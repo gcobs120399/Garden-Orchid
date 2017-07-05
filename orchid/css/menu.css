@@ -1,0 +1,122 @@
+  * {
+  box-sizing: border-box;}
+body.open {
+  overflow: hidden;}
+body.open:before {
+  visibility: visible;
+  opacity: 1;}
+body:before {
+  content: "";
+  position: absolute;
+  background-color: #F9F0D6;
+  width: 15%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;}
+.burger {
+  position: fixed;
+  top: 100px;
+  left: 20px;}
+.burger__button {
+  display: block;
+  position: relative;
+  background: #FFA857;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  transition: all 0.5s ease;
+  border: 3px solid transparent;
+  box-shadow: 0px 0px 8px -2px #333;}
+.burger__button.open {
+  border: 3px solid #fff;
+  box-shadow: none;}
+.burger__button__icon {
+  display: inline-block;
+  position: absolute;
+  background: #fff;
+  margin: 0 auto;
+  width: 20px;
+  height: 3px;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease;
+  transform: translateY(-1.5px);}
+.burger__button__icon:before,
+.burger__button__icon:after {
+  content: "";
+  position: absolute;
+  margin: 0 auto;
+  background: #fff;
+  width: 20px;
+  height: 3px;
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease;}
+.burger__button__icon:before {
+  bottom: 10px;}
+.burger__button__icon:after {
+  top: 10px;}
+.burger__button.open .burger__button__icon {
+  background: transparent;}
+.burger__button.open .burger__button__icon:before,
+.burger__button.open .burger__button__icon:after {
+  transform-origin: 0 50%;
+  width: 30px;}
+.burger__button.open .burger__button__icon:before {
+  transform: rotateZ(0.78539816rad);}
+.burger__button.open .burger__button__icon:after {
+  transform: rotateZ(-0.78539816rad);}
+.burger__menu {
+  list-style-type: none;
+  padding: 0 0 0 20px;}
+.burger__menu li {
+  display: block;
+  position: relative;
+  margin: 15px 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  transform: translateX(-400px);}
+.burger__menu a {
+  display: block;
+  text-decoration: none;
+  color: #FFA857;
+  font-size: 1.5rem;
+  font-family: Arial, "san-serif";
+  font-weight: normal;
+  transition: all 0.4s ease;
+  border-left: 3px solid transparent;
+  padding-left: 0;
+  font-family: "微軟正黑體";
+  font-size: 30px;}
+.burger__menu a:hover {
+  padding-left: 30px;
+  border-left: 3px solid #fff;}
+.burger__button.open + .burger__menu li {
+  transform: translateX(0);
+  visibility: visible;}
+
+
+.datepicker-content{/*日曆*/
+	padding: 2em 0;
+	height: 300px;
+}
+.datepicker-content label{color: #D5D6E2;}
+#gotop {
+    position: fixed;
+    border-radius: 50px;
+    right: 20px;
+    bottom: 30px;
+    padding: 10px 16px;
+    font-size: 25px;
+    background: rgba(228, 211, 211, 0.8);
+    color: #FAFCFD;
+    cursor: pointer;
+    z-index: 1000;
+}
