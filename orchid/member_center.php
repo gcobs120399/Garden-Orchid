@@ -114,11 +114,11 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
     <hr>
     <div style="background: rgba(100%,100%,100%,0.6); margin: 0 auto;"><!--div放白色背景透明度60%開始-->
 
-        <div style="text-align: center"><h3><img src="img/LOGO.png" alt="LOGO" width="80" height="50">會員系統</h3></div>
+        <div style="text-align: center"><h3><img src="img/LOGO.png" alt="LOGO" width="80" height="50">豐田蘭園</h3></div>
       
         <div style="margin-left:0px auto;margin-right:0px auto;">
           <div style="display: table-cell;vertical-align: middle;">
-            <p class="title">歡迎光臨網站會員系統</p>
+            <!--<p class="title">歡迎光臨網站會員系統</p>
               <p class="heading"> 本會員系統擁有以下的功能：</p>
               <ol>
                 <li>免費加入會員 。</li>
@@ -134,16 +134,41 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
                 <li> 承擔一切因您的行為而直接或間接導致的民事或刑事法律責任。</li>
                 <li> 互相尊重， 遵守互聯網絡道德；嚴禁互相惡意攻擊， 漫罵。</li>
                 <li> 管理員擁有一切管理權力。</li>
-              </ol>
+              </ol>-->
+              <table>
+                <tr>
+                  <td style="font-size: 30px">蘭園的大小約為。</td>
+                </tr>
+                <tr>
+                  <td style="font-size: 30px">種植的蘭花品種為「腎藥蘭」。<p></td>
+                </tr>
+                 <tr>
+                  <td style="font-size: 30px">腎藥蘭(Renanthera Philippinensis)介紹：<p></td>
+                </tr>
+                <tr>
+                  <td style="font-size: 30px">蘭科腎藥蘭屬的著生性多年生草本，本屬約有15種。<p>屬名Renanthera 是由拉丁文 renes 腎臟與希臘文 anthera 花藥組合成，意指花藥形似腎臟。</td>
+                </tr>
+                <tr>
+                  <td style="font-size: 30px">粗壯的氣生根自莖伸出，單莖直立，二列互生葉片排列如梯，厚革質葉長橢圓形，葉尖凹入，葉長約10~15㎝。<p>複總狀花序自葉腋伸出，花朵萼瓣發達寬大，其他花瓣較窄，脣瓣小而不明顯，中心黃色。花色橘紅，有深紅色斑紋。<p></td>
+                </tr>
+              </table>
           </div>
 
               <div style="display: table-cell;vertical-align: middle;">
-                <p class="heading"><strong>會員系統</strong></p>
+                <!--<p class="heading"><strong>會員系統</strong></p>
                 <p><strong><?php echo $row_RecMember["m_name"];?></strong> 您好。</p>
                 <p>您總共登入了 <?php echo $row_RecMember["m_login"];?> 次。<br>
                     本次登入的時間為：<br>
                 <?php echo $row_RecMember["m_logintime"];?></p>
-                <a href="member_update.php">修改資料</a> | <a href="?logout=true">登出系統</a>
+                <a href="member_update.php">修改資料</a> | <a href="?logout=true">登出系統</a>-->
+                <table>
+                  <tr>
+                   <td><img src="img/orchid1.jpg" width="600" height="450"></td>
+                  </tr>
+                  <tr>
+                    <td><img src="img/orchid11.jpg" width="600" height="450"></td>
+                  </tr>
+                </table>
               </div>
         </div>
 
