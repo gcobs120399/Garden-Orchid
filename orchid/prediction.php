@@ -10,6 +10,9 @@ if(isset($_GET["logout"]) && ($_GET["logout"]=="true")){
   unset($_SESSION["loginMember"]);
   unset($_SESSION["memberLevel"]);
   header("Location: index.php");}
+$query_RecFlo = "SELECT * FROM `flower` WHERE `f_id`='".$_GET["select"]."' ";
+$RecFlo = mysql_query($query_RecFlo);
+$row_RecFlo=mysql_fetch_assoc($RecFlo);
 ?>
 <!DOCTYPE html>
 <html>
@@ -136,14 +139,23 @@ $(function () {
 <script type=”text/javascript” src=”http://www.hcharts.cn/demo/js/highcharts.js”></script>
 <script type=”text/javascript” src=”http://www.hcharts.cn/demo/js/exporting.js”></script>
 <div class="col-xs-4 col-md-4">
+<?php
+include("MYSQL.php"); //資料庫連線套用
+$data = "SELECT * FROM `flower` WHERE `f_username`='".$_SESSION["loginMember"]."'"; //查詢FROM 資料表 where 判斷式(府和判斷式的才搜尋
+$resultub = mysql_query($data);
+?>
   <div class="thumbnail" style="text-align:center;">
     <form action="" name="sort1" method="get">
-      <select name="select" onChange="submit()">
-      <option value="4">蘭花D</option>
-        <option value="4">蘭花D</option>
+      預測像：<select name="select" onChange="submit()">
+      <option value=""><?php echo $row_RecFlo["f_biology"];?></option>
+        <?php while ($rowub = mysql_fetch_array($resultub)):?>
+        <option value="<?php echo $rowub["f_id"];?>"><?php echo $rowub["f_biology"];?></option>
+        <?php endwhile?>
       </select>
     </form>
   </div>
+
+
 </div>
 </div>
 
