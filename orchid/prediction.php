@@ -13,6 +13,23 @@ if(isset($_GET["logout"]) && ($_GET["logout"]=="true")){
 $query_RecFlo = "SELECT * FROM `flower` WHERE `f_id`='".$_GET["select"]."' ";
 $RecFlo = mysql_query($query_RecFlo);
 $row_RecFlo=mysql_fetch_assoc($RecFlo);
+
+$query_RecHis = "SELECT * FROM `history` WHERE `h_on`='".$_GET["select"]."' ";
+$RecHis = mysql_query($query_RecHis);
+$row_RecHis=mysql_fetch_assoc($RecHis);
+
+$query_RecHis1 = "SELECT * FROM `history` WHERE `h_on`=10";
+
+include("MYSQL.php");
+$data = "SELECT * FROM `history` WHERE `h_on`=10 ORDER BY `h_id` ASC "; //查詢FROM 資料表 where 判斷式
+$resultub = mysql_query($data);
+while ($row = mysql_fetch_array($resultub)){
+    $time[]=$row["h_date"];
+    $h_pedlength[]=intval($row["h_pedlength"]);
+}
+$time = json_encode($time);
+$data = array(array("name"=>"花梗長度","data"=>$h_pedlength));
+$data = json_encode($data);
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,7 +46,6 @@ $row_RecFlo=mysql_fetch_assoc($RecFlo);
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
 <!--呆-->
-
   <!-- 最新編譯和最佳化的 CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <!-- 選擇性佈景主題 -->
@@ -57,7 +73,7 @@ $(function () {
             x: -20
         },
         xAxis: {
-            categories: ['第一天', '第二天', '第三天', '第四天']
+            categories: <?php echo $time; ?>
         },
         yAxis: {
             title: {
@@ -78,13 +94,7 @@ $(function () {
             verticalAlign: 'middle',
             borderWidth: 0
         },
-        series: [{
-            name: '預測莖高',
-            data: [35.3, 35.25,35.275 , 35.34]
-        }, {
-          name: '莖高',
-            data: [35.3, 35.25, 35.275]
-        }]
+        series: <?php echo $data; ?>
     });
 });
     </script>
