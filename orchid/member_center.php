@@ -79,7 +79,7 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
   </div>
 </nav>
 
-<div class=" col-xs-2 col-md-2">
+<div class=" col-xs-1 col-md-1">
  <!--旁邊菜單nav_burger
  <nav class="burger">
       <a href="#" class="burger__button" id="burger-button">
@@ -98,7 +98,7 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
 </div>
 
 
-<div class="container col-xs-8 col-md-8">
+<div class="container col-xs-10 col-md-10">
   <!--內文-->
     <h1 style="text-align:center;">應用物聯網技術之蘭園智慧生產管理與知識系統</h1>
     <!--按鈕
