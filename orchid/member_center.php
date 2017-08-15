@@ -137,9 +137,19 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
               </ol>-->
               <table>
                 <tr>
-                  <td style="font-size: 30px">蘭園的大小約為。</td>
+                  <td style="font-size: 30px">
+                  <p>蘭園的大小約為。</p>
+                  <p>種植的蘭花品種為「腎藥蘭」。</p>
+                  <p>腎藥蘭(Renanthera Philippinensis)介紹：<p>
+                  <p>　　蘭科腎藥蘭屬的著生性多年生草本，本屬約有15種。<br>　　屬名Renanthera 是由拉丁文 renes 腎臟與希臘文 anthera 花藥組合成，意指花藥形似腎臟。<br>
+                  　　粗壯的氣生根自莖伸出，單莖直立，二列互生葉片排列如梯，厚革質葉長橢圓形，葉尖凹入，葉長約10~15㎝。<br>　　複總狀花序自葉腋伸出，花朵萼瓣發達寬大，其他花瓣較窄，脣瓣小而不明顯，中心黃色。花色橘紅，有深紅色斑紋。
+                  </p>
+                  </td>
                 </tr>
                 <tr>
+                  <td align="center" valign="center"><img src="img/orchid1.jpg" width="90%" height="50%"></td>
+                </tr>
+                <!--<tr>
                   <td style="font-size: 30px">種植的蘭花品種為「腎藥蘭」。<p></td>
                 </tr>
                  <tr>
@@ -150,7 +160,7 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
                 </tr>
                 <tr>
                   <td style="font-size: 30px">粗壯的氣生根自莖伸出，單莖直立，二列互生葉片排列如梯，厚革質葉長橢圓形，葉尖凹入，葉長約10~15㎝。<p>複總狀花序自葉腋伸出，花朵萼瓣發達寬大，其他花瓣較窄，脣瓣小而不明顯，中心黃色。花色橘紅，有深紅色斑紋。<p></td>
-                </tr>
+                </tr>-->
               </table>
           </div>
 
@@ -160,13 +170,13 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
                 <p>您總共登入了 <?php echo $row_RecMember["m_login"];?> 次。<br>
                     本次登入的時間為：<br>
                 <?php echo $row_RecMember["m_logintime"];?></p>
-                <a href="member_update.php">修改資料</a> | <a href="?logout=true">登出系統</a>-->
+                <a href="member_update.php">修改資料</a> | <a href="?logout=true">登出系統</a>
                 <table>
                   <tr>
                    <td><img src="img/orchid1.jpg" width="90%" height="50%"></td>
                   </tr>
                   
-                </table>
+                </table>-->
               </div>
         </div>
 
