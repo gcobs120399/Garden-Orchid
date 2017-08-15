@@ -163,11 +163,9 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
                 <a href="member_update.php">修改資料</a> | <a href="?logout=true">登出系統</a>-->
                 <table>
                   <tr>
-                   <td><img src="img/orchid1.jpg" width="600" height="450"></td>
+                   <td><img src="img/orchid1.jpg" width="90%" height="50%"></td>
                   </tr>
-                  <tr>
-                    <td><img src="img/orchid11.jpg" width="600" height="450"></td>
-                  </tr>
+                  
                 </table>
               </div>
         </div>
