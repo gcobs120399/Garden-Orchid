@@ -20,7 +20,7 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
 ?>
 <html lang="en">
 <head>
-<title>蘭花管理系統</title>
+<title>腎藥蘭花管理系統</title>
 <!--呆的巡覽列-->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,7 +49,7 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header"> 
-     <a class="navbar-brand" href="member_center.php" style="font-size: 24pt;">應用物聯網技術之蘭園智慧生產管理與知識系統</a>
+     <a class="navbar-brand" href="member_center.php" style="font-size: 24pt;">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</a>
     </div>
   </div>
 </nav>
@@ -100,7 +100,7 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
 
 <div class="container col-xs-10 col-md-10">
   <!--內文-->
-    <h1 style="text-align:center;">應用物聯網技術之蘭園智慧生產管理與知識系統</h1>
+    <h1 style="text-align:center;">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</h1>
     <!--按鈕
     <div style="text-align:center;">
       <input type="button" class="btn btn-info btn-lg" size="300" value="溫室管理" onclick="location.href='GMM.php'">
@@ -181,7 +181,7 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
         </div>
 
   <footer align="center">
-    © 2016 農業物聯生產管理系統 ©
+    © 2016 腎藥蘭花管理系統 ©
   </footer>
 </div><!--div放白色透明度60%結束-->
 

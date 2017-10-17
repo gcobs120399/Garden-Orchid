@@ -37,7 +37,7 @@ if(isset($_GET["logout"]) && ($_GET["logout"]=="true")){
 <div class="col-xs-12 ">
   <input type="button" class="btn btn-info" name="Submit" value="回上一頁" onClick="window.history.back();">
 </div>
-<div class="col-xs-12">© 2016 農業物聯生產管理系統 ©</div>
+<div class="col-xs-12">© 2016 腎藥蘭花管理系統 ©</div>
 </form>
 </body>
 </html>

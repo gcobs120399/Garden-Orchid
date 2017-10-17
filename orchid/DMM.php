@@ -44,7 +44,7 @@
 <div class="col-xs-12">
   <input type="button" class="btn btn-info" size="12" value="回首頁" onclick="location.href='index.php'">
 </div>
-© 2016 農業物聯生產管理系統 ©
+© 2016 腎藥蘭花管理系統 ©
 
 </div><!--div放白色背景透明度60%結束-->
 </body>

@@ -45,7 +45,7 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>農業物聯生產管理系統</title>
+	<title>腎藥蘭花管理系統</title>
 	<!-- 最新編譯和最佳化的 CSS -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 	<!-- 選擇性佈景主題 -->
@@ -96,7 +96,7 @@ window.location.href='CM.php';
 		</tr>
 		<tr></tr>
 		<tr>
-    		<td align="center" colspan="2">© 2016 農業物聯生產管理系統 ©</td>
+    		<td align="center" colspan="2">© 2016 腎藥蘭花管理系統 ©</td>
   		</tr>
 	</form>
 </table>

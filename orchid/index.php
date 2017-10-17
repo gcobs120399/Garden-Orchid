@@ -55,7 +55,7 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>蘭花管理系統</title>
+<title>腎藥蘭花管理系統</title>
 <link rel="icon" href="./img/title.png">
 <!--呆-->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -88,7 +88,7 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
         <span class="icon-bar"></span> 
         <span class="icon-bar"></span> 
       </button> 
-      <a class="navbar-brand" href="">應用物聯網技術之蘭園智慧生產管理與知識系統</a>
+      <a class="navbar-brand" href="">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -103,7 +103,7 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
   </div>
 </nav>
 
-<h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">應用物聯網技術之蘭園智慧生產管理與知識系統</h1>
+<h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</h1>
     <div class="col-xs-2">
  <!--旁邊菜單nav_burger
  <nav class="burger">
@@ -180,7 +180,7 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
     </td>
   </tr>
   <tr>
-    <td align="center" background="images/album_r2_c1.jpg" class="trademark">© 2016 農業物聯生產管理系統 ©</td>
+    <td align="center" background="images/album_r2_c1.jpg" class="trademark">© 2016 腎藥蘭花管理系統 ©</td>
   </tr>
 </table>
 </div><!--div放白色背景透明度60%結束-->

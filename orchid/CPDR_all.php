@@ -139,7 +139,7 @@ $total_pages = ceil($total_records/$pageRow_records);
 
     <td align="center">
     <input type="button" class="btn btn-info" size="12" value="回首頁" onclick="location.href='index.php'"><br>
-    © 2016 農業物聯生產管理系統 ©</td>
+    © 2016 腎藥蘭花管理系統 ©</td>
   </tr>
 </table>
 

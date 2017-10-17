@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主機: 127.0.0.1
--- 產生時間： 2017-07-26 08:30:57
+-- 產生時間： 2017-10-17 15:10:48
 -- 伺服器版本: 10.1.13-MariaDB
 -- PHP 版本： 5.6.23
 
@@ -54,11 +54,12 @@ INSERT INTO `avg` (`id`, `temp_1`, `humi_1`, `light_1`, `date`, `time`) VALUES
 --
 
 CREATE TABLE `equipment` (
-  `e_id` int(255) UNSIGNED NOT NULL,
-  `e_user` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `e_name` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `e_num` tinyint(20) NOT NULL,
-  `e_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `e_id` int(255) UNSIGNED NOT NULL COMMENT '編號',
+  `e_user` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '使用者',
+  `e_name` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '器材名稱',
+  `e_num` tinyint(20) NOT NULL COMMENT '數量',
+  `e_money` int(255) NOT NULL COMMENT '單價',
+  `e_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '時間',
   `e_pattern` enum('耗材','資材') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -66,17 +67,18 @@ CREATE TABLE `equipment` (
 -- 資料表的匯出資料 `equipment`
 --
 
-INSERT INTO `equipment` (`e_id`, `e_user`, `e_name`, `e_num`, `e_time`, `e_pattern`) VALUES
-(2, '', '45', 45, '2016-07-06 13:04:36', '資材'),
-(3, 'root12', '45', 45, '2016-07-06 13:38:24', '資材'),
-(4, 'gcobs120399', '12修改', 54, '2016-07-07 01:37:35', '耗材'),
-(5, 'gcobs120399', 'YOOOOOO修改', 127, '2016-07-07 01:39:58', '資材'),
-(6, 'gcobs120399', '12', 12, '2016-07-07 01:41:20', '耗材'),
-(7, 'gcobs120399', '12', 23, '2016-07-07 01:41:37', '資材'),
-(8, 'gcobs120399', '12', 22, '2016-07-07 01:43:21', '耗材'),
-(9, 'gcobs120399', '型態測試', 3, '2016-11-11 10:29:47', '耗材'),
-(10, 'b10356019', '資材', 1, '2016-12-06 18:32:22', '資材'),
-(11, 'b10356019', '耗材', 3, '2016-12-06 18:32:38', '耗材');
+INSERT INTO `equipment` (`e_id`, `e_user`, `e_name`, `e_num`, `e_money`, `e_time`, `e_pattern`) VALUES
+(2, '', '45', 45, 0, '2016-07-06 13:04:36', '資材'),
+(3, 'root12', '45', 45, 0, '2016-07-06 13:38:24', '資材'),
+(4, 'gcobs120399', '12修改', 54, 0, '2016-07-07 01:37:35', '耗材'),
+(5, 'gcobs120399', 'YOOOOOO修改', 127, 0, '2016-07-07 01:39:58', '資材'),
+(6, 'gcobs120399', '12', 12, 0, '2016-07-07 01:41:20', '耗材'),
+(7, 'gcobs120399', '12', 23, 0, '2016-07-07 01:41:37', '資材'),
+(8, 'gcobs120399', '12', 22, 0, '2016-07-07 01:43:21', '耗材'),
+(9, 'gcobs120399', '型態測試', 3, 0, '2016-11-11 10:29:47', '耗材'),
+(10, 'b10356019', '資材', 1, 10000, '2016-12-06 18:32:22', '資材'),
+(11, 'b10356019', '耗材', 3, 100, '2016-12-06 18:32:38', '耗材'),
+(13, 'b10356019', '肥料', 10, 200, '2017-10-17 13:06:10', '耗材');
 
 -- --------------------------------------------------------
 
@@ -425,7 +427,7 @@ INSERT INTO `memberdata` (`m_id`, `m_name`, `m_username`, `m_passwd`, `m_sex`, `
 (1, '系統管理員', 'admin', '21232f297a57a5a743894a0e4a801fc3', '男', NULL, 'admin', NULL, NULL, NULL, NULL, 7, '2008-10-21 12:07:13', '2008-10-20 16:36:15'),
 (12, '9527', 'gcobs120399', '4f58111f49e05226933bf1122df4a9ae', '女', '1996-01-20', 'member', 'gcobs120399@gmail.com', '', '', '', 90, '2017-04-27 14:32:49', '2016-07-04 13:18:25'),
 (13, '113', 'root12', 'f5948d35adf81357375ec2fe1313259f', '女', '1235-12-23', 'admin', 'gcobs120399@gmail.com', '', '', '', 18, '2016-10-22 09:04:15', '2016-07-04 13:29:24'),
-(14, '豐田蘭園', 'b10356019', 'aef24e1def02692cefab5a014a8770d5', '女', '2017-01-03', 'member', '123@yahoo.com.tw', '', '', '', 91, '2017-07-26 13:24:58', '2016-11-14 18:17:10'),
+(14, '豐田蘭園', 'b10356019', 'aef24e1def02692cefab5a014a8770d5', '女', '2017-01-03', 'member', '123@yahoo.com.tw', '', '', '', 93, '2017-10-17 20:23:50', '2016-11-14 18:17:10'),
 (15, '萬俟和玉', 'adg257p', '377c92bbe8b81606ed934808d2afa2cc', '女', '1996-07-11', 'member', 'adg257p@yahoo.com.tw', '', '', '', 1, '2016-11-15 16:41:11', '2016-11-15 16:41:03'),
 (16, 'HTML5', 'abcde', '827ccb0eea8a706c4c34a16891f84e7b', '女', '0000-00-00', 'member', 'emppy_miao511311@yahoo.com.tw', '', '', '', 35, '2017-04-11 16:24:59', '2016-11-15 16:46:20'),
 (17, 'rybfvevk', 'uqubbetw', '32cc5886dc1fa8c106a02056292c4654', '女', '0000-00-00', 'member', 'sample@email.tst', '1', '555-666-0606', '3137 Laguna Street', 0, NULL, '2017-06-02 13:55:27'),
@@ -1031,7 +1033,7 @@ ALTER TABLE `avg`
 -- 使用資料表 AUTO_INCREMENT `equipment`
 --
 ALTER TABLE `equipment`
-  MODIFY `e_id` int(255) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `e_id` int(255) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '編號', AUTO_INCREMENT=14;
 --
 -- 使用資料表 AUTO_INCREMENT `flower`
 --

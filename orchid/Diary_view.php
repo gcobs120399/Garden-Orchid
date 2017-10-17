@@ -53,7 +53,7 @@ $count=0;
         <span class="icon-bar"></span> 
         <span class="icon-bar"></span> 
       </button> 
-      <a class="navbar-brand" href="">應用物聯網技術之蘭園智慧生產管理與知識系統</a>
+      <a class="navbar-brand" href="">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -122,7 +122,7 @@ while($rowub1 = mysql_fetch_array($resultub1)){ //顯示資料
   <div class="col-md-2"></div>
 </div>
 <div class="col-xs-12 col-md-2"></div>
-<div class="col-xs-12 col-md-8" style="text-align: center;">© 2016 農業物聯生產管理系統 ©</div>
+<div class="col-xs-12 col-md-8" style="text-align: center;">© 2016 腎藥蘭花管理系統 ©</div>
 <div class="col-xs-12 col-md-2"></div>
 <div id="gotop">˄</div>
 </body>

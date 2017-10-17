@@ -25,7 +25,7 @@ if(isset($_POST["action"])&&($_POST["action"]=="join")){
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>蘭花管理系統</title>
+	<title>腎藥蘭花管理系統</title>
 	<script language="javascript">
 function checkForm(){
 	if(document.cmform.f_biology.value==""){//注意表格名稱
@@ -80,7 +80,7 @@ window.location.href='CM.php';
 			</td>
 		</tr>
 		<tr>
-    		<td align="center" colspan="2">© 2016 農業物聯生產管理系統 ©</td>
+    		<td align="center" colspan="2">© 2016 腎藥蘭花管理系統 ©</td>
   		</tr>
 	</form>
 </table>

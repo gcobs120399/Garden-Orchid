@@ -47,7 +47,7 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>網站會員系統</title>
+<title>腎藥蘭花管理系統</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 <script language="javascript">
 function checkForm(){//注意表單名稱
@@ -185,7 +185,7 @@ function checkmail(myEmail) {
     </table></td>
   </tr>
   <tr>
-    <td align="center" background="images/album_r2_c1.jpg" class="trademark">© 2016 農業物聯生產管理系統 ©</td>
+    <td align="center" background="images/album_r2_c1.jpg" class="trademark">© 2016 腎藥蘭花管理系統 ©</td>
   </tr>
 </table>
 </body>

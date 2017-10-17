@@ -55,7 +55,7 @@ $total_pages = ceil($total_records/$pageRow_records);
 <html>
 <head>
   <meta  http-equiv="Content-Type" content="text/html;charset=utf-8">
-  <title>蘭花管理系統</title>
+  <title>腎藥蘭花管理系統</title>
 
 <!--呆的巡覽列-->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -87,7 +87,7 @@ $total_pages = ceil($total_records/$pageRow_records);
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header"> 
-     <a class="navbar-brand" href="member_center.php" style="font-size: 24pt;">應用物聯網技術之蘭園智慧生產管理與知識系統</a>
+     <a class="navbar-brand" href="member_center.php" style="font-size: 24pt;">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</a>
     </div>
   </div>
 </nav>
@@ -118,7 +118,7 @@ $total_pages = ceil($total_records/$pageRow_records);
 </nav>
 
 <!--<h1>設備管理</h1>-->
-<h2 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">耗材管理</h2>
+<h2 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">設備管理</h2>
 <form name="fromCM" method="" action="">
 <hr>
 
@@ -156,7 +156,8 @@ $total_pages = ceil($total_records/$pageRow_records);
              <tr>
               <th bgcolor="#CCCCCC" style="text-align:center;"><p>設備名稱</p></th>
               <th bgcolor="#CCCCCC" style="text-align:center;"><p>數量</p></th>
-              <th bgcolor="#CCCCCC" style="text-align:center;"><p>使用者</p></th>
+              <th bgcolor="#CCCCCC" style="text-align:center;"><p>單價</p></th>
+              <th bgcolor="#CCCCCC" style="text-align:center;"><p>總價</p></th>
               <th bgcolor="#CCCCCC" style="text-align:center;"><p>型態</p></th>
               <th bgcolor="#CCCCCC" style="text-align:center;"><p>時間</p></th>
               <th bgcolor="#CCCCCC" style="text-align:center;">&nbsp;</th>
@@ -165,7 +166,8 @@ $total_pages = ceil($total_records/$pageRow_records);
             <tr>
               <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["e_name"];?></p></td>
               <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["e_num"];?></p></td>
-              <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["e_user"];?></p></td>
+              <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["e_money"];?></p></td>
+              <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo ($row_RecFlower["e_num"]*$row_RecFlower["e_money"]);?></p></td>
               <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["e_pattern"];?></p></td>
               <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["e_time"];?></p></td>
               <td width="5%" align="center" bgcolor="#FFFFFF"><p><a href="SM_update.php?id=<?php echo $row_RecFlower["e_id"];?>">修改</a><br>
@@ -197,7 +199,7 @@ $total_pages = ceil($total_records/$pageRow_records);
     <td align="center"><p>
     <!--<input type="button" class="btn btn-info" size="12" value="感測設備控管" onclick="location.href='SDC.php'">
     <input type="button" class="btn btn-info" size="12" value="回首頁" onclick="location.href='index.php'"></p>-->
-    © 2016 農業物聯生產管理系統 ©</td>
+    © 2016 腎藥蘭花管理系統 ©</td>
   </tr>
 </table>
 </div><!--div放白色背景透明度60%結束-->

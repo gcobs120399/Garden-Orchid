@@ -61,7 +61,7 @@ $total_pages = ceil($total_records/$pageRow_records);
 <html>
 <head>
   <meta  http-equiv="Content-Type" content="text/html;charset=utf-8">
-  <title>蘭花管理系統</title>
+  <title>腎藥蘭花管理系統</title>
 
 <!--呆的巡覽列-->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -116,7 +116,7 @@ function btnDivH_onclick() {
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header"> 
-     <a class="navbar-brand" href="member_center.php" style="font-size: 24pt;">應用物聯網技術之蘭園智慧生產管理與知識系統</a>
+     <a class="navbar-brand" href="member_center.php" style="font-size: 24pt;">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</a>
     </div>
   </div>
 </nav>
@@ -182,7 +182,7 @@ function btnDivH_onclick() {
     <div>
     <input type="button" class="btn btn-info" size="12" value="回首頁" onclick="location.href='index.php'">
     </div>
-    © 2016 農業物聯生產管理系統 ©</td>
+    © 2016 腎藥蘭花管理系統 ©</td>
   </tr>
 </table>
 </form>

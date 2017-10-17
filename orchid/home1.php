@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>蘭花管理系統</title>
+<title>腎藥蘭花蘭花管理系統</title>
 <!--呆-->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,7 +34,7 @@
         <span class="icon-bar"></span> 
         <span class="icon-bar"></span> 
       </button> 
-      <a class="navbar-brand" href="">應用物聯網技術之蘭園智慧生產管理與知識系統</a>
+      <a class="navbar-brand" href="">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -48,7 +48,7 @@
     </div>
   </div>
 </nav>
-<h1 style="text-align:center;">農業物聯生產管理系統</h1>
+<h1 style="text-align:center;">腎藥蘭花管理系統</h1>
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -119,7 +119,7 @@
   });
 
 </script>
-  <p align="center" background="images/album_r2_c1.jpg" class="trademark">© 2016 農業物聯生產管理系統 ©</p>
+  <p align="center" background="images/album_r2_c1.jpg" class="trademark">© 2016 腎藥蘭花管理系統 ©</p>
 </body>
 
 </html>

@@ -136,7 +136,7 @@ $total_pages = ceil($total_records/$pageRow_records);
   </tr>
   <tr>
 
-    <td align="center">© 2016 農業物聯生產管理系統 ©</td>
+    <td align="center">© 2016 腎藥蘭花管理系統 ©</td>
   </tr>
 </table>
 

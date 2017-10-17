@@ -43,7 +43,7 @@ if(isset($_POST["action"])&&($_POST["action"]=="join")){
 <!-- 最新編譯和最佳化的 JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8">
-<title>蘭花管理系統</title>
+<title>腎藥蘭花管理系統</title>
 <script language="javascript">
 function checkForm(){
 	if(document.formJoin.m_username.value==""){
@@ -147,7 +147,7 @@ function checkmail(myEmail) {
         <span class="icon-bar"></span> 
         <span class="icon-bar"></span> 
       </button> 
-      <a class="navbar-brand" href="">應用物聯網技術之蘭園智慧生產管理與知識系統</a>
+      <a class="navbar-brand" href="">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -251,7 +251,7 @@ window.location.href='index.php';
     </table></td>
   </tr>
   <tr>
-    <td align="center" background="images/album_r2_c1.jpg">© 2016 農業物聯生產管理系統 ©</td>
+    <td align="center" background="images/album_r2_c1.jpg">© 2016 腎藥蘭花管理系統 ©</td>
   </tr>
 </table>
 </body>

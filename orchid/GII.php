@@ -17,7 +17,7 @@ if(isset($_GET["logout"]) && ($_GET["logout"]=="true")){
 <html>
 <head>
   <meta  http-equiv="Content-Type" content="text/html;charset=utf-8">
-  <title>溫室管理</title>
+  <title>腎藥蘭花管理系統</title>
   <!--呆的巡覽列-->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,7 +39,7 @@ if(isset($_GET["logout"]) && ($_GET["logout"]=="true")){
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header"> 
-     <a class="navbar-brand" href="member_center.php" style="font-size: 24pt;">應用物聯網技術之蘭園智慧生產管理與知識系統</a>
+     <a class="navbar-brand" href="member_center.php" style="font-size: 24pt;">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</a>
     </div>
   </div>
 </nav>

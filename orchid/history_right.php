@@ -157,7 +157,7 @@ $(document).ready(function() {
 <div class="col-xs-12">
   <input type="button" class="btn btn-info" size="12" value="回首頁" onclick="location.href='index.php'">
 </div>
-    <footer>© 2016 農業物聯生產管理系統 ©</footer>
+    <footer>© 2016 腎藥蘭花管理系統 ©</footer>
 </form>
 
 </div><!--div放白色背景透明度60%結束-->
