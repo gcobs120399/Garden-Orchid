@@ -16,8 +16,17 @@ $row_RecFlo=mysql_fetch_assoc($RecFlo);
 $beginWeek=date("Y-m-d", mktime(0, 0, 0, date('m'), date('d')-7, date('Y')));
 
 $endWeek=date("Y-m-d", mktime(0, 0, 0, date('m'), date('d'), date('Y')));
-include("MYSQL.php"); //这个文件是写了访问mysql权限的，自然我就不会列出LIMIT 0,7
-$data = "SELECT * FROM `history` WHERE `h_on`='".$_GET["select"]."' AND `h_date` BETWEEN '$beginWeek'AND '$endWeek' ORDER BY `h_id` ASC "; //查詢FROM 資料表 where 判斷式
+
+include("MYSQL.php"); //这个文件是写了访问mysql权限的，自然我就不会列出LIMIT
+$count="SELECT * FROM `history` WHERE `h_on`='".$_GET["select"]."'";//計算歷史紀錄ㄉ筆數
+$reCount = mysql_query($count);
+$num = mysql_num_rows($reCount);
+if($num<10){//計算限制的筆數
+  $num1=0;
+}else{
+  $num1=$num-10;
+}
+$data = "SELECT * FROM `history` WHERE `h_on`='".$_GET["select"]."' ORDER BY `h_id` ASC limit $num1,10"; //查詢FROM 資料表 where 判斷式
 $resultub = mysql_query($data);
 while ($row = mysql_fetch_array($resultub)){
     $time[]=$row["h_date"];
