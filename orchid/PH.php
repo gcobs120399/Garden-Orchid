@@ -13,20 +13,15 @@ if(isset($_GET["logout"]) && ($_GET["logout"]=="true")){
 $query_RecFlo = "SELECT * FROM `flower` WHERE `f_id`='".$_GET["select"]."' ";
 $RecFlo = mysql_query($query_RecFlo);
 $row_RecFlo=mysql_fetch_assoc($RecFlo);
-$beginWeek=date("Y-m-d", mktime(0, 0, 0, date('m'), date('d')-7, date('Y')));
 
-$endWeek=date("Y-m-d", mktime(0, 0, 0, date('m'), date('d'), date('Y')));
-
-include("MYSQL.php"); //这个文件是写了访问mysql权限的，自然我就不会列出LIMIT
+include("MYSQL.php"); //这个文件是写了访问mysql权限的，自然我就不会列出
 $count="SELECT * FROM `history` WHERE `h_on`='".$_GET["select"]."'";//計算歷史紀錄ㄉ筆數
 $reCount = mysql_query($count);
-$num = mysql_num_rows($reCount);
-if($num<10){//計算限制的筆數
-  $num1=0;
-}else{
-  $num1=$num-10;
-}
-$data = "SELECT * FROM `history` WHERE `h_on`='".$_GET["select"]."' ORDER BY `h_id` ASC limit $num1,10"; //查詢FROM 資料表 where 判斷式
+$tenday = mysql_num_rows($reCount);
+if($tenday<10){//計算限制的筆數
+  $tenday1=0;}
+  else{$tenday1=$tenday-10;}
+$data = "SELECT * FROM `history` WHERE `h_on`='".$_GET["select"]."' ORDER BY `h_id` ASC limit $tenday1,10"; //查詢FROM 資料表 where 判斷式
 $resultub = mysql_query($data);
 while ($row = mysql_fetch_array($resultub)){
     $time[]=$row["h_date"];
@@ -40,6 +35,43 @@ while ($row = mysql_fetch_array($resultub)){
 $time = json_encode($time); //调用函数json_encode生成json数据。
 $data = array(array("name"=>"葉片數量","data"=>$h_leafNum),array("name"=>"花梗長度","data"=>$h_pedlength),array("name"=>"分岔數","data"=>$h_bifNum),array("name"=>"第一分岔","data"=>$h_bifNum1),array("name"=>"第二分岔","data"=>$h_bifNum2),array("name"=>"成熟度","data"=>$maturity));
 $data = json_encode($data);
+
+$count1="SELECT * FROM `history` WHERE `h_on`='".$_GET["select"]."'";//計算歷史紀錄ㄉ筆數
+$reCount1 = mysql_query($count1);
+$thirtyday = mysql_num_rows($reCount1);
+if($thirtyday<30){//計算限制的筆數
+  $thirtyday1=0;}
+  else{$thirtyday1=$thirtyday-30;}
+$data1 = "SELECT * FROM `history` WHERE `h_on`='".$_GET["select"]."' ORDER BY `h_id` ASC limit $thirtyday1,30"; //查詢FROM 資料表 where 判斷式
+$resultub1 = mysql_query($data1);
+while ($row1 = mysql_fetch_array($resultub1)){
+    $time_1[]=$row1["h_date"];
+    $h_leafNum_1[]=intval($row1["h_leafNum"]);
+    $h_pedlength_1[]=intval($row1["h_pedlength"]);
+    $h_bifNum_1[]=intval($row1["h_bifNum"]);
+    $h_bifNum1_1[]=intval($row1["h_bifNum1"]);
+    $h_bifNum2_1[]=intval($row1["h_bifNum2"]);
+    $maturity_1[]=intval($row1["maturity"]);
+}
+$time1 = json_encode($time_1); //调用函数json_encode生成json数据。
+$data1 = array(array("name"=>"葉片數量","data"=>$h_leafNum_1),array("name"=>"花梗長度","data"=>$h_pedlength_1),array("name"=>"分岔數","data"=>$h_bifNum_1),array("name"=>"第一分岔","data"=>$h_bifNum1_1),array("name"=>"第二分岔","data"=>$h_bifNum2_1),array("name"=>"成熟度","data"=>$maturity_1));
+$data1 = json_encode($data1);
+
+
+$data2 = "SELECT * FROM `history` WHERE `h_on`='".$_GET["select"]."' ORDER BY `h_id` "; //查詢FROM 資料表 where 判斷式
+$resultub2 = mysql_query($data2);
+while ($row2 = mysql_fetch_array($resultub2)){
+    $time_2[]=$row2["h_date"];
+    $h_leafNum_2[]=intval($row2["h_leafNum"]);
+    $h_pedlength_2[]=intval($row2["h_pedlength"]);
+    $h_bifNum_2[]=intval($row2["h_bifNum"]);
+    $h_bifNum1_2[]=intval($row2["h_bifNum1"]);
+    $h_bifNum2_2[]=intval($row2["h_bifNum2"]);
+    $maturity_2[]=intval($row2["maturity"]);
+}
+$time2 = json_encode($time_2); //调用函数json_encode生成json数据。
+$data2 = array(array("name"=>"葉片數量","data"=>$h_leafNum_2),array("name"=>"花梗長度","data"=>$h_pedlength_2),array("name"=>"分岔數","data"=>$h_bifNum_2),array("name"=>"第一分岔","data"=>$h_bifNum1_2),array("name"=>"第二分岔","data"=>$h_bifNum2_2),array("name"=>"成熟度","data"=>$maturity_2));
+$data2 = json_encode($data2);
 ?>
 <!DOCTYPE html>
 <html>
@@ -82,7 +114,7 @@ ${demo.css}
 $(function () {
     Highcharts.chart('container', {
         title: {
-            text: '生長紀錄',
+            text: '近十天生長紀錄',
             x: -20 //center
         },
         subtitle: {
@@ -113,6 +145,78 @@ $(function () {
         },
         series:
           <?php echo $data; ?>
+    });
+});
+$(function () {
+    Highcharts.chart('container1', {
+        title: {
+            text: '近三十天生長紀錄',
+            x: -20 //center
+        },
+        subtitle: {
+            text: '',
+            x: -20
+        },
+        xAxis: {
+            categories: <?php echo $time1; ?>
+        },
+        yAxis: {
+            title: {
+                text: '公分(數量)'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '公分(數量)'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series:
+          <?php echo $data1; ?>
+    });
+});
+$(function () {
+    Highcharts.chart('container2', {
+        title: {
+            text: '全部生長紀錄',
+            x: -20 //center
+        },
+        subtitle: {
+            text: '',
+            x: -20
+        },
+        xAxis: {
+            categories: <?php echo $time2; ?>
+        },
+        yAxis: {
+            title: {
+                text: '公分(數量)'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '公分(數量)'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series:
+          <?php echo $data2; ?>
     });
 });
     </script>
@@ -198,54 +302,14 @@ $resultub = mysql_query($data);
     </form>
   </div>
 </div>
-<!--
-<div class="col-xs-4 col-md-4">
-<form>
-  <table>
-    <tr>
-      <td>莖高：</td>
-      <td><?php echo $row_RecHis["h_stems"];?></td>
-    </tr>
-    <tr>
-      <td>葉片大小(CM)：</td>
-      <td><?php echo $row_RecHis["h_leafsize"];?></td>
-    </tr>
-    <tr>
-      <td>葉片數量：</td>
-      <td><?php echo $row_RecHis["h_leafNum"];?></td>
-    </tr>
-    <tr>
-      <td>花梗長度(CM)：</td>
-      <td><?php echo $row_RecHis["h_pedlength"];?></td>
-    </tr>
-    <tr>
-      <td>花梗數量：</td>
-      <td><?php echo $row_RecHis["h_pedNum"];?></td>
-    </tr>
-    <tr>
-      <td>分岔數：</td>
-      <td><?php echo $row_RecHis["h_bifNum"];?></td>
-    </tr>
-    <tr>
-      <td>第一分岔：</td>
-      <td><?php echo $row_RecHis["h_bifNum1"];?></td>
-    </tr>
-    <tr>
-      <td>第二分岔：</td>
-      <td><?php echo $row_RecHis["h_bifNum2"];?></td>
-    </tr>
-    <tr>
-      <td>日期：</td>
-      <td><input type="text" placeholder="Date picker" id="date1" name="date1" onChange="submit()"></td>
-    </tr>
-  </table>
-</form>
-</div>
--->
 </div>
 
 <div class="col-xs-12 col-md-12">
-  <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div><!--折線圖-->
+  <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div><!--近10天折線圖-->
+  <br>
+  <div id="container1" style="min-width: 400px; height: 400px; margin: 0 auto"></div><!--30天折線圖-->
+  <br>
+  <div id="container2" style="min-width: 400px; height: 400px; margin: 0 auto"></div><!--全部折線圖-->
 </div>
 <div class="col-xs-2 col-md-2"></div>
 <div class="col-xs-8 col-md-8">
