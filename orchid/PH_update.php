@@ -14,7 +14,6 @@ if(isset($_POST["action"])&&($_POST["action"]=="update")){
         mysql_query($sql)or die(mysql_error());
         header("Location: PH2.php");
       }
-      
     }
 $sql_db = "SELECT * FROM `history` WHERE `h_id`=".$_GET["id"];
 $result = mysql_query($sql_db);

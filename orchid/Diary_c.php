@@ -113,7 +113,6 @@ while($rowub = mysql_fetch_array($resultub)){ //顯示資料
 <div class="col-xs-12 col-md-8" style="text-align: center;">© 2016 腎藥蘭花管理系統 ©</div>
 <div class="col-xs-12 col-md-2"></div>
 </div><!--div放白色透明度60%結束-->
-<div id="gotop">˄</div>
 </body>
 <script type="text/javascript">/*這為左邊菜單的JS，來源http://codepen.io/vkbansal/pen/QbapGz*/
   'use strict';
@@ -137,19 +136,5 @@ burger.addEventListener('click', function (e) {
 		    startDate: moment()
 		});
 	});
-
-	$("#gotop").click(function(){
-    jQuery("html,body").animate({
-        scrollTop:0
-    },1000);
-});
-$(window).scroll(function() {
-    if ( $(this).scrollTop() > 300){
-        $('#gotop').fadeIn("fast");
-    } else {
-        $('#gotop').stop().fadeOut("fast");
-    }
-});
-
 </script>
 </html>

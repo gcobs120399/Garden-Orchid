@@ -253,6 +253,7 @@ $(function () {
         <li><a href="prediction.php">生長預測</a></li>
         <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
         <li><a href="Diary.php">日誌</a></li>
+        <li><a href="?logout=true">登出</a></li>
       </ul>
     </div>
   </div>
@@ -299,6 +300,7 @@ $resultub = mysql_query($data);
         <option value="<?php echo $rowub["f_id"];?>"><?php echo $rowub["f_biology"];?></option>
         <?php endwhile?>
       </select>
+      <a href="PH2.php?id=<?php echo $row_RecFlo["f_id"];?>">觀看列表</a>
     </form>
   </div>
 </div>

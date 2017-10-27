@@ -131,6 +131,7 @@ $(function () {
         <li class="active"><a href="prediction.php">生長預測</a></li>
         <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
         <li><a href="Diary.php">日誌</a></li>
+        <li><a href="?logout=true">登出</a></li>
       </ul>
     </div>
   </div>

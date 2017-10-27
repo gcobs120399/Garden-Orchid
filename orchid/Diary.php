@@ -170,6 +170,7 @@ $count=0;
         <li><a href="prediction.php">生長預測</a></li>
         <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
         <li class="active"><a href="Diary.php">日誌</a></li>
+        <li><a href="?logout=true">登出</a></li>
       </ul>
     </div>
   </div>
@@ -257,7 +258,6 @@ while($rowub1 = mysql_fetch_array($resultub1)){ //顯示資料
 
 <div class="col-xs-12 col-md-12" style="text-align: center;">© 2016 腎藥蘭花管理系統 ©</div>
 
-<div id="gotop">˄</div>
 
 <!--呆的巡覽列-->
 <script src="./js/jquery.min.js"></script>
@@ -289,18 +289,5 @@ burger.addEventListener('click', function (e) {
 		    startDate: moment()
 		});
 	});
-
-	$("#gotop").click(function(){/*至頂按鈕*/
-    jQuery("html,body").animate({
-        scrollTop:0
-    },1000);
-});
-$(window).scroll(function() {/*至頂按鈕*/
-    if ( $(this).scrollTop() > 300){
-        $('#gotop').fadeIn("fast");
-    } else {
-        $('#gotop').stop().fadeOut("fast");
-    }
-});
 </script>
 </html>
