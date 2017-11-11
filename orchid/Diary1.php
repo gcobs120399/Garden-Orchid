@@ -69,7 +69,7 @@ $total_records = mysql_num_rows($all_RecFlower);
 <html>
 <head>
   <meta  http-equiv="Content-Type" content="text/html;charset=utf-8">
-  <title>作物日誌</title>
+  <title>腎藥蘭花管理系統</title>
     <script language="javascript">
     function deletesure(){
       if (confirm('\n您確定要刪除此筆日誌嗎?\n刪除後無法恢復!\n')) return true;
@@ -80,7 +80,7 @@ $total_records = mysql_num_rows($all_RecFlower);
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
-<link href="./css/navbar-fixed-top.css" rel="stylesheet"> 
+<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
 <!--呆-->
@@ -188,8 +188,7 @@ $(function() {
     </div>
   </div>
 </nav>
-<br>
-<br>
+<br><br><br>
 <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">日誌</h1>
 <!--
 <div style="text-align:center;">

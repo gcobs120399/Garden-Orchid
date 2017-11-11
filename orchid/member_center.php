@@ -2,7 +2,6 @@
 header("Content-Type: text/html; charset=utf-8");
 require_once("MYSQL.php");
 session_start();
-
 //檢查是否經過登入
 if(!isset($_SESSION["loginMember"]) || ($_SESSION["loginMember"]=="")){
   header("Location: index.php");
@@ -20,16 +19,16 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
 ?>
 <html lang="en">
 <head>
-<title>腎藥蘭花管理系統</title>
+  <title>腎藥蘭花管理系統</title>
 <!--呆的巡覽列-->
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="./css/bootstrap.min.css" rel="stylesheet">
-<link href="./css/navbar-fixed-top.css" rel="stylesheet"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
 <!--[if lt IE 9]><script src=~/Scripts/AssetsBS3/ie8-responsive-file-warning.js></script><![endif]-->
-<script src="./js/ie-emulation-modes-warning.js"></script> 
-<link rel="icon" href="./img/title.png">
+  <script src="./js/ie-emulation-modes-warning.js"></script> 
+  <link rel="icon" href="./img/title.png">
 <!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]-->
 <!--呆-->
 
@@ -74,82 +73,37 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
         <li><a href="prediction.php">生長預測</a></li>
         <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
         <li><a href="Diary.php">日誌</a></li>
+        <li><a href="member_update.php">修改資料</a></li>
         <li><a href="?logout=true">登出</a></li>
       </ul>
     </div>
   </div>
 </nav>
-
-<div class=" col-xs-1 col-md-1">
- <!--旁邊菜單nav_burger
- <nav class="burger">
-      <a href="#" class="burger__button" id="burger-button">
-        <span class="burger__button__icon"></span>
-      </a>
-      <ul class="burger__menu">
-        <li><a href="member_center.php">首頁</a></li>
-        <li><a href="GMM.php">溫室管理</a></li>
-        <li><a href="DMM.php">設備管理</a></li>
-        <li><a href="CM.php">作物管理</a></li>
-        <li><a href="PH.php?select=1">生產履歷</a></li>
-        <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
-        <li><a href="Diary.php">日誌</a></li>
-      </ul>
-    </nav>-->
-</div>
-
-
+<div class=" col-xs-1 col-md-1"></div>
 <div class="container col-xs-10 col-md-10">
   <!--內文-->
-    <h1 style="text-align:center;">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</h1>
-    <!--按鈕
-    <div style="text-align:center;">
-      <input type="button" class="btn btn-info btn-lg" size="300" value="溫室管理" onclick="location.href='GMM.php'">
-      <input type="button" class="btn btn-info btn-lg" size="12" value="設備管理" onclick="location.href='SM.php'">
-      <input type="button" class="btn btn-info btn-lg" size="12" value="作物管理" onclick="location.href='CM.php'">
-      <input type="button" class="btn btn-info btn-lg" size="12" value="生產履歷" onclick="location.href='PH2.php'">
-      <input type="button" class="btn btn-info btn-lg" size="12" value="溫室環境監控" onclick="location.href='GEMM.php'">
-      <input type="button" class="btn btn-info btn-lg" size="12" value="日誌" onclick="location.href='Diary.php'">
-    </div>-->
-
-    <hr>
-    <div style="background: rgba(100%,100%,100%,0.6); margin: 0 auto;"><!--div放白色背景透明度60%開始-->
-
-        <div style="text-align: center"><h3><img src="img/LOGO.png" alt="LOGO" width="80" height="50">豐田蘭園</h3></div>
-      
-        <div style="margin-left:0px auto;margin-right:0px auto;">
-          <div style="display: table-cell;vertical-align: middle;">
-            <!--<p class="title">歡迎光臨網站會員系統</p>
-              <p class="heading"> 本會員系統擁有以下的功能：</p>
-              <ol>
-                <li>免費加入會員 。</li>
-                <li>每個會員可修改本身資料。</li>
-                <li>若是遺忘密碼，會員可由系統發出電子信函通知。</li>
-                <li>管理者可以修改、刪除會員的資料。</li>
-              </ol>
-              <p class="heading">請各位會員遵守以下規則： </p>
-              <ol>
-                <li> 遵守政府的各項有關法律法規。</li>
-                <li> 不得在發佈任何色情非法， 以及危害國家安全的言論。</li>
-                <li>嚴禁連結有關政治， 色情， 宗教， 迷信等違法訊息。</li>
-                <li> 承擔一切因您的行為而直接或間接導致的民事或刑事法律責任。</li>
-                <li> 互相尊重， 遵守互聯網絡道德；嚴禁互相惡意攻擊， 漫罵。</li>
-                <li> 管理員擁有一切管理權力。</li>
-              </ol>-->
-              <table>
-                <tr>
-                  <td style="font-size: 30px">
-                  <p>蘭園的大小約為。</p>
-                  <p>種植的蘭花品種為「腎藥蘭」。</p>
-                  <p>腎藥蘭(Renanthera Philippinensis)介紹：<p>
-                  <p>　　蘭科腎藥蘭屬的著生性多年生草本，本屬約有15種。<br>　　屬名Renanthera 是由拉丁文 renes 腎臟與希臘文 anthera 花藥組合成，意指花藥形似腎臟。<br>
-                  　　粗壯的氣生根自莖伸出，單莖直立，二列互生葉片排列如梯，厚革質葉長橢圓形，葉尖凹入，葉長約10~15㎝。<br>　　複總狀花序自葉腋伸出，花朵萼瓣發達寬大，其他花瓣較窄，脣瓣小而不明顯，中心黃色。花色橘紅，有深紅色斑紋。
-                  </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td align="center" valign="center"><img src="img/orchid1.jpg" width="90%" height="50%"></td>
-                </tr>
+  <h1 style="text-align:center;">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</h1>
+  <hr>
+  <div style="background: rgba(100%,100%,100%,0.6); margin: 0 auto;"><!--div放白色背景透明度60%開始-->
+  
+    <div style="text-align: center"><h1><img src="img/LOGO.png" alt="LOGO" width="80" height="50">豐田蘭園</h1></div>
+    <div style="margin-left:0px auto;margin-right:0px auto;">
+      <div style="display: table-cell;vertical-align: middle;">
+        <table>
+          <tr>
+          <td style="font-size: 30px">
+            <p>蘭園的大小約為。</p>
+            <p>種植的蘭花品種為「腎藥蘭」。</p>
+            <p>腎藥蘭(Renanthera Philippinensis)介紹：<p>
+            <p>　　蘭科腎藥蘭屬的著生性多年生草本，本屬約有15種。<br>
+            　　屬名Renanthera 是由拉丁文 renes 腎臟與希臘文 anthera 花藥組合成，意指花藥形似腎臟。<br>
+            　　粗壯的氣生根自莖伸出，單莖直立，二列互生葉片排列如梯，厚革質葉長橢圓形，葉尖凹入，葉長約10~15㎝。<br>　　複總狀花序自葉腋伸出，花朵萼瓣發達寬大，其他花瓣較窄，脣瓣小而不明顯，中心黃色。花色橘紅，有深紅色斑紋。
+            </p>
+          </td>
+          </tr>
+          <tr>
+          <td align="center" valign="center"><img src="img/orchid1.jpg" width="90%" height="50%"></td>
+          </tr>
                 <!--<tr>
                   <td style="font-size: 30px">種植的蘭花品種為「腎藥蘭」。<p></td>
                 </tr>
@@ -162,31 +116,13 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
                 <tr>
                   <td style="font-size: 30px">粗壯的氣生根自莖伸出，單莖直立，二列互生葉片排列如梯，厚革質葉長橢圓形，葉尖凹入，葉長約10~15㎝。<p>複總狀花序自葉腋伸出，花朵萼瓣發達寬大，其他花瓣較窄，脣瓣小而不明顯，中心黃色。花色橘紅，有深紅色斑紋。<p></td>
                 </tr>-->
-              </table>
-          </div>
+        </table>
+    </div>
+    <div style="display: table-cell;vertical-align: middle;"></div>
+</div>
 
-              <div style="display: table-cell;vertical-align: middle;">
-                <!--<p class="heading"><strong>會員系統</strong></p>
-                <p><strong><?php echo $row_RecMember["m_name"];?></strong> 您好。</p>
-                <p>您總共登入了 <?php echo $row_RecMember["m_login"];?> 次。<br>
-                    本次登入的時間為：<br>
-                <?php echo $row_RecMember["m_logintime"];?></p>
-                <a href="member_update.php">修改資料</a> | <a href="?logout=true">登出系統</a>
-                <table>
-                  <tr>
-                   <td><img src="img/orchid1.jpg" width="90%" height="50%"></td>
-                  </tr>
-                  
-                </table>-->
-              </div>
-        </div>
-
-  <footer align="center">
-    © 2016 腎藥蘭花管理系統 ©
-  </footer>
+  <footer align="center">© 2016 腎藥蘭花管理系統 ©</footer>
 </div><!--div放白色透明度60%結束-->
-
-  
 </div>
 <!--呆的巡覽列-->
 <script src="./js/jquery.min.js"></script>
@@ -194,8 +130,6 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
 <script src="./js/ie10-viewport-bug-workaround.js"></script>
 <!--呆-->
 </body>
-
-
 <script type="text/javascript">/*這為左邊菜單的JS，來源http://codepen.io/vkbansal/pen/QbapGz*/
   'use strict';
 var burger = document.getElementById('burger-button');

@@ -97,13 +97,13 @@ if(isset($_POST["action"])&&($_POST["action"]=="update")){
 <html>
 <head>
 	<meta  http-equiv="Content-Type" content="text/html;charset=utf-8">
-	<title>日誌修改</title>
+	<title>腎藥蘭花管理系統</title>
 <!--呆的巡覽列-->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
-<link href="./css/navbar-fixed-top.css" rel="stylesheet"> 
+<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
 <!--呆-->
@@ -155,9 +155,8 @@ if(isset($_POST["action"])&&($_POST["action"]=="update")){
     </div>
   </div>
 </nav>
-<br>
-<br>
-<h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">日誌</h1>
+<br><br><br>
+<h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">日誌修改</h1>
 <!--<div style="text-align:center;">
   <input type="button" class="btn btn-info" size="12" value="溫室管理" onclick="location.href='GMM.php'">
   <input type="button" class="btn btn-info" size="12" value="設備管理" onclick="location.href='DMM.php'">

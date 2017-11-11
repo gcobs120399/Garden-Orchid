@@ -62,7 +62,7 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
-<link href="./css/navbar-fixed-top.css" rel="stylesheet"> 
+<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
 <!--[if lt IE 9]><script src=~/Scripts/AssetsBS3/ie8-responsive-file-warning.js></script><![endif]-->
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]-->
@@ -102,25 +102,9 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
     </div>
   </div>
 </nav>
-
+<br><br>
 <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</h1>
-    <div class="col-xs-2">
- <!--旁邊菜單nav_burger
- <nav class="burger">
-      <a href="#" class="burger__button" id="burger-button">
-        <span class="burger__button__icon"></span>
-      </a>
-      <ul class="burger__menu">
-        <li><a href="member_center.php">首頁</a></li>
-        <li><a href="GMM.php">溫室管理</a></li>
-        <li><a href="DMM.php">設備管理</a></li>
-        <li><a href="CM.php">作物管理</a></li>
-        <li><a href="PH2.php">生產履歷</a></li>
-        <li><a href="GEMM.php">溫室環境監控</a></li>
-        <li><a href="Diary.php">日誌</a></li>
-      </ul>
-    </nav>-->
-</div>
+<div class="col-xs-2"></div>
 <div style="background: rgba(100%,100%,100%,0.6);" class="col-xs-12"><!--div放白色背景透明度60%開始-->
 <table width="780" border="0" align="center" cellpadding="4" cellspacing="0">
   <tr>
@@ -131,7 +115,7 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
     <table width="100%" border="5">
       <tr valign="top">
         <td class="tdrline"><p class="title">歡迎光臨農業物聯生產管理系統</p>
-          <p>感謝各位來到蘭花管理系統， 所有的會員功能都必須經由登入後才能使用，請您在右方視窗中執行登入動作。</p>
+          <p>感謝各位來到腎藥蘭花管理系統， 所有的會員功能都必須經由登入後才能使用，請您在右方視窗中執行登入動作。</p>
           <p class="heading"> 本會員系統擁有以下的功能：</p>
           <ol>
             <li>免費加入會員 。</li>

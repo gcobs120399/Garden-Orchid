@@ -68,7 +68,7 @@ $total_pages = ceil($total_records/$pageRow_records);
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
-<link href="./css/navbar-fixed-top.css" rel="stylesheet"> 
+<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
 <!--呆-->
@@ -165,7 +165,8 @@ function btnDivH_onclick() {
     </div>
   </div>
 </nav>
-<h2 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">作物管理</h2>
+<br><br><br>
+<h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">作物管理</h1>
 <div class="row col-xs-12" style="display:none" id="div1">
   <iframe name="new" style="width: 30%;" marginwidth="0" marginheight="0" onload="Javascript:SetCwinHeight()"  scrolling="No" frameborder="0" id="new"></iframe><br>
   <!--<iframe name="update" style="width: 30%;" marginwidth="0" marginheight="0" onload="Javascript:SetCwinHeight1()"  scrolling="No" frameborder="0" id="new"></iframe>-->

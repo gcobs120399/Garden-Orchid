@@ -62,7 +62,7 @@ $total_pages = ceil($total_records/$pageRow_records);
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
-<link href="./css/navbar-fixed-top.css" rel="stylesheet"> 
+<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
 <!--呆-->
@@ -119,7 +119,8 @@ $total_pages = ceil($total_records/$pageRow_records);
 </nav>
 
 <!--<h1>設備管理</h1>-->
-<h2 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">設備管理</h2>
+<br><br><br>
+<h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">設備管理</h1>
 <form name="fromCM" method="" action="">
 <hr>
 

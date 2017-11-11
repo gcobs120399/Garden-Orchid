@@ -47,7 +47,7 @@ if (isset($_GET["logout"]) && ($_GET["logout"]=="true")) {
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
-<link href="./css/navbar-fixed-top.css" rel="stylesheet"> 
+<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
 <!--呆-->
@@ -107,6 +107,7 @@ alert('資料修改成功。');
 window.location.href='SM.php';
 </script>
 <?php }?>
+<br><br><br>
 <div class="col-xs-12">
 	<h2><img src="img/LOGO.png" alt="LOGO" width="80" height="50">修改設備</h2>
 </div>

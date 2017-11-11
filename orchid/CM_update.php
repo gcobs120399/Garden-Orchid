@@ -106,7 +106,7 @@ window.location.href='CM.php';
 </nav>
 <br><br><br>
 <div class="row col-xs-12">
-	<h2><img src="img/LOGO.png" alt="LOGO" width="80" height="50">修改作物</h2>
+	<h1><img src="img/LOGO.png" alt="LOGO" width="80" height="50">修改作物</h1>
 </div>
 <hr>
 <div class="col-xs-2 col-md-2"></div>
@@ -124,7 +124,7 @@ window.location.href='CM.php';
 		<tr >
 			<td colspan="2">
 			    <input name="f_id" type="hidden" id="f_id" value="<?php echo $row_result["f_id"];?>">
-				<input name="action" type="hidden" id="action" value="update">
+				  <input name="action" type="hidden" id="action" value="update">
             	<input type="submit" name="Submit2" class="btn btn-info" value="送出">
             	<input type="reset" name="Submit3" class="btn btn-info" value="重設資料">
 				<input type="button" name="Submit" class="btn btn-info" value="回上一頁" onClick="window.history.back();">
