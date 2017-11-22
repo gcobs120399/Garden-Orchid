@@ -95,7 +95,7 @@ while($rowub = mysql_fetch_array($resultub)){ //顯示資料
 ?>
   <div class="col-md-4">
 
-    <div class="thumbnail" style="text-align:center;">
+    <div class="thumbnail" style="text-align:center;font-size: 20px;">
     <!--<?php if(($row_RecPic['p_username']==$rowub["m_username"])&&($row_RecPic['filepic']!="")){?>
         <a href="Diary_view.php?id=<?php echo $rowub["m_id"];?>"><img alt="<?php echo $rowub["m_username"];?>的日誌" width="200" height="200" src="<?php echo $row_RecPic['filepic']; ?>"></a>
       <?php } ?>-->
@@ -110,7 +110,7 @@ while($rowub = mysql_fetch_array($resultub)){ //顯示資料
   <div class="col-md-2"></div>
 </div>
 <div class="col-xs-12 col-md-2"></div>
-<div class="col-xs-12 col-md-8" style="text-align: center;">© 2016 腎藥蘭花管理系統 ©</div>
+<div class="col-xs-12 col-md-8" style="text-align: center;font-size: 20px;">© 2016 腎藥蘭花管理系統 ©</div>
 <div class="col-xs-12 col-md-2"></div>
 </div><!--div放白色透明度60%結束-->
 </body>

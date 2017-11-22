@@ -81,7 +81,7 @@ $total_pages = ceil($total_records/$pageRow_records);
 <h1>歷史紀錄</h1>
 <form name="fromCM" method="" action="">
 <hr>
-<table width="90%" border="0px" align="center" cellpadding="4" cellspacing="0">
+<table width="90%" border="0px" align="center" cellpadding="4" cellspacing="0" style="font-size: 20px;">
   <tr>
     <td class="tdbline"><table width="100%" border="0px" cellspacing="0" cellpadding="10">
       <tr valign="top">

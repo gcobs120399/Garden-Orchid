@@ -107,7 +107,7 @@ $total_pages = ceil($total_records/$pageRow_records);
         </button>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav"  style="font-size: 20px;">
         <li><a href="member_center.php">首頁</a></li>
         <li class="active"><a href="GMM.php">溫室管理</a></li>
         <li><a href="SM.php">設備管理</a></li>
@@ -116,6 +116,7 @@ $total_pages = ceil($total_records/$pageRow_records);
         <li><a href="prediction.php">生長預測</a></li>
         <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
         <li><a href="Diary.php">日誌</a></li>
+        <li><a href="member_update.php">修改資料</a></li>
         <li><a href="?logout=true">登出</a></li>
       </ul>
     </div>
@@ -151,7 +152,7 @@ $total_pages = ceil($total_records/$pageRow_records);
 <input type="button" class="btn btn-info" size="12" value="回首頁" onclick="location.href='index.php'">
 </form>-->
 <div style="background: rgba(100%,100%,100%,0.6);" class=" col-xs-8 col-md-8"><!--div放白色背景透明度60%開始-->
-<table width="95%" border="0px" align="center" cellpadding="4" cellspacing="0">
+<table width="95%" border="0px" align="center" cellpadding="4" cellspacing="0"  style="font-size: 22px;">
   <tr>
     <td class="tdbline"><table width="100%" border="0px" cellspacing="0" cellpadding="10">
       <tr valign="top">
@@ -162,7 +163,7 @@ $total_pages = ceil($total_records/$pageRow_records);
              <tr>
               <th bgcolor="#CCCCCC" style="text-align:center;"><p>溫室名稱</p></th>
               <th bgcolor="#CCCCCC" style="text-align:center;"><p>單位</p></th>
-              <th bgcolor="#CCCCCC" style="text-align:center;"><p>使用者</p></th>
+              <!--<th bgcolor="#CCCCCC" style="text-align:center;"><p>使用者</p></th>-->
               <th bgcolor="#CCCCCC" style="text-align:center;"><p>地址</p></th>
               <th bgcolor="#CCCCCC" style="text-align:center;"><p>溫室建置日</p></th>
               <th bgcolor="#CCCCCC" style="text-align:center;"><p>時間</p></th>
@@ -171,9 +172,9 @@ $total_pages = ceil($total_records/$pageRow_records);
       <?php while($row_RecFlower=mysql_fetch_assoc($RecFlower)){ ?>
             <tr>
               <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["gh_name"];?></p></td>
-              <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["gh_num"];?></p></td>
-              <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["gh_user"];?></p></td>
-              <td width="15%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["gh_add"];?></p></td>
+              <td width="5%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["gh_num"];?></p></td>
+              <!--<td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["gh_user"];?></p></td>-->
+              <td width="20%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["gh_add"];?></p></td>
               <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["gh_data"];?></p></td>
               <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["gh_time"];?></p></td>
               <td width="5%" align="center" bgcolor="#FFFFFF"><p><a href="GMM_update.php?id=<?php echo $row_RecFlower["gh_id"];?>">修改</a><br>

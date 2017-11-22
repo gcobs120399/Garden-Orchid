@@ -11,7 +11,7 @@ $count=0;
 <html>
 <head>
 	<meta  http-equiv="Content-Type" content="text/html;charset=utf-8">
-	<title>日誌</title>
+	<title>腎藥蘭花管理系統</title>
   <!--呆的巡覽列-->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -61,8 +61,8 @@ $count=0;
         <li class="active"><a href="Diary_c.php">日誌</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">登入 </a></li>
-      <li><a href="#">註冊</a></li>
+      <li><a href="index.php">登入 </a></li>
+      <li><a href="member_join.php">註冊</a></li> 
       </ul>
     </div>
   </div>
@@ -97,11 +97,11 @@ while($rowub = mysql_fetch_array($resultub)){ //顯示資料
       <div class="caption">
         <h3 style="text-align:center;"><?php echo $rowub['p_title']; ?></h3>
         <div style="">
-          <p>
+          <p style="font-size: 20px;">
           <?php  echo nl2br($rowub['p_text']); ?>
           </p>
         </div>
-        <span style="font-size:14px;"><?php echo $rowub['p_time']; ?></span><br>
+        <span style="font-size:16px;"><?php echo $rowub['p_time']; ?></span><br>
 <?php
 include("MYSQL.php"); //資料庫連線套用
 $data1 = "SELECT * FROM message"; //查詢FROM 資料表 where 判斷式(府和判斷式的才搜尋

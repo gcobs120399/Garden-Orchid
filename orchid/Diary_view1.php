@@ -79,8 +79,8 @@ $total_records = mysql_num_rows($all_RecFlower);
         <li class="active"><a href="Diary_c.php">日誌</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">登入 </a></li>
-      <li><a href="#">註冊</a></li>
+      <li><a href="index.php">登入 </a></li>
+      <li><a href="member_join.php">註冊</a></li> 
       </ul>
     </div>
   </div>
@@ -106,7 +106,7 @@ $total_records = mysql_num_rows($all_RecFlower);
       <?php } ?>
       <div class="caption">
         <a style="color:black;font-weight:border;" href="Diary1.php?id=<?php echo $row_RecView["p_id"];?>"><h3 style="text-align:center;"><?php echo $row_RecView['p_title']; ?></h3></a>
-        <p>
+        <p style="font-size: 20px;">
         <?php  echo nl2br($row_RecView['p_text']); ?>
         </p>
         <span style="font-size:14px;"><?php echo $row_RecView['p_time']; ?></span>
@@ -125,10 +125,10 @@ $total_records = mysql_num_rows($all_RecFlower);
       </p>
     </div>
       <div class="thumbnail">
-      <p>留言：</p>
+      <p style="font-size: 20px;">留言：</p>
       <form method="POST" name="Dvform" >
         <input type="text" name="s_name" id="s_name" placeholder="您的暱稱"><br>
-        <span style="font-size:14px;font-weight:border;color:red;">未留暱稱，將以訪客身分留言。</span>
+        <span style="font-size:16px;font-weight:border;color:red;">未留暱稱，將以訪客身分留言。</span>
         <textarea rows="2" style="width:85%" wrap="virtual" name="s_text" id="s_text" placeholder="我要留言..."></textarea>
         <input type="hidden" id="s_on" name="s_on" readonly="readonly" value="<?php echo $row_RecView['p_id']; ?>">
         <input name="action" type="hidden" id="action" value="join">

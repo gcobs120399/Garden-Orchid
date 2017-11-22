@@ -149,7 +149,7 @@ function checkmail(myEmail) {
         </button>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" style="font-size: 20px;">
         <li class="active"><a href="member_center.php">首頁</a></li>
         <li><a href="GMM.php">溫室管理</a></li>
         <li><a href="SM.php">設備管理</a></li>
@@ -157,6 +157,8 @@ function checkmail(myEmail) {
         <li><a href="PH.php?select=1">生產履歷</a></li>
         <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
         <li><a href="Diary.php">日誌</a></li>
+        <li><a href="member_update.php">修改資料</a></li>
+        <li><a href="?logout=true">登出</a></li>
       </ul>
     </div>
   </div>
@@ -168,10 +170,10 @@ function checkmail(myEmail) {
     <td><img src="img/LOGO.png" alt="LOGO" width="80" height="50"><h2>會員系統</h2></td>
   </tr>
   <tr>
-    <td><table width="100%" border="0" cellspacing="0" cellpadding="10">
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="10" style="font-size: 20px;">
       <tr valign="top">
         <td><form action="" method="POST" name="formJoin" id="formJoin" onSubmit="return checkForm();">
-          <p style="font-size: 16px;font-weight:bold;">修改資料</p>
+          <p style="font-size: 20px;font-weight:bold;">修改資料</p>
           <div class="dataDiv">
             <hr size="1" />
             <p class="heading">帳號資料</p>
@@ -184,7 +186,7 @@ function checkmail(myEmail) {
             <p><strong>確認密碼</strong> ：
               <input name="m_passwdrecheck" type="password" class="normalinput" id="m_passwdrecheck">
               <br>
-              <span style="font-style: italic;">若不修改密碼，請不要填寫。若要修改，請輸入密碼二次。<br>
+              <span style="font-style: italic;font-size: 16px;">若不修改密碼，請不要填寫。若要修改，請輸入密碼二次。<br>
               若修改密碼，系統會自動登出，請用新密碼登入。</span></p>
             <hr size="1" />
             <p >個人資料</p>
@@ -200,15 +202,15 @@ function checkmail(myEmail) {
             <p><strong>生　　日</strong>：
                 <input name="m_birthday" type="date" class="normalinput" id="m_birthday" value="<?php echo $row_RecMember["m_birthday"];?>">
                 <font color="#FF0000">*</font> <br>
-                <span style="font-style: italic;">為西元格式(YYYY-MM-DD)。 </span></p>
+                <span style="font-style: italic;font-size: 16px;">為西元格式(YYYY-MM-DD)。 </span></p>
             <p><strong>電子郵件</strong>：
                 <input name="m_email" type="text" class="normalinput" id="m_email" value="<?php echo $row_RecMember["m_email"];?>">
                 <font color="#FF0000">*</font> </p>
-            <p style="font-style: italic;">請確定此電子郵件為可使用狀態，以方便未來系統使用，如補寄會員密碼信。</p>
+            <p style="font-style: italic;font-size: 16px;">請確定此電子郵件為可使用狀態，以方便未來系統使用，如補寄會員密碼信。</p>
             <p><strong>個人網頁</strong>：
                 <input name="m_url" type="text" class="normalinput" id="m_url" value="<?php echo $row_RecMember["m_url"];?>">
                 <br>
-                <span style="font-style: italic;">請以「http://」 為開頭。</span> </p>
+                <span style="font-style: italic;font-size: 16px;">請以「http://」 為開頭。</span> </p>
             <p><strong>電　　話</strong>：
                 <input name="m_phone" type="text" class="normalinput" id="m_phone" value="<?php echo $row_RecMember["m_phone"];?>">
             </p>
@@ -221,12 +223,12 @@ function checkmail(myEmail) {
           <p align="center">
             <input name="m_id" type="hidden" id="m_id" value="<?php echo $row_RecMember["m_id"];?>">
             <input name="action" type="hidden" id="action" value="update">
-            <input type="submit" class="btn btn-info" name="Submit2" value="修改資料">
-            <input type="reset" class="btn btn-info" name="Submit3" value="重設資料">
-            <input type="button" class="btn btn-info" name="Submit" value="回上一頁" onClick="window.history.back();">
+            <input type="submit" class="btn btn-info" name="Submit2" value="修改資料" style="font-size: 18px;">
+            <input type="reset" class="btn btn-info" name="Submit3" value="重設資料" style="font-size: 18px;">
+            <input type="button" class="btn btn-info" name="Submit" value="回上一頁" onClick="window.history.back();" style="font-size: 18px;">
           </p>
         </form></td>
-        <td width="200">
+        <td width="300">
         <div class="col-xs-12"></div><div class="col-xs-12"></div>
 <div class="col-xs-12">
           <p class="heading"><strong>會員系統</strong></p>
@@ -234,14 +236,14 @@ function checkmail(myEmail) {
             <p>您總共登入了 <?php echo $row_RecMember["m_login"];?> 次。<br>
             本次登入的時間為：<br>
             <?php echo $row_RecMember["m_logintime"];?></p>
-            <p align="center"><a href="member_center.php">會員中心</a> | <a href="?logout=true">登出系統</a></p>
+            
 </div>
         <div class="col-xs-12"></div><div class="col-xs-12"></div></td>
       </tr>
     </table></td>
   </tr>
   <tr>
-    <td align="center" background="images/album_r2_c1.jpg" class="trademark">© 2016 腎藥蘭花管理系統 ©</td>
+    <td align="center" background="images/album_r2_c1.jpg" class="trademark" style="font-size: 20px;">© 2016 腎藥蘭花管理系統 ©</td>
   </tr>
 </table>
 </div><!--div放白色透明度60%結束-->

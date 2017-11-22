@@ -174,7 +174,7 @@ $(function() {
         </button>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" style="font-size: 20px;">
         <li><a href="member_center.php">首頁</a></li>
         <li><a href="GMM.php">溫室管理</a></li>
         <li><a href="SM.php">設備管理</a></li>
@@ -183,6 +183,7 @@ $(function() {
         <li><a href="prediction.php">生長預測</a></li>
         <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
         <li class="active"><a href="Diary.php">日誌</a></li>
+        <li><a href="member_update.php">修改資料</a></li>
         <li><a href="?logout=true">登出</a></li>
       </ul>
     </div>
@@ -232,10 +233,10 @@ while($rowub = mysql_fetch_array($resultub)){ //顯示資料
       <?php } ?>
       <div class="caption">
         <a style="color:black;font-weight:border;" href="Diary1.php?id=<?php echo $rowub["p_id"];?>"><h3 style="text-align:center;"><?php echo $rowub['p_title']; ?></h3></a>
-        <p>
+        <p style="font-size: 20px;">
         <?php  echo nl2br($rowub['p_text']); ?>
         </p>
-        <span style="font-size:14px;"><?php echo $rowub['p_time']; ?></span>
+        <span style="font-size:16px;"><?php echo $rowub['p_time']; ?></span>
         <div id="fb-root"></div><!--分享-->
     <script>
       (function(d, s, id) {
@@ -248,19 +249,19 @@ while($rowub = mysql_fetch_array($resultub)){ //顯示資料
     </script>
     <div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
       </div>
-      <p style="text-align:right;"><a class="btn btn-default" role="button" href="Diary_update.php?id=<?php echo $rowub["p_id"];?>">編輯</a>
-      <a class="btn btn-default" role="button" href="?action=delete&id=<?php echo $rowub["p_id"];?>" onClick="return deletesure();">刪除</a>
+      <p style="text-align:right;"><a class="btn btn-default" role="button" href="Diary_update.php?id=<?php echo $rowub["p_id"];?>" style="font-size: 16px;">編輯</a>
+      <a class="btn btn-default" role="button" href="?action=delete&id=<?php echo $rowub["p_id"];?>" onClick="return deletesure();" style="font-size: 16px;">刪除</a>
       </p>
     </div>
 <?php }?>
       <div class="thumbnail">
-      <p>留言：</p>
+      <p style="font-size: 20px;">留言：</p>
       <form method="POST" name="Dvform" >
         <input type="text" readonly="readonly" style="border-style:none;" name="s_name" id="s_name" value="<?php echo $row_RecMember['m_username']; ?>"><br>
         <textarea rows="2" style="width:85%" wrap="virtual" name="s_text" id="s_text" placeholder="我要留言..."></textarea>
         <input type="hidden" id="s_on" name="s_on" readonly="readonly" value="<?php echo $row_RecView['p_id']; ?>">
         <input name="action" type="hidden" id="action" value="join">
-        <input type="submit" class="btn btn-default" name="Submit" value="送出"></p>
+        <input type="submit" class="btn btn-default" name="Submit" value="送出" style="font-size: 16px;"></p>
       </form>
       <hr>
 <?php

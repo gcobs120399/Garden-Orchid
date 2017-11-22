@@ -90,7 +90,7 @@ window.location.href='CM.php';
         </button>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" style="font-size: 20px;">
         <li><a href="member_center.php">首頁</a></li>
         <li><a href="GMM.php">溫室管理</a></li>
         <li><a href="SM.php">設備管理</a></li>
@@ -99,6 +99,7 @@ window.location.href='CM.php';
         <li><a href="prediction.php">生長預測</a></li>
         <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
         <li><a href="Diary.php">日誌</a></li>
+        <li><a href="member_update.php">修改資料</a></li>
         <li><a href="?logout=true">登出</a></li>
       </ul>
     </div>
@@ -110,8 +111,8 @@ window.location.href='CM.php';
 </div>
 <hr>
 <div class="col-xs-2 col-md-2"></div>
-<div style="background: rgba(100%,100%,100%,0.6);" class="row col-xs-8 col-md-8"><!--div放白色背景透明度60%開始-->
-	<table align="center" >
+<div class="row col-xs-8 col-md-8"><!--div放白色背景透明度60%開始-->
+	<table align="center" style="font-size: 20px;">
 	<form name="cmform" method="post" onSubmit="return checkForm();" >
 		<tr>
 			<td>帳號:</td>
@@ -125,9 +126,9 @@ window.location.href='CM.php';
 			<td colspan="2">
 			    <input name="f_id" type="hidden" id="f_id" value="<?php echo $row_result["f_id"];?>">
 				  <input name="action" type="hidden" id="action" value="update">
-            	<input type="submit" name="Submit2" class="btn btn-info" value="送出">
-            	<input type="reset" name="Submit3" class="btn btn-info" value="重設資料">
-				<input type="button" name="Submit" class="btn btn-info" value="回上一頁" onClick="window.history.back();">
+            	<input type="submit" name="Submit2" class="btn btn-info" value="送出" style="font-size: 18px;">
+            	<input type="reset" name="Submit3" class="btn btn-info" value="重設資料" style="font-size: 18px;">
+				<input type="button" name="Submit" class="btn btn-info" value="回上一頁" onClick="window.history.back();" style="font-size: 18px;">
 			</td>
 		</tr>
 		<tr></tr>

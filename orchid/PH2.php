@@ -118,7 +118,7 @@ function btnDivH_onclick() {
         </button>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" style="font-size: 20px;">
         <li><a href="member_center.php">首頁</a></li>
         <li><a href="GMM.php">溫室管理</a></li>
         <li><a href="SM.php">設備管理</a></li>
@@ -127,6 +127,7 @@ function btnDivH_onclick() {
         <li><a href="prediction.php">生長預測</a></li>
         <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
         <li><a href="Diary.php">日誌</a></li>
+        <li><a href="member_update.php">修改資料</a></li>
         <li><a href="?logout=true">登出</a></li>
       </ul>
     </div>
@@ -143,7 +144,7 @@ function btnDivH_onclick() {
 
 <div style="background: rgba(100%,100%,100%,0.6);" class="row col-xs-10 col-md-10"><!--div放白色背景透明度60%開始-->
 <!--以下顯示作物列表-->
-<table width="90%" border="0px" align="center" cellpadding="4" cellspacing="0">
+<table width="90%" border="0px" align="center" cellpadding="4" cellspacing="0" style="font-size: 20px;">
   <tr>
     <td class="tdbline"><table width="100%" border="0px" cellspacing="0" cellpadding="10">
       <tr valign="top">
@@ -185,7 +186,6 @@ function btnDivH_onclick() {
                   <a href="?page=<?php echo $num_pages+1;?>">下一頁</a> | <a href="?page=<?php echo $total_pages;?>">最末頁</a>
                   <?php }?>
               </p></td>
-                <td rowspan="2"><a href="CM_join.php">新增</a></td>
             </tr>
 
           </table>          <p>&nbsp;</p>
@@ -196,8 +196,7 @@ function btnDivH_onclick() {
   <tr>
     <td align="center">
     <div>
-    <input type="button" class="btn btn-info" size="12" value="回首頁" onclick="location.href='index.php'">
-    <input type="button" name="Submit" class="btn btn-info" value="回上一頁" onClick="window.history.back();">
+    <input type="button" name="Submit" class="btn btn-info" value="回上一頁" onClick="window.history.back();" style="font-size: 18px;">
     </div>
     © 2016 腎藥蘭花管理系統 ©</td>
   </tr>

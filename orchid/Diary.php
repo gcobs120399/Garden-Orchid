@@ -161,7 +161,7 @@ $count=0;
         </button>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" style="font-size: 20px;">
         <li><a href="member_center.php">首頁</a></li>
         <li><a href="GMM.php">溫室管理</a></li>
         <li><a href="SM.php">設備管理</a></li>
@@ -170,6 +170,7 @@ $count=0;
         <li><a href="prediction.php">生長預測</a></li>
         <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
         <li class="active"><a href="Diary.php">日誌</a></li>
+        <li><a href="member_update.php">修改資料</a></li>
         <li><a href="?logout=true">登出</a></li>
       </ul>
     </div>
@@ -233,7 +234,7 @@ while($rowub = mysql_fetch_array($resultub)){ //顯示資料
       <?php } ?>
       <div class="caption">
         <a style="color:black;font-weight:border;" href="Diary1.php?id=<?php echo $rowub["p_id"];?>"><h3 style="text-align:center;"><?php echo $rowub['p_title']; ?></h3></a>
-        <p>
+        <p style="font-size: 20px;">
         <?php  echo nl2br($rowub['p_text']); ?>
         </p>
         <span style="font-size:14px;"><?php echo $rowub['p_time']; ?></span><br>

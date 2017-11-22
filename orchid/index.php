@@ -106,7 +106,7 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
 <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</h1>
 <div class="col-xs-2"></div>
 <div style="background: rgba(100%,100%,100%,0.6);" class="col-xs-12"><!--div放白色背景透明度60%開始-->
-<table width="780" border="0" align="center" cellpadding="4" cellspacing="0">
+<table width="550" border="0" align="center" cellpadding="4" cellspacing="0">
   <tr>
     <td class="tdbline"><h2>會員系統</h2></td>
   </tr>
@@ -114,7 +114,7 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
     <td class="tdbline">
     <table width="100%" border="5">
       <tr valign="top">
-        <td class="tdrline"><p class="title">歡迎光臨農業物聯生產管理系統</p>
+        <!--<td class="tdrline"><p class="title">歡迎光臨農業物聯生產管理系統</p>
           <p>感謝各位來到腎藥蘭花管理系統， 所有的會員功能都必須經由登入後才能使用，請您在右方視窗中執行登入動作。</p>
           <p class="heading"> 本會員系統擁有以下的功能：</p>
           <ol>
@@ -131,32 +131,31 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
             <li> 承擔一切因您的行為而直接或間接導致的民事或刑事法律責任。</li>
             <li> 互相尊重， 遵守互聯網絡道德；嚴禁互相惡意攻擊， 漫罵。</li>
             <li> 管理員擁有一切管理權力。</li>
-          </ol></td>
+          </ol></td>-->
         <td width="200">
         <div class="boxtl col-xs-12"></div><div class="boxtr"></div>
   <div class="col-xs-12"><?php if(isset($_GET["errMsg"]) && ($_GET["errMsg"]=="1")){?>
     <div class="col-xs-12"><font color="red">登入帳號或密碼錯誤！</font></div>
     <?php }?>
-    <p class="heading">登入會員系統</p>
-    <form name="form1" method="post" action="">
+    <p class="heading" style="font-size: 28px; text-align: center;">登入會員系統</p>
+    <form name="form1" method="post" action="" style="font-size: 20px; text-align: center;">
     <p><strong>帳號：</strong>
-      <br>
       <input name="username" type="text" id="username" value="<?php if(isset($_COOKIE["remUser"])){echo $_COOKIE["remUser"];}?>">
     </p>
-    <p><strong>密碼：</strong><br>
+    <p><strong>密碼：</strong>
       <input name="passwd" type="password" id="passwd" value="<?php if(isset($_COOKIE["remPass"])){echo $_COOKIE["remPass"];}?>">
     </p>
     <p>
       <input name="rememberme" type="checkbox" id="rememberme" value="true" checked>記住我的帳號密碼。</p>
-    <p align="center">
+    <p align="center" >
       <input type="submit" name="button" class="btn btn-info" id="button" value="登入系統">
     </p>
     </form>
-    <p align="center"><a href="admin_passmail.php">忘記密碼，補寄密碼信。</a></p>
+    <!--p align="center" style="font-size: 20px; text-align: center;"><a href="admin_passmail.php">忘記密碼，補寄密碼信。</a></p>-->
     <hr size="1">
-    <p class="heading">還沒有會員帳號?</p>
-    <p>註冊帳號免費又容易</p>
-    <p align="right"><a href="member_join.php">馬上申請會員</a></p>
+    <p class="heading" style="font-size: 20px;">還沒有會員帳號?</p>
+    <p  style="font-size: 20px;">註冊帳號免費又容易</p>
+    <p align="right" style="font-size: 20px;"><a href="member_join.php">馬上申請會員</a></p>
 </div>
     <div class="col-xs-12"></div><div class="col-xs-12"></div></td>
       </tr>
@@ -164,7 +163,7 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
     </td>
   </tr>
   <tr>
-    <td align="center" background="images/album_r2_c1.jpg" class="trademark">© 2016 腎藥蘭花管理系統 ©</td>
+    <td align="center" background="images/album_r2_c1.jpg" class="trademark" style="font-size: 18px;">© 2016 腎藥蘭花管理系統 ©</td>
   </tr>
 </table>
 </div><!--div放白色背景透明度60%結束-->

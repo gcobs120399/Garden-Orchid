@@ -142,7 +142,7 @@ if(isset($_POST["action"])&&($_POST["action"]=="update")){
         </button>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" style="font-size: 20px;">
         <li><a href="member_center.php">首頁</a></li>
         <li><a href="GMM.php">溫室管理</a></li>
         <li><a href="SM.php">設備管理</a></li>
@@ -150,6 +150,7 @@ if(isset($_POST["action"])&&($_POST["action"]=="update")){
         <li><a href="PH.php?select=1">生產履歷</a></li>
         <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
         <li class="active"><a href="Diary.php">日誌</a></li>
+        <li><a href="member_update.php">修改資料</a></li>
         <li><a href="?logout=true">登出</a></li>
       </ul>
     </div>
@@ -192,16 +193,16 @@ if(isset($_POST["action"])&&($_POST["action"]=="update")){
     <img alt="..." width="300" height="300" src="<?php echo $row_result['filepic']; ?>">
     <input name="upfile" type="file">
     <span style="text-align:left;color:red;font-size:14px;">如需更改圖片，請重新上傳檔案</span>
-      <div class="caption">
-      <input type="text" name="p_title" size="14" id="p_title" value="<?php echo $row_result['p_title']; ?>"><br>
+      <div class="caption" style="font-size: 20px;">
+      <input type="text" name="p_title" id="p_title" value="<?php echo $row_result['p_title']; ?>"><br>
         <textarea rows="15" cols="60" name="p_text" id="p_text"><?php echo $row_result["p_text"]; ?></textarea><br>
         <input type="hidden" name="p_username" size="14" id="p_username" readonly="readonly" value="<?php echo $row_result["p_username"];?>">
 		    <label for="date">日期</label>
 		    <input type="text" placeholder="Date picker" id="date" name="date"><br>
         <input name="action" type="hidden" id="action" value="update">
-        <input type="submit" name="Submit2" class="btn btn-info" value="送出">
-        <input type="reset" name="Submit3" class="btn btn-info" value="重設資料">
-        <input type="button" name="Submit" class="btn btn-info" value="回上一頁" onClick="window.history.back();"></p>
+        <input type="submit" name="Submit2" class="btn btn-info" value="送出" style="font-size: 16px;">
+        <input type="reset" name="Submit3" class="btn btn-info" value="重設資料" style="font-size: 16px;">
+        <input type="button" name="Submit" class="btn btn-info" value="回上一頁" onClick="window.history.back();" style="font-size: 16px;"></p>
       </div>
     </form>
     </div>

@@ -244,7 +244,7 @@ $(function () {
         </button>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" style="font-size: 20px;">
         <li><a href="member_center.php">首頁</a></li>
         <li><a href="GMM.php">溫室管理</a></li>
         <li><a href="SM.php">設備管理</a></li>
@@ -253,6 +253,7 @@ $(function () {
         <li><a href="prediction.php">生長預測</a></li>
         <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
         <li><a href="Diary.php">日誌</a></li>
+        <li><a href="member_update.php">修改資料</a></li>
         <li><a href="?logout=true">登出</a></li>
       </ul>
     </div>
@@ -292,7 +293,7 @@ $data = "SELECT * FROM `flower` WHERE `f_username`='".$_SESSION["loginMember"]."
 $resultub = mysql_query($data);
 ?>
 <div class="col-xs-4 col-md-4">
-  <div class="thumbnail" style="text-align:center;">
+  <div class="thumbnail" style="text-align:center; font-size: 20px">
     <form action="" name="sort1" method="get">
       <select name="select" onChange="submit()">
       <option value=""><?php echo $row_RecFlo["f_biology"];?></option>

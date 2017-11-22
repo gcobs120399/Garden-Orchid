@@ -64,7 +64,7 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
         </button>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" style="font-size: 20px;">
         <li class="active"><a href="member_center.php">首頁</a></li>
         <li><a href="GMM.php">溫室管理</a></li>
         <li><a href="SM.php">設備管理</a></li>
@@ -121,7 +121,7 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
     <div style="display: table-cell;vertical-align: middle;"></div>
 </div>
 
-  <footer align="center">© 2016 腎藥蘭花管理系統 ©</footer>
+  <footer align="center" style="font-size: 18px;">© 2016 腎藥蘭花管理系統 ©</footer>
 </div><!--div放白色透明度60%結束-->
 </div>
 <!--呆的巡覽列-->

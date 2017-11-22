@@ -80,15 +80,16 @@ window.location.href='GMM.php';
         </button>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" style="font-size: 20px;">
         <li><a href="member_center.php">首頁</a></li>
-        <li><a href="GMM.php">溫室管理</a></li>
+        <li class="active"><a href="GMM.php">溫室管理</a></li>
         <li><a href="SM.php">設備管理</a></li>
-        <li class="active"><a href="CM.php">作物管理</a></li>
+        <li><a href="CM.php">作物管理</a></li>
         <li><a href="PH.php?select=1">生產履歷</a></li>
         <li><a href="prediction.php">生長預測</a></li>
         <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
         <li><a href="Diary.php">日誌</a></li>
+        <li><a href="member_update.php">修改資料</a></li>
         <li><a href="?logout=true">登出</a></li>
       </ul>
     </div>
@@ -99,8 +100,8 @@ window.location.href='GMM.php';
 	<h2><img src="img/LOGO.png" alt="LOGO" width="80" height="50">修改溫室</h2>
 </div>
 <hr>
-	<table align="center">
-		<form name="gmmform" method="post" onSubmit="return checkForm();">
+	<table align="center" style="font-size: 20px;">
+		<form name="gmmform" method="post" onSubmit="return checkForm();" >
 			<tr>
 			<td>帳號:</td>
 			<td><input type="text" name="gh_user"  size="14" id="gh_user" readonly="readonly" value="<?php echo $row_result["gh_user"]; ?>"></td>
@@ -126,9 +127,9 @@ window.location.href='GMM.php';
 			<td colspan="2">
 			    <input name="gh_id" type="hidden" id="gh_id" value="<?php echo $row_result["gh_id"];?>">
 				<input name="action" type="hidden" id="action" value="update">
-            	<input type="submit" name="Submit2" class="btn btn-info" value="送出">
-            	<input type="reset" name="Submit3" class="btn btn-info" value="重設資料">
-				<input type="button" name="Submit" class="btn btn-info" value="回上一頁" onClick="window.history.back();">
+            	<input type="submit" name="Submit2" class="btn btn-info" value="送出" style="font-size: 18px;">
+            	<input type="reset" name="Submit3" class="btn btn-info" value="重設資料" style="font-size: 18px;">
+				<input type="button" name="Submit" class="btn btn-info" value="回上一頁" onClick="window.history.back();" style="font-size: 18px;">
 			</td>
 		</tr>
 		<tr></tr>

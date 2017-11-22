@@ -6,12 +6,15 @@ session_start();
 if(!isset($_SESSION["loginMember"]) || ($_SESSION["loginMember"]=="")){
 	header("Location: index.php");
 }
-
-
 $query_RecFlower = "SELECT * FROM `history` WHERE `h_id`=".$_GET["id"];
 $RecFlower = mysql_query($query_RecFlower);
 $row_RecFlower=mysql_fetch_assoc($RecFlower);//抓花花
-
+//執行登出動作
+if(isset($_GET["logout"]) && ($_GET["logout"]=="true")){
+  unset($_SESSION["loginMember"]);
+  unset($_SESSION["memberLevel"]);
+  header("Location: index.php");
+}
 if(isset($_POST["action"])&&($_POST["action"]=="update")){
       if (isset($_POST['h_id'])) {   //isset檢查變數是否設置
         require_once 'MYSQL.php';
@@ -87,6 +90,7 @@ window.location.href='history.php';
         <li><a href="prediction.php">生長預測</a></li>
         <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
         <li><a href="Diary.php">日誌</a></li>
+        <li><a href="member_update.php">修改資料</a></li>
         <li><a href="?logout=true">登出</a></li>
       </ul>
     </div>

@@ -67,7 +67,7 @@ window.location.href='history.php';
 	<h2><img src="img/LOGO.png" alt="LOGO" width="80" height="50">新增歷史紀錄</h2>
 </div>
 <hr>
-	<table align="center" >
+	<table align="center"  style="font-size: 20px;">
 	<form name="hform" method="post" onSubmit="return checkForm();" >
 		<tr>
 			<td><input type="hidden" name="h_username" maxlength="" size="14" id="h_username" readonly="readonly" value="<?php echo $row_RecMember["m_username"];?>"></td>
@@ -111,8 +111,8 @@ window.location.href='history.php';
 		<tr>
 			<td colspan="2">
 				<input name="action" type="hidden" id="action" value="join">
-            	<input type="submit" class="btn btn-info" name="Submit2" value="送出">
-            	<input type="reset" class="btn btn-info" name="Submit3" value="重設資料">
+            	<input type="submit" class="btn btn-info" name="Submit2" value="送出" style="font-size: 18px;">
+            	<input type="reset" class="btn btn-info" name="Submit3" value="重設資料" style="font-size: 18px;">
 			</td>
 		</tr>
 		<tr></tr>
