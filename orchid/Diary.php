@@ -80,7 +80,7 @@ if(!move_uploaded_file ($filename, $destination))
 $pinfo=pathinfo($destination);
 $fname=$pinfo['basename'];
 //將資料插入到資料庫中
-$dizhi = "http://140.127.22.47/abc/"."$destination_folder"."$fname";//路徑
+$dizhi = "http://140.127.22.47/orchid/"."$destination_folder"."$fname";//路徑
 $name = $file['name'];//檔名
 $size = $file["size"];//大小
 if(isset($_POST["action"])&&($_POST["action"]=="join")){
