@@ -138,6 +138,8 @@ $(function () {
 </nav>
 
 <br>
+<br>
+<br>
 <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">作物預測紀錄</h1>
 <hr>
 
