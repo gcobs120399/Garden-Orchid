@@ -67,14 +67,24 @@ $(function () {
     Highcharts.chart('container', {
         title: {
             text: '生長預測',
-            x: -20 //center
+            x: -20, //center
         },
         subtitle: {
             text: '',
-            x: -20
+            x: -20,
+            labels:{
+              style:{
+                fontSize:'20px'
+              }
+            }
         },
         xAxis: {
-            categories:   ['2017-11-24', '2017-11-25', ]
+            categories:   ['2017-11-24', '2017-11-25', '預測'],
+            labels:{
+              style:{
+                fontSize:'20px'
+              }
+            }
         },
         yAxis: {
             title: {
@@ -83,8 +93,13 @@ $(function () {
             plotLines: [{
                 value: 0,
                 width: 1,
-                color: '#808080'
-            }]
+                color: '#808080',
+            }],
+            labels:{
+              style:{
+                fontSize:'20px'
+              }
+            }
         },
         tooltip: {
             valueSuffix: '公分'
@@ -93,7 +108,7 @@ $(function () {
             layout: 'vertical',
             align: 'right',
             verticalAlign: 'middle',
-            borderWidth: 0
+            borderWidth: 0,
         },
         series: <?php echo $data; ?>
     });
