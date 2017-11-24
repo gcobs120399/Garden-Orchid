@@ -122,7 +122,12 @@ $(function () {
             x: -20
         },
         xAxis: {
-            categories: <?php echo $time; ?>
+            categories: <?php echo $time; ?>,
+            labels:{
+              style:{
+                fontSize:'16px'
+              }
+            }
         },
         yAxis: {
             title: {
@@ -132,7 +137,12 @@ $(function () {
                 value: 0,
                 width: 1,
                 color: '#808080'
-            }]
+            }],
+            labels:{
+              style:{
+                fontSize:'20px'
+              }
+            }
         },
         tooltip: {
             valueSuffix: '公分(數量)'
@@ -158,7 +168,12 @@ $(function () {
             x: -20
         },
         xAxis: {
-            categories: <?php echo $time1; ?>
+            categories: <?php echo $time1; ?>,
+            labels:{
+              style:{
+                fontSize:'16px'
+              }
+            }
         },
         yAxis: {
             title: {
@@ -168,7 +183,12 @@ $(function () {
                 value: 0,
                 width: 1,
                 color: '#808080'
-            }]
+            }],
+            labels:{
+              style:{
+                fontSize:'20px'
+              }
+            }
         },
         tooltip: {
             valueSuffix: '公分(數量)'
@@ -194,7 +214,12 @@ $(function () {
             x: -20
         },
         xAxis: {
-            categories: <?php echo $time2; ?>
+            categories: <?php echo $time2; ?>,
+            labels:{
+              style:{
+                fontSize:'16px'
+              }
+            }
         },
         yAxis: {
             title: {
@@ -204,7 +229,12 @@ $(function () {
                 value: 0,
                 width: 1,
                 color: '#808080'
-            }]
+            }],
+            labels:{
+              style:{
+                fontSize:'20px'
+              }
+            }
         },
         tooltip: {
             valueSuffix: '公分(數量)'
