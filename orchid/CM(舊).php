@@ -11,16 +11,18 @@ if(isset($_SESSION["loginMember"]) && ($_SESSION["loginMember"]!="")){
 }
 //執行登出動作
 if(isset($_GET["logout"]) && ($_GET["logout"]=="true")){
-  unset($_SESSION["loginMember"]);
-  unset($_SESSION["memberLevel"]);
-  header("Location: two3.php");
+	unset($_SESSION["loginMember"]);
+	unset($_SESSION["memberLevel"]);
+	header("Location: index.php");
 }
 //刪除花花
 if(isset($_GET["action"])&&($_GET["action"]=="delete")){
-  $query_delMember = "DELETE FROM `flower` WHERE `f_id`=".$_GET["id"];
-  mysql_query($query_delMember);
-  //重新導向回到主畫面
-  header("Location: two4.php");
+	$query_delMember = "DELETE FROM `flower` WHERE `f_id`=".$_GET["id"];
+	mysql_query($query_delMember);
+  $query_delHis = "DELETE FROM `history` WHERE `h_on`=".$_GET["id"];
+  mysql_query($query_delHis);
+	//重新導向回到主畫面
+	header("Location: CM.php");
 }
 //選會員
 $query_RecMember = "SELECT * FROM `memberdata` WHERE `m_username`='".$_SESSION["loginMember"]."'";
@@ -56,61 +58,80 @@ $total_records = mysql_num_rows($all_RecFlower);
 $total_pages = ceil($total_records/$pageRow_records);
 ?>
 <!DOCTYPE html>
-<html lang="en-us">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
+	<meta  http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>腎藥蘭花管理系統</title>
+
+<!--呆的巡覽列-->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script language="javascript">
-    function deletesure(){
-      if (confirm('\n您確定要刪除此筆資料嗎?\n刪除後無法恢復!\n')) return true;
-      return false;
-    }
-    function SetCwinHeight(){
-      var iframeid=document.getElementById("new"); //iframe id
-      if (document.getElementById){
-        if (iframeid && !window.opera){
-          if (iframeid.contentDocument && iframeid.contentDocument.body.offsetHeight){
-            iframeid.height = iframeid.contentDocument.body.offsetHeight;
-          }else if(iframeid.Document && iframeid.Document.body.scrollHeight){
-            iframeid.height = iframeid.Document.body.scrollHeight;
-          }
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
+<script src="./js/ie-emulation-modes-warning.js"></script> 
+<link rel="icon" href="./img/title.png">
+<!--呆-->
+
+	<!-- 最新編譯和最佳化的 CSS -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<!-- 選擇性佈景主題 -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+	<!-- 最新編譯和最佳化的 JavaScript -->
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  	<script language="javascript">
+		function deletesure(){
+    	if (confirm('\n您確定要刪除此筆資料嗎?\n刪除後無法恢復!\n該筆歷史紀錄也會跟著刪除!\n')) return true;
+    	return false;
+		}
+    function SetCwinHeight()
+{
+var iframeid=document.getElementById("new"); //iframe id
+  if (document.getElementById)
+  {
+   if (iframeid && !window.opera)
+   {
+    if (iframeid.contentDocument && iframeid.contentDocument.body.offsetHeight)
+     {
+       iframeid.height = iframeid.contentDocument.body.offsetHeight;
+     }else if(iframeid.Document && iframeid.Document.body.scrollHeight)
+     {
+       iframeid.height = iframeid.Document.body.scrollHeight;
       }
     }
-    function btnDivShow_onclick() {
-          div1.style.display='';
-          }
-    function btnDivH_onclick() {
-          div1.style.display='none';
-          }
-  </script>
-<head>
-<style>
-  body{
-    font-size:18px;
-    background-image: url(img/46505.png);
-    background-size: cover;
-     font-family: 微軟正黑體;
-     background-attachment:fixed;
-  }
-  .dbg{
-    background: rgba(100%,100%,100%,0.6);
-    width:90%;
-    float:left;
-    margin-left: 5%;
-    background-attachment: fixed;
-    margin-bottom: 50px;
-  }
+   }
+}
 
-</style>
+function SetCwinHeight1()
+{
+var iframeid=document.getElementById("new"); //iframe id
+  if (document.getElementById)
+  {
+   if (iframeid && !window.opera)
+   {
+    if (iframeid.contentDocument && iframeid.contentDocument.body.offsetHeight)
+     {
+       iframeid.height = iframeid.contentDocument.body.offsetHeight;
+     }else if(iframeid.Document && iframeid.Document.body.scrollHeight)
+     {
+       iframeid.height = iframeid.Document.body.scrollHeight;
+      }
+    }
+   }
+}
+
+function btnDivShow_onclick() {
+      div1.style.display='';
+      }
+function btnDivH_onclick() {
+      div1.style.display='none';
+      }
+</script>
+<link rel="stylesheet" type="text/css" href="css/menu.css"><!--菜單CSS+頂端-->
 </head>
-<body>
-  <!--巡覽列black-->
+<body style="text-align:center;font-size:18px;background-image: url(img/46505.png);background-size: cover;background-attachment: fixed; font-family: 微軟正黑體;margin:30px">
+
+<!--巡覽列black-->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header"> 
@@ -145,33 +166,39 @@ $total_pages = ceil($total_records/$pageRow_records);
     </div>
   </div>
 </nav>
-<br><br><br><br>
-  <!-- Sidebar -->
-  <!--<div class="w3-sidebar w3-bar-block w3-animate-left " style="display:none;z-index:5" id="mySidebar">
-    <button class="w3-bar-item w3-button w3-large w3-green" onclick="w3_close()">Close &times;</button>
-    <a href="two3(1).php" class="w3-bar-item w3-button">首頁</a>
-    <a href="#" class="w3-bar-item w3-button">溫室管理</a>
-    <a href="#" class="w3-bar-item w3-button">設備管理</a>
-    <a href="two4.php" class="w3-bar-item w3-button w3-pale-blue">作物管理</a>
-    <a href="#" class="w3-bar-item w3-button">生產履歷</a>
-    <a href="#" class="w3-bar-item w3-button">生長預測</a>
-    <a href="#" class="w3-bar-item w3-button">溫室環境監控</a>
-    <a href="#" class="w3-bar-item w3-button">日誌</a>
-  </div>-->
-  <!-- Page Content -->
-  <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+<br><br><br>
+<h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">作物管理</h1>
+<div class="row col-xs-12" style="display:none" id="div1">
+  <iframe name="new" style="width: 30%;" marginwidth="0" marginheight="0" onload="Javascript:SetCwinHeight()"  scrolling="No" frameborder="0" id="new"></iframe><br>
+  <!--<iframe name="update" style="width: 30%;" marginwidth="0" marginheight="0" onload="Javascript:SetCwinHeight1()"  scrolling="No" frameborder="0" id="new"></iframe>-->
+</div>
 
-  <div>
-    <!--<button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>-->
-    <h2 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="65" height="40">作物管理</h2>
-    <div align="center" style="display:none" id="div1">
-      <iframe name="new" style="width: 80%;" onload="Javascript:SetCwinHeight()"  frameborder="0" id="new"></iframe>
-    </div>
-    <div class="dbg"><!--div放白色背景透明度60%開始-->
-    <table width="90%" border="0px" align="center" cellpadding="4" cellspacing="0">
-    <tr>
-    <td class="tdbline">
-    <table width="100%" border="0px" cellspacing="0" cellpadding="10" style="font-size: 20px;">
+<form name="fromCM" method="" action="">
+<hr>
+<div class="col-xs-2 col-md-2"></div>
+<!--旁邊菜單nav_burger
+<div class="col-xs-2 col-md-2">
+ <nav class="burger">
+      <a href="#" class="burger__button" id="burger-button">
+        <span class="burger__button__icon"></span>
+      </a>
+      <ul class="burger__menu">
+        <li><a href="member_center.php">首頁</a></li>
+        <li><a href="GMM.php">溫室管理</a></li>
+        <li><a href="DMM.php">設備管理</a></li>
+        <li><a href="CM.php">作物管理</a></li>
+        <li><a href="PH.php?select=1">生產履歷</a></li>
+        <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
+        <li><a href="Diary.php">日誌</a></li>
+      </ul>
+    </nav>
+</div>-->
+
+<div style="background: rgba(100%,100%,100%,0.6);" class="row col-xs-8 col-md-8"><!--div放白色背景透明度60%開始-->
+<!--以下顯示作物列表-->
+<table width="70%" border="0px" align="center" cellpadding="4" cellspacing="0" style="font-size: 20px;">
+  <tr>
+    <td class="tdbline"><table width="100%" border="0px" cellspacing="0" cellpadding="10">
       <tr valign="top">
         <td class="tdrline"><p class="title"><?php echo $row_RecMember["m_name"];?> 您的作物列表 </p>
           <table width="100%"  border="1px" cellpadding="0" cellspacing="0" bgcolor="#F0F0F0" >
@@ -181,10 +208,10 @@ $total_pages = ceil($total_records/$pageRow_records);
               <th width="10%" bgcolor="#CCCCCC" style="text-align:center;"><p>作物位置</p></th>
               <th width="5%" bgcolor="#CCCCCC">&nbsp;</th>
             </tr>
-      <?php while($row_RecFlower=mysql_fetch_assoc($RecFlower)){ ?>
+			<?php	while($row_RecFlower=mysql_fetch_assoc($RecFlower)){ ?>
             <tr>
               <td width="10%" align="center" bgcolor="#FFFFFF">
-                <p><a href="two7.php?id=<?php echo $row_RecFlower["f_id"];?>" target="new" onclick="return btnDivShow_onclick()"><?php echo $row_RecFlower["f_biology"];?></a></p>
+                <p><a href="CPDR_join.php?id=<?php echo $row_RecFlower["f_id"];?>" target="new" onclick="return btnDivShow_onclick()"><?php echo $row_RecFlower["f_biology"];?></a></p>
               </td>
               <!--td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["f_username"];?></p></td-->
               <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["f_location"];?></p></td>
@@ -193,7 +220,7 @@ $total_pages = ceil($total_records/$pageRow_records);
               <a href="PH2.php?id=<?php echo $row_RecFlower["f_id"];?>">查詢</a>|
               <a href="?action=delete&id=<?php echo $row_RecFlower["f_id"];?>" onClick="return deletesure();">刪除</a></p></td>
             </tr>
-      <?php }?>
+			<?php }?>
           </table>
           <hr size="1" />
           <table width="98%" border="0px" align="center" cellpadding="4" cellspacing="0">
@@ -207,7 +234,7 @@ $total_pages = ceil($total_records/$pageRow_records);
                   <a href="?page=<?php echo $num_pages+1;?>">下一頁</a> | <a href="?page=<?php echo $total_pages;?>">最末頁</a>
                   <?php }?>
               </p></td>
-                <td rowspan="2" align="right"><a href="two5.php">新增</a></td>
+                <td rowspan="2"><a href="CM_join.php">新增</a></td>
             </tr>
 
           </table>          <p>&nbsp;</p>
@@ -216,26 +243,26 @@ $total_pages = ceil($total_records/$pageRow_records);
     </table></td>
   </tr>
   <tr>
-    <td align="center">
-   </td>
-  </tr>
-  <tr>
-    <td align="center" colspan="2" style="font-size: 20px;">© 2016 農業物聯生產管理系統 ©</td>
+    <td align="center">© 2016 腎藥蘭花管理系統 ©</td>
   </tr>
 </table>
 </form>
 </div><!--div放白色背景透明度60%結束-->
-  </div>
-    
-<script>
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-</script>
+
+<!--呆的巡覽列-->
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/ie10-viewport-bug-workaround.js"></script>
+<!--呆-->
+
 </body>
+<script type="text/javascript">/*這為左邊菜單的JS，來源http://codepen.io/vkbansal/pen/QbapGz*/
+  'use strict';
+var burger = document.getElementById('burger-button');
+burger.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.body.classList.toggle('open');
+    burger.classList.toggle('open');
+});
+</script>
 </html>

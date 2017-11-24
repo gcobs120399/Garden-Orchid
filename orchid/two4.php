@@ -93,7 +93,7 @@ $total_pages = ceil($total_records/$pageRow_records);
 <style>
   body{
     font-size:18px;
-    background-image: url(img/60.png);
+    background-image: url(img/46505.png);
     background-size: cover;
      font-family: 微軟正黑體;
      background-attachment:fixed;
@@ -110,8 +110,44 @@ $total_pages = ceil($total_records/$pageRow_records);
 </style>
 </head>
 <body>
+  <!--巡覽列black-->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header"> 
+     <a class="navbar-brand" href="member_center.php" style="font-size: 24pt;">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</a>
+    </div>
+  </div>
+</nav>
+<!--巡覽列white-->
+<nav class="navbar navbar-default navbar-fixed-top" style="top: 50px;" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> 
+          <span class="sr-only">Toggle navigation</span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+        </button>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav" style="font-size: 20px;">
+        <li><a href="member_center.php">首頁</a></li>
+        <li><a href="GMM.php">溫室管理</a></li>
+        <li><a href="SM.php">設備管理</a></li>
+        <li class="active"><a href="CM.php">作物管理</a></li>
+        <li><a href="PH.php?select=1">生產履歷</a></li>
+        <li><a href="prediction.php?select=10">生長預測</a></li>
+        <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
+        <li><a href="Diary.php">日誌</a></li>
+        <li><a href="member_update.php">修改資料</a></li>
+        <li><a href="?logout=true">登出</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br><br><br>
   <!-- Sidebar -->
-  <div class="w3-sidebar w3-bar-block w3-animate-left " style="display:none;z-index:5" id="mySidebar">
+  <!--<div class="w3-sidebar w3-bar-block w3-animate-left " style="display:none;z-index:5" id="mySidebar">
     <button class="w3-bar-item w3-button w3-large w3-green" onclick="w3_close()">Close &times;</button>
     <a href="two3(1).php" class="w3-bar-item w3-button">首頁</a>
     <a href="#" class="w3-bar-item w3-button">溫室管理</a>
@@ -121,21 +157,21 @@ $total_pages = ceil($total_records/$pageRow_records);
     <a href="#" class="w3-bar-item w3-button">生長預測</a>
     <a href="#" class="w3-bar-item w3-button">溫室環境監控</a>
     <a href="#" class="w3-bar-item w3-button">日誌</a>
-  </div>
+  </div>-->
   <!-- Page Content -->
   <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 
   <div>
-    <button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>
+    <!--<button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>-->
     <h2 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="65" height="40">作物管理</h2>
     <div align="center" style="display:none" id="div1">
       <iframe name="new" style="width: 80%;" onload="Javascript:SetCwinHeight()"  frameborder="0" id="new"></iframe>
     </div>
     <div class="dbg"><!--div放白色背景透明度60%開始-->
-    <table width="100%" border="0px" align="center" cellpadding="4" cellspacing="0">
+    <table width="90%" border="0px" align="center" cellpadding="4" cellspacing="0">
     <tr>
     <td class="tdbline">
-    <table width="100%" border="0px" cellspacing="0" cellpadding="10">
+    <table width="100%" border="0px" cellspacing="0" cellpadding="10" style="font-size: 20px;">
       <tr valign="top">
         <td class="tdrline"><p class="title"><?php echo $row_RecMember["m_name"];?> 您的作物列表 </p>
           <table width="100%"  border="1px" cellpadding="0" cellspacing="0" bgcolor="#F0F0F0" >
@@ -153,7 +189,8 @@ $total_pages = ceil($total_records/$pageRow_records);
               <!--td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["f_username"];?></p></td-->
               <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["f_location"];?></p></td>
               <td width="5%" align="center" bgcolor="#FFFFFF"><p>
-              <a href="CM_update.php?id=<?php echo $row_RecFlower["f_id"];?>">修改</a><br>
+              <a href="CM_update.php?id=<?php echo $row_RecFlower["f_id"];?>">修改作物</a><br>
+              <a href="PH2.php?id=<?php echo $row_RecFlower["f_id"];?>">查詢</a>|
               <a href="?action=delete&id=<?php echo $row_RecFlower["f_id"];?>" onClick="return deletesure();">刪除</a></p></td>
             </tr>
       <?php }?>
@@ -180,13 +217,10 @@ $total_pages = ceil($total_records/$pageRow_records);
   </tr>
   <tr>
     <td align="center">
-    <div>
-    <input type="button" class="btn btn-info" size="12" value="回首頁" onclick="location.href='two3.php'">
-    </div>
    </td>
   </tr>
   <tr>
-    <td align="center" colspan="2">© 2016 農業物聯生產管理系統 ©</td>
+    <td align="center" colspan="2" style="font-size: 20px;">© 2016 農業物聯生產管理系統 ©</td>
   </tr>
 </table>
 </form>

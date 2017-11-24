@@ -39,10 +39,10 @@ $data = json_encode($data);
 $count1="SELECT * FROM `history` WHERE `h_on`='".$_GET["select"]."'";//計算歷史紀錄ㄉ筆數
 $reCount1 = mysql_query($count1);
 $thirtyday = mysql_num_rows($reCount1);
-if($thirtyday<30){//計算限制的筆數
+if($thirtyday<15){//計算限制的筆數
   $thirtyday1=0;}
-  else{$thirtyday1=$thirtyday-30;}
-$data1 = "SELECT * FROM `history` WHERE `h_on`='".$_GET["select"]."' ORDER BY `h_id` ASC limit $thirtyday1,30"; //查詢FROM 資料表 where 判斷式
+  else{$thirtyday1=$thirtyday-15;}
+$data1 = "SELECT * FROM `history` WHERE `h_on`='".$_GET["select"]."' ORDER BY `h_id` ASC limit $thirtyday1,15"; //查詢FROM 資料表 where 判斷式
 $resultub1 = mysql_query($data1);
 while ($row1 = mysql_fetch_array($resultub1)){
     $time_1[]=$row1["h_date"];
@@ -150,7 +150,7 @@ $(function () {
 $(function () {
     Highcharts.chart('container1', {
         title: {
-            text: '近三十天生長紀錄',
+            text: '近十五天生長紀錄',
             x: -20 //center
         },
         subtitle: {

@@ -27,8 +27,9 @@ while ($row = mysql_fetch_array($resultub)){
     $time[]=$row["h_date"];
     $h_pedlength[]=intval($row["h_pedlength"]);
 }
+$pre[0]=35;$pre[1]=36;$pre[2]=37;
 $time = json_encode($time);
-$data = array(array("name"=>"花梗長度","data"=>$h_pedlength));
+$data = array(array("name"=>"預測長度","data"=>$pre),array("name"=>"花梗長度","data"=>$h_pedlength));
 $data = json_encode($data);
 ?>
 <!DOCTYPE html>
@@ -60,7 +61,7 @@ $data = json_encode($data);
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <style type="text/css">
 ${demo.css}
-    </style>
+    </style><!--<?php echo $time;?>-->
     <script type="text/javascript">
 $(function () {
     Highcharts.chart('container', {
@@ -73,7 +74,7 @@ $(function () {
             x: -20
         },
         xAxis: {
-            categories: <?php echo $time; ?>
+            categories:   ['2017-11-24', '2017-11-25', ]
         },
         yAxis: {
             title: {
@@ -100,7 +101,7 @@ $(function () {
     </script>
 </head>
 
-<body style="text-align:left;font-size:18px;background-image: url(img/46505.png);background-size: cover;background-attachment: fixed; font-family: 微軟正黑體;margin:30px">
+<body style="text-align:left;font-size:20px;background-image: url(img/46505.png);background-size: cover;background-attachment: fixed; font-family: 微軟正黑體;margin:30px">
 
 <!--巡覽列black-->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -154,12 +155,12 @@ $(function () {
 <div class="col-xs-4 col-md-4">
 <?php
 include("MYSQL.php"); //資料庫連線套用
-$data = "SELECT * FROM `flower` WHERE `f_username`='".$_SESSION["loginMember"]."'"; //查詢FROM 資料表 where 判斷式(府和判斷式的才搜尋
+$data = "SELECT * FROM `flower` WHERE `f_username`='".$_SESSION["loginMember"]."' AND `h_on`> 9"; //查詢FROM 資料表 where 判斷式(府和判斷式的才搜尋
 $resultub = mysql_query($data);
 ?>
   <div class="thumbnail" style="text-align:center;">
     <form action="" name="sort1" method="get">
-      預測像：<select name="select" onChange="submit()">
+      預測作物：<select name="select" onChange="submit()">
       <option value=""><?php echo $row_RecFlo["f_biology"];?></option>
         <?php while ($rowub = mysql_fetch_array($resultub)):?>
         <option value="<?php echo $rowub["f_id"];?>"><?php echo $rowub["f_biology"];?></option>
@@ -167,9 +168,8 @@ $resultub = mysql_query($data);
       </select>
     </form>
   </div>
-
-
 </div>
+  溫度：26.31、濕度：62.59
 </div>
 
 <div class="col-xs-12 col-md-12">
