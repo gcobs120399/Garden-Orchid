@@ -18,10 +18,10 @@ $query_RecHis = "SELECT * FROM `history` WHERE `h_on`='".$_GET["select"]."' ";
 $RecHis = mysql_query($query_RecHis);
 $row_RecHis=mysql_fetch_assoc($RecHis);
 
-$query_RecHis1 = "SELECT * FROM `history` WHERE `h_on`=10";
+//$query_RecHis1 = "SELECT * FROM `history` WHERE `h_on`=10";
 
 include("MYSQL.php");
-$data = "SELECT * FROM `history` WHERE `h_on`=10 ORDER BY `h_id` ASC "; //查詢FROM 資料表 where 判斷式
+$data = "SELECT * FROM `history` WHERE `h_on`='".$_GET["select"]."' ORDER BY `h_id` ASC "; //查詢FROM 資料表 where 判斷式
 $resultub = mysql_query($data);
 while ($row = mysql_fetch_array($resultub)){
     $time[]=$row["h_date"];
@@ -68,6 +68,9 @@ $(function () {
         title: {
             text: '生長預測',
             x: -20, //center
+            style:{
+                fontSize:'24px'
+              }
         },
         subtitle: {
             text: '',
@@ -88,7 +91,10 @@ $(function () {
         },
         yAxis: {
             title: {
-                text: '公分'
+                text: '公分',
+                style:{
+                fontSize:'18px'
+              }
             },
             plotLines: [{
                 value: 0,
@@ -102,7 +108,10 @@ $(function () {
             }
         },
         tooltip: {
-            valueSuffix: '公分'
+            valueSuffix: '公分',
+            style:{
+                fontSize:'20px'
+              }
         },
         legend: {
             layout: 'vertical',
@@ -110,7 +119,7 @@ $(function () {
             verticalAlign: 'middle',
             borderWidth: 0,
         },
-        series: <?php echo $data; ?>
+        series: <?php echo $data; ?>,
     });
 });
     </script>
@@ -122,7 +131,7 @@ $(function () {
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header"> 
-     <a class="navbar-brand" href="member_center.php" style="font-size: 24pt;">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</a>
+     <a class="navbar-brand" href="member_center.php" style="font-size: 24pt;">應用物聯網技術之蘭園智慧生產管理與知識系統</a>
     </div>
   </div>
 </nav>
@@ -147,6 +156,7 @@ $(function () {
         <li class="active"><a href="prediction.php?select=10">生長預測</a></li>
         <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
         <li><a href="Diary.php">日誌</a></li>
+        <li><a href="member_update.php">修改資料</a></li>
         <li><a href="?logout=true">登出</a></li>
       </ul>
     </div>
@@ -170,7 +180,7 @@ $(function () {
 <div class="col-xs-4 col-md-4">
 <?php
 include("MYSQL.php"); //資料庫連線套用
-$data = "SELECT * FROM `flower` WHERE `f_username`='".$_SESSION["loginMember"]."' AND `h_on`> 9"; //查詢FROM 資料表 where 判斷式(府和判斷式的才搜尋
+$data = "SELECT * FROM `flower` WHERE `f_username`='".$_SESSION["loginMember"]."' AND `f_id`> 9"; //查詢FROM 資料表 where 判斷式(府和判斷式的才搜尋
 $resultub = mysql_query($data);
 ?>
   <div class="thumbnail" style="text-align:center;">

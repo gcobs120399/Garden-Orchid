@@ -60,13 +60,49 @@ function checkForm(){
   #p1{padding-left: 25px;}
 </style>
 </head>
-<body><?php if(isset($_GET["loginStats"]) && ($_GET["loginStats"]=="1")){?>
+<body style="text-align:center;font-size:18px;background-image: url(img/46505.png);background-size: cover; font-family: 微軟正黑體;margin:30px"><?php if(isset($_GET["loginStats"]) && ($_GET["loginStats"]=="1")){?>
 <script language="javascript">
 alert('資料新增成功。');
 window.location.href='two4.php';
 </script>
 <?php }?>
-<!-- Sidebar -->
+<!--巡覽列black-->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header"> 
+     <a class="navbar-brand" href="member_center.php" style="font-size: 24pt;">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</a>
+    </div>
+  </div>
+</nav>
+<!--巡覽列white-->
+<nav class="navbar navbar-default navbar-fixed-top" style="top: 50px;" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> 
+          <span class="sr-only">Toggle navigation</span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+        </button>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav" style="font-size: 20px;">
+        <li><a href="member_center.php">首頁</a></li>
+        <li><a href="GMM.php">溫室管理</a></li>
+        <li><a href="SM.php">設備管理</a></li>
+        <li class="active"><a href="CM.php">作物管理</a></li>
+        <li><a href="PH.php?select=1">生產履歷</a></li>
+        <li><a href="prediction.php">生長預測</a></li>
+        <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
+        <li><a href="Diary.php">日誌</a></li>
+        <li><a href="member_update.php">修改資料</a></li>
+        <li><a href="?logout=true">登出</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br><br>
+<!-- Sidebar 
   <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
     <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
     <a href="#" class="w3-bar-item w3-button">首頁</a>
@@ -77,22 +113,22 @@ window.location.href='two4.php';
     <a href="#" class="w3-bar-item w3-button">生長預測</a>
     <a href="#" class="w3-bar-item w3-button">溫室環境監控</a>
     <a href="#" class="w3-bar-item w3-button">日誌</a>
-  </div>
+  </div>-->
   <!-- Page Content -->
   <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 
   <div>
-    <button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>
+    <!--<button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>-->
      <h2 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="65" height="40">新增作物</h2>
     <div class="dbg container"><!--div放白色背景透明度60%開始-->
-        <form  name="cmform" method="post" onSubmit="return checkForm();">
+        <form  name="cmform" method="post" onSubmit="return checkForm();" style="font-size: 20px;">
         <div class="form-group">
           <label for="usr">帳號：</label>
-          <input type="text" name="f_username" class="form-control" id="f_username" readonly="readonly" value="<?php echo $row_RecMember["m_username"];?>">
+          <input type="text" name="f_username" class="form-control" id="f_username" readonly="readonly" value="<?php echo $row_RecMember["m_username"];?>" style="font-size: 20px;">
         </div>
         <div class="form-group">
           <label for="biology">品種：</label>
-          <input type="text" class="form-control" name="f_biology" >
+          <input type="text" class="form-control" name="f_biology" style="font-size: 20px;">
         </div>
         <div class="form-group">
           <label for="radio">位置：</label>
@@ -105,9 +141,9 @@ window.location.href='two4.php';
         <div class="form-group">
           <center>
           <input name="action" type="hidden" id="action" value="join">
-          <input type="submit" class="btn btn-info btn-sm" name="Submit2" value="送出">
-          <input type="reset" class="btn btn-info btn-sm" name="Submit3" value="重設資料">
-          <input type="button" class="btn btn-info btn-sm" name="Submit" value="回上一頁" onClick="window.history.back();"></center>
+          <input type="submit" class="btn btn-info btn-sm" name="Submit2" value="送出" style="font-size: 18px;">
+          <input type="reset" class="btn btn-info btn-sm" name="Submit3" value="重設資料" style="font-size: 18px;">
+          <input type="button" class="btn btn-info btn-sm" name="Submit" value="回上一頁" onClick="window.history.back();" style="font-size: 18px;"></center>
         </div>
       </form>
     </div><!--div放白色背景透明度60%結束-->

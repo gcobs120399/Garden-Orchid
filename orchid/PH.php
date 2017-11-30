@@ -115,7 +115,10 @@ $(function () {
     Highcharts.chart('container', {
         title: {
             text: '近十天生長紀錄',
-            x: -20 //center
+            x: -20, //center
+            style:{
+                fontSize:'24px'
+              }
         },
         subtitle: {
             text: '',
@@ -131,7 +134,10 @@ $(function () {
         },
         yAxis: {
             title: {
-                text: '公分(數量)'
+                text: '公分(數量)',
+                style:{
+                fontSize:'18px'
+              }
             },
             plotLines: [{
                 value: 0,
@@ -145,7 +151,10 @@ $(function () {
             }
         },
         tooltip: {
-            valueSuffix: '公分(數量)'
+            valueSuffix: '公分(數量)',
+            style:{
+                fontSize:'20px'
+              }
         },
         legend: {
             layout: 'vertical',
@@ -161,7 +170,10 @@ $(function () {
     Highcharts.chart('container1', {
         title: {
             text: '近十五天生長紀錄',
-            x: -20 //center
+            x: -20, //center
+            style:{
+                fontSize:'24px'
+              }
         },
         subtitle: {
             text: '',
@@ -171,13 +183,16 @@ $(function () {
             categories: <?php echo $time1; ?>,
             labels:{
               style:{
-                fontSize:'16px'
+                fontSize:'18px'
               }
             }
         },
         yAxis: {
             title: {
-                text: '公分(數量)'
+                text: '公分(數量)',
+                style:{
+                fontSize:'16px'
+              }
             },
             plotLines: [{
                 value: 0,
@@ -191,7 +206,10 @@ $(function () {
             }
         },
         tooltip: {
-            valueSuffix: '公分(數量)'
+            valueSuffix: '公分(數量)',
+            style:{
+                fontSize:'20px'
+              }
         },
         legend: {
             layout: 'vertical',
@@ -207,11 +225,17 @@ $(function () {
     Highcharts.chart('container2', {
         title: {
             text: '全部生長紀錄',
-            x: -20 //center
+            x: -20, //center
+            style:{
+                fontSize:'24px'
+              }
         },
         subtitle: {
             text: '',
-            x: -20
+            x: -20,
+            style:{
+                fontSize:'20px'
+              }
         },
         xAxis: {
             categories: <?php echo $time2; ?>,
@@ -223,7 +247,10 @@ $(function () {
         },
         yAxis: {
             title: {
-                text: '公分(數量)'
+                text: '公分(數量)',
+                style:{
+                fontSize:'18px'
+              }
             },
             plotLines: [{
                 value: 0,

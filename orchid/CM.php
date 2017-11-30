@@ -184,7 +184,7 @@ $total_pages = ceil($total_records/$pageRow_records);
       <?php while($row_RecFlower=mysql_fetch_assoc($RecFlower)){ ?>
             <tr>
               <td width="10%" align="center" bgcolor="#FFFFFF">
-                <p><a href="two7.php?id=<?php echo $row_RecFlower["f_id"];?>" target="new" onclick="return btnDivShow_onclick()"><?php echo $row_RecFlower["f_biology"];?></a></p>
+                <p><a href="CPDR_join.php?id=<?php echo $row_RecFlower["f_id"];?>" target="new" onclick="return btnDivShow_onclick()"><?php echo $row_RecFlower["f_biology"];?></a></p>
               </td>
               <!--td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["f_username"];?></p></td-->
               <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["f_location"];?></p></td>
@@ -207,7 +207,7 @@ $total_pages = ceil($total_records/$pageRow_records);
                   <a href="?page=<?php echo $num_pages+1;?>">下一頁</a> | <a href="?page=<?php echo $total_pages;?>">最末頁</a>
                   <?php }?>
               </p></td>
-                <td rowspan="2" align="right"><a href="two5.php">新增</a></td>
+                <td rowspan="2" align="right"><a href="CM_join.php">新增</a></td>
             </tr>
 
           </table>          <p>&nbsp;</p>

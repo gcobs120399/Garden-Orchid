@@ -75,38 +75,38 @@ window.location.href='history.php';
 <?php }?>
   <div>
      <h2 style="text-align:center;"><!--img src="img/LOGO.png" alt="LOGO" width="80" height="50"-->新增歷史紀錄</h2>
-        <form  name="hform" method="post" onSubmit="return checkForm();">
+        <form  name="hform" method="post" onSubmit="return checkForm();" style="font-size: 20px;">
         <div class="form-group">
-          <input type="hidden" name="h_username" maxlength="" size="14" id="h_username" readonly="readonly" value="<?php echo $row_RecMember["m_username"];?>">
+          <input type="hidden" name="h_username" maxlength="" size="14" id="h_username" readonly="readonly" value="<?php echo $row_RecMember["m_username"];?>" style="font-size: 20px;">
 		  <input type="hidden" name="h_on" maxlength="" size="14" id="h_on" readonly="readonly" value="<?php echo $row_RecFlower["f_id"]; ?> ">
         </div>
         <div class="form-group">
           <label for="biology">品種：</label>
-          <input type="text" class="form-control" name="h_biology" size="14" id="h_biology" readonly="readonly" value="<?php echo $row_RecFlower["f_biology"];?>">
+          <input type="text" class="form-control" name="h_biology" size="14" id="h_biology" readonly="readonly" value="<?php echo $row_RecFlower["f_biology"];?>" style="font-size: 20px;">
         </div>
         <div class="form-group">
           <label for="biology">花梗長度:</label>
-          <input type="number" class="form-control" name="h_pedlength"  size="14" id="h_pedlength" >
+          <input type="text" class="form-control" name="h_pedlength"  size="14" id="h_pedlength"  style="font-size: 20px;">
         </div>
         <div class="form-group">
           <label for="biology">葉片數量：</label>
-          <input type="number" class="form-control" name="h_leafNum"  size="14" id="h_leafNum">
+          <input type="text" class="form-control" name="h_leafNum"  size="14" id="h_leafNum" style="font-size: 20px;">
         </div>
         <div class="form-group">
           <label for="biology">分岔數量:</label>
-          <input type="number" class="form-control" name="h_bifNum"  size="14" id="h_bifNum">
+          <input type="text" class="form-control" name="h_bifNum"  size="14" id="h_bifNum" style="font-size: 20px;">
         </div>
         <div class="form-group">
           <label for="biology">第一分岔:</label>
-          <input type="number" class="form-control" name="h_bifNum1"  size="14" id="h_bifNum1">
+          <input type="text" class="form-control" name="h_bifNum1"  size="14" id="h_bifNum1" style="font-size: 20px;">
         </div>
         <div class="form-group">
           <label for="biology">第二分岔:</label>
-          <input type="number" class="form-control" name="h_bifNum2"  size="14" id="h_bifNum2">
+          <input type="text" class="form-control" name="h_bifNum2"  size="14" id="h_bifNum2" style="font-size: 20px;">
         </div>
         <div class="form-group">
           <label for="biology">成熟度(0.00~1):</label>
-          <input type="number" class="form-control" name="maturity"  size="14" id="maturity">
+          <input type="text" class="form-control" name="maturity"  size="14" id="maturity" style="font-size: 20px;">
         </div>
         <div class="form-group">
           <script language="javascript">
@@ -116,8 +116,8 @@ window.location.href='history.php';
         <div class="form-group">
           <center>
           <input name="action" type="hidden" id="action" value="join">
-            	<input type="submit" class="btn btn-info" name="Submit2" value="送出">
-            	<input type="reset" class="btn btn-info" name="Submit3" value="重設資料"></center>
+            	<input type="submit" class="btn btn-info" name="Submit2" value="送出" style="font-size: 16px;">
+            	<input type="reset" class="btn btn-info" name="Submit3" value="重設資料" style="font-size: 16px;"></center>
         </div>
         <div align="center">© 2016 農業物聯生產管理系統 ©</div>
       </form>

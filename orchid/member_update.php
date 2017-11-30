@@ -150,14 +150,14 @@ function checkmail(myEmail) {
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav" style="font-size: 20px;">
-        <li class="active"><a href="member_center.php">首頁</a></li>
+        <li><a href="member_center.php">首頁</a></li>
         <li><a href="GMM.php">溫室管理</a></li>
         <li><a href="SM.php">設備管理</a></li>
         <li><a href="CM.php">作物管理</a></li>
         <li><a href="PH.php?select=1">生產履歷</a></li>
         <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
         <li><a href="Diary.php">日誌</a></li>
-        <li><a href="member_update.php">修改資料</a></li>
+        <li class="active"><a href="member_update.php">修改資料</a></li>
         <li><a href="?logout=true">登出</a></li>
       </ul>
     </div>
