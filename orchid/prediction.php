@@ -19,24 +19,26 @@ $RecHis = mysql_query($query_RecHis);
 $row_RecHis=mysql_fetch_assoc($RecHis);
 
 //$query_RecHis1 = "SELECT * FROM `history` WHERE `h_on`=10";
-
+$count=0;
 include("MYSQL.php");
 $data = "SELECT * FROM `history` WHERE `h_on`='".$_GET["select"]."' ORDER BY `h_id` ASC "; //查詢FROM 資料表 where 判斷式
 $resultub = mysql_query($data);
 while ($row = mysql_fetch_array($resultub)){
     $time[]=$row["h_date"];
     $h_pedlength[]=intval($row["h_pedlength"]);
+    $count=$count+1;
 }
-for ($i=0; $i <3 ; $i++) { 
+
+for ($i=0; $i <$count ; $i++) { 
   $pre[$i]=$h_pedlength[$i];
 }
+//左:2.7  中:3.1  右:2.9
 if ($row_RecFlo["f_location"]=="中") {
-  //左:2.7  中:3.1  右:2.9
-  $pre[2]=$pre[1]+3.1;
+  $pre[$count]=$pre[$count-1]+3.1;
 }elseif ($row_RecFlo["f_location"]=="左") {
-  $pre[2]=$pre[1]+2.7;
+  $pre[$count]=$pre[$count-1]+2.7;
 }elseif ($row_RecFlo["f_location"]=="右") {
-  $pre[2]=$pre[1]+2.9;
+  $pre[$count]=$pre[$count-1]+2.9;
 }
 
 //$pre[0]=35;$pre[1]=36;$pre[2]=37;
