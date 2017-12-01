@@ -27,7 +27,19 @@ while ($row = mysql_fetch_array($resultub)){
     $time[]=$row["h_date"];
     $h_pedlength[]=intval($row["h_pedlength"]);
 }
-$pre[0]=35;$pre[1]=36;$pre[2]=37;
+for ($i=0; $i <3 ; $i++) { 
+  $pre[$i]=$h_pedlength[$i];
+}
+if ($row_RecFlo["f_location"]=="中") {
+  //左:2.7  中:3.1  右:2.9
+  $pre[2]=$pre[1]+3.1;
+}elseif ($row_RecFlo["f_location"]=="左") {
+  $pre[2]=$pre[1]+2.7;
+}elseif ($row_RecFlo["f_location"]=="右") {
+  $pre[2]=$pre[1]+2.9;
+}
+
+//$pre[0]=35;$pre[1]=36;$pre[2]=37;
 $time = json_encode($time);
 $data = array(array("name"=>"預測長度","data"=>$pre),array("name"=>"花梗長度","data"=>$h_pedlength));
 $data = json_encode($data);
@@ -194,7 +206,15 @@ $resultub = mysql_query($data);
     </form>
   </div>
 </div>
-  溫度：26.31、濕度：62.59
+<?php
+if ($row_RecFlo["f_location"]=="中") {
+  echo "溫度：26.31、濕度：62.59";
+}elseif ($row_RecFlo["f_location"]=="左") {
+  echo "溫度：25.2、濕度：65.62";
+}elseif ($row_RecFlo["f_location"]=="右") {
+  echo "溫度：25.87、濕度：65.52";
+}
+?>
 </div>
 
 <div class="col-xs-12 col-md-12">
