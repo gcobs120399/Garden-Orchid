@@ -92,7 +92,7 @@ if (isset($_GET["logout"]) && ($_GET["logout"]=="true")) {
         <li class="active"><a href="SM.php">設備管理</a></li>
         <li><a href="CM.php">作物管理</a></li>
         <li><a href="PH.php?select=1">生產履歷</a></li>
-        <li><a href="prediction.php">生長預測</a></li>
+        <li><a href="prediction.php?select=10">生長預測</a></li>
         <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
         <li><a href="Diary.php">日誌</a></li>
         <li><a href="member_update.php">修改資料</a></li>

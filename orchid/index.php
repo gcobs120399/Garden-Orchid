@@ -88,7 +88,7 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
         <span class="icon-bar"></span> 
         <span class="icon-bar"></span> 
       </button> 
-      <a class="navbar-brand" href="">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</a>
+      <a class="navbar-brand" href="index.php">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">

@@ -54,7 +54,8 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
 ?>
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>腎藥蘭花管理系統</title>
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -62,11 +63,33 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="icon" href="./img/title.png">
+<!--呆-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
+<!--[if lt IE 9]><script src=~/Scripts/AssetsBS3/ie8-responsive-file-warning.js></script><![endif]-->
+<script src="./js/ie-emulation-modes-warning.js"></script> 
+<!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]-->
+<!--呆-->
+
+  <!-- 最新編譯和最佳化的 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <!-- 選擇性佈景主題 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <!-- 最新編譯和最佳化的 JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/menu.css"><!--菜單CSS-->
+
+</head>
 <style>
 body,p,h1 {font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 .bgimg {
-    background-image: url(img/60.png);
+    background-image: url(img/4.jpg);
     min-height: 100%;
     background-position: center;
     background-size: cover;
@@ -85,7 +108,7 @@ p{font-family: 'Fira Sans', sans-serif;}
 
 <!--菜單-->
 
-<div class="w3-sidebar w3-light-grey w3-card-4 w3-animate-left" style="width: 200px; display: none;" id="mySidebar">
+<!--<div class="w3-sidebar w3-light-grey w3-card-4 w3-animate-left" style="width: 200px; display: none;" id="mySidebar">
   <div class="w3-ba">
   <span>Close</span>
   <button onclick="w3_close()" class="w3-bar-item w3-button w3-right w3-padding-16" title="close Sidebar">×</button>
@@ -95,16 +118,38 @@ p{font-family: 'Fira Sans', sans-serif;}
   <a class="w3-bar-item w3-button" href="two3.php">登入</a>
   <a class="w3-bar-item w3-button" href="Diary_c.php">網誌</a>
   </div>
-</div>
-
+</div>-->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> 
+        <span class="sr-only">Toggle navigation</span> 
+        <span class="icon-bar"></span> 
+        <span class="icon-bar"></span> 
+        <span class="icon-bar"></span> 
+      </button> 
+      <a class="navbar-brand" href="">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.php">首頁</a></li>
+        <li><a href="Diary_c.php">日誌</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="index.php">登入 </a></li>
+      <li><a href="member_join.php">註冊</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <div class="bgimg w3-display-container w3-animate-opacity" id="main" style="margin-left: 0px;">
-  <div class="w3-container w3-display-container">
+  <!--<div class="w3-container w3-display-container">
     <span title="open Sidebar" style="display: inline-block;" id="openNav" class="w3-button w3-transparent w3-display-topleft w3-xlarge" onclick="w3_open()">☰</span>
-  </div>
+  </div>-->
   <div class="w3-display-middle">
-    <h1 class="w3-jumbo w3-animate-top"><img src="img/LOGO.png" alt="LOGO" width="80" height="50"><b>
-蘭園系統</h1>
+    <h1 class="w3-jumbo w3-animate-top" style="color: black;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50"><b>
+腎藥蘭花管理系統</h1>
     <hr class="w3-border-white" style="margin:auto;width:100%">
     <p class=" w3-center w3-text-black" style="font-size:30px"><button class="w3-btn w3-border w3-round-large"  onclick="document.getElementById('id01').style.display='block'" ><b>Login</button></p>
   </div>
@@ -122,7 +167,7 @@ p{font-family: 'Fira Sans', sans-serif;}
       <?php if(isset($_GET["errMsg"]) && ($_GET["errMsg"]=="1")){?>
         <font color="red">登入帳號或密碼錯誤！</font>
       <?php }?>
-        <div class="w3-section">
+        <div class="w3-section" >
           <label><b>帳號：</b></label>
           <input class="w3-input w3-border w3-margin-bottom" name="username" type="text" id="username" value="<?php if(isset($_COOKIE["remUser"])){echo $_COOKIE["remUser"];}?>" required>
           <label><b>密碼：</b></label>
@@ -133,7 +178,7 @@ p{font-family: 'Fira Sans', sans-serif;}
       </form>
 
       <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-        <span class="w3-right w3-padding w3-hide-small"><a href="admin_passmail.php">忘記密碼</a></span>&nbsp; &nbsp;
+        <!--<span class="w3-right w3-padding w3-hide-small"><a href="admin_passmail.php">忘記密碼</a></span>&nbsp; &nbsp;-->
         <span class="w3-right w3-padding w3-hide-small"><a href="member_join.php"align="right">註冊</a>
       </div>
     </div>
