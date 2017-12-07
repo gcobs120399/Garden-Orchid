@@ -1,19 +1,15 @@
 作物生產數據紀錄 CPDR
-生產履歷 PH
-作物最適環境回推 COEPB
+生產履歷 PH+PH2(列表)
+生產預測 prediction
+
 作物管理 CM
-耗材管理 SM
+設備管理 SM+SM1
 設備管理模組 DMM
 感測設備控管 SDC
 
-溫室設置管理 GM
-溫室資料查詢 GII
-溫室管理模組 GMM
-溫室環境即時監測 IGEM
-溫室環境監控模組 GEMM
+溫室管理 GMM
 
 歷史紀錄  History
-環境異常警告 EAW
 
 index 首頁
 member_admin 管理者中心
@@ -23,12 +19,11 @@ member_update 會員中心的修改資料
 member_join 會員註冊
 MYSQL 資料庫的相關設定
 
-data_center系列 中間溫室環境數值
-data_left系列 左邊溫室環境數值
-data_right系列 右邊溫室環境數值
-
 Diary 日誌 新增+總覽
 Diary1 日誌詳細內容+留言
+Diary_all 已登入看他人日誌
+Diary_all1 已登入 看他人日誌總攬
+Diary_all2 已登入 看他人日誌詳細內容+留言
 Diary_c 未登入者 選他人日誌
 Diary_view  未登入者 看他人日誌總覽
 Diary_view1 未登入者 看他人日誌詳細內容+留言

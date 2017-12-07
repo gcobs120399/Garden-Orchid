@@ -43,7 +43,7 @@ $total_records = mysql_num_rows($all_RecFlower);
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
-<link href="./css/navbar-fixed-top.css" rel="stylesheet"> 
+<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
 <!--呆-->
@@ -110,7 +110,7 @@ $total_records = mysql_num_rows($all_RecFlower);
         <?php  echo nl2br($row_RecView['p_text']); ?>
         </p>
         <span style="font-size:14px;"><?php echo $row_RecView['p_time']; ?></span>
-        <div id="fb-root"></div><!--分享-->
+        <!--<div id="fb-root"></div><!--分享
     <script>
       (function(d, s, id) {
 　     var js, fjs = d.getElementsByTagName(s)[0];
@@ -119,7 +119,7 @@ $total_records = mysql_num_rows($all_RecFlower);
 　       js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1";
 　     fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
-    </script>
+    </script>-->
     <div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
       </div>
       </p>
@@ -167,7 +167,7 @@ while($rowub = mysql_fetch_array($resultub)){ //顯示資料
 <div class="col-xs-12 col-md-2"></div>
 <div class="col-xs-12 col-md-8" style="text-align: center;">© 2016 腎藥蘭花管理系統 ©</div>
 <div class="col-xs-12 col-md-2"></div>
-<div id="gotop">˄</div>
+<!--<div id="gotop">˄</div>-->
 </body>
 <script type="text/javascript">/*這為左邊菜單的JS，來源http://codepen.io/vkbansal/pen/QbapGz*/
   'use strict';
@@ -178,7 +178,7 @@ burger.addEventListener('click', function (e) {
     burger.classList.toggle('open');
 });
 </script>
-<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+<!--<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>造成日誌一直轉-->
 <script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/locale/zh-cn.js"></script>
@@ -193,17 +193,17 @@ burger.addEventListener('click', function (e) {
     });
   });
 
-  $("#gotop").click(function(){/*至頂按鈕*/
+  /*$("#gotop").click(function(){//至頂按鈕
     jQuery("html,body").animate({
         scrollTop:0
     },1000);
 });
-$(window).scroll(function() {/*至頂按鈕*/
+$(window).scroll(function() {//至頂按鈕
     if ( $(this).scrollTop() > 300){
         $('#gotop').fadeIn("fast");
     } else {
         $('#gotop').stop().fadeOut("fast");
     }
-});
+});*/
 </script>
 </html>

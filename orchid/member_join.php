@@ -32,7 +32,7 @@ if(isset($_POST["action"])&&($_POST["action"]=="join")){
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
-<link href="./css/navbar-fixed-top.css" rel="stylesheet"> 
+<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
 <!--呆-->
@@ -168,6 +168,8 @@ alert('會員新增成功\n請用申請的帳號密碼登入。');
 window.location.href='index.php';
 </script>
 <?php }?>
+<br>
+<div style="background: rgba(100%,100%,100%,0.6);" >
 <table width="780" border="0" align="center" cellpadding="4" cellspacing="0" style="font-size: 20px;">
   <tr>
     <td class="tdbline"><h3><img src="img/LOGO.png" alt="LOGO" width="80" height="50">會員系統</h3></td>
@@ -254,5 +256,6 @@ window.location.href='index.php';
     <td align="center" background="images/album_r2_c1.jpg">© 2016 腎藥蘭花管理系統 ©</td>
   </tr>
 </table>
+</div>
 </body>
 </html>

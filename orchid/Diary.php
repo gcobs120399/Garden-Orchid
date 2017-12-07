@@ -255,7 +255,9 @@ while($rowub1 = mysql_fetch_array($resultub1)){ //顯示資料
     </div>
 <?php }?>
 </div>
-
+<div class="col-xs-2 col-md-2">
+  <button style="font-size: 18px;" class="btn btn-info btn-sm" onclick="javascript:location.href='Diary_all.php'">其他日誌</button>
+</div>
 <div class="col-xs-12 col-md-12" style="text-align: center;">© 2016 腎藥蘭花管理系統 ©</div>
 
 

@@ -47,7 +47,7 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>蘭花會員系統</title>
+<title>腎藥蘭花管理系統</title>
 <script language="javascript">
 function checkForm(){//注意表單名稱
   if(document.formJoin.m_passwd.value!="" || document.formJoin.m_passwdrecheck.value!=""){
