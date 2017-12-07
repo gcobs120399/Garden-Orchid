@@ -32,7 +32,7 @@ if(isset($_POST["action"])&&($_POST["action"]=="join")){
     $s_name = $_POST['s_name'];
     $sql = "INSERT INTO `message`(`s_text`,`s_on`,`s_name`) VALUES ('$s_text','$s_on','$s_name')";
     mysql_query($sql)or die(mysql_error());
-    header("Location: Diary_view1.php?id=$s_on");
+    header("Location: Diary_all2.php?id=$s_on");
   }
   else
   { echo "新增失敗"; }
