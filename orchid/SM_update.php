@@ -30,42 +30,50 @@ if (isset($_GET["logout"]) && ($_GET["logout"]=="true")) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>腎藥蘭花管理系統</title>
-	<!-- 最新編譯和最佳化的 CSS -->
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-
-	<!-- 選擇性佈景主題 -->
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-
-	<!-- 最新編譯和最佳化的 JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-  <!--呆的巡覽列-->
+<html lang="en-us">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="./css/bootstrap.min.css" rel="stylesheet">
-<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
-<script src="./js/ie-emulation-modes-warning.js"></script> 
-<link rel="icon" href="./img/title.png">
-<!--呆-->
-
-  <script type="text/javascript">
-  	function checkForm(){
-  		if (document.smform.e_name.value=="") {//注意表格的名稱
-  			alert("請填寫設備名稱！");
-  			document.smform.e_name.focus();
-  			return false;
-  		}
-  		return confirm('確定送出嗎？');
-  	}
-  </script>
-  <link rel="stylesheet" type="text/css" href="css/menu.css"><!--菜單CSS+頂端-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>腎藥蘭花管理系統</title>
+<head>
+  <script language="javascript">
+function checkForm(){
+  if(document.cmform.e_name.value==""){//注意表格名稱
+    alert("請填寫設備!");
+    document.cmform.e_name.focus();
+    return false;
+  }
+  return confirm('確定送出嗎？');
+}
+</script>
+<style>
+  body {
+    font-size:18px;
+    background-image: url(img/60.png);
+    background-size: cover;
+     font-family: 微軟正黑體;
+     background-attachment:fixed;
+}
+  .dbg{
+    background: rgba(100%,100%,100%,0.6);
+    width:60%;
+    float:left;
+    position: fixed; left: 20%;
+  }
+  #p1{padding-left: 25px;}
+</style>
 </head>
-<body style="text-align:center;font-size:18px;background-image: url(img/46505.png);background-size: cover; background-attachment: fixed; font-family: 微軟正黑體;margin:30px">
-
+<body style="text-align:center;font-size:18px;background-image: url(img/46505.png);background-size: cover; font-family: 微軟正黑體;margin:30px"><?php if(isset($_GET["loginStats"]) && ($_GET["loginStats"]=="1")){?>
+<script language="javascript">
+alert('資料修改成功。');
+window.location.href='SM.php';
+</script>
+<?php }?>
 <!--巡覽列black-->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
@@ -101,59 +109,59 @@ if (isset($_GET["logout"]) && ($_GET["logout"]=="true")) {
     </div>
   </div>
 </nav>
-</head>
-<body style="text-align:center;font-size:18px;background-image: url(img/46505.png);background-size: cover;background-attachment: fixed; font-family: 微軟正黑體;margin:30px">
-<?php if(isset($_GET["loginStats"]) && ($_GET["loginStats"]=="1")) {?>
-<script language="javascript">
-alert('資料修改成功。');
-window.location.href='SM.php';
-</script>
-<?php }?>
 <br><br><br>
-<div class="col-xs-12">
-	<h2><img src="img/LOGO.png" alt="LOGO" width="80" height="50">修改設備</h2>
-</div>
-<hr>
-	<table align="center" style="font-size: 20px;">
-		<form name="smform" method="post" onSubmit="return checkForm();">
-			<tr>
-			<td>帳號:</td>
-			<td><input type="text" name="e_user"  size="14" id="e_user" readonly="readonly" value="<?php echo $row_result["e_user"]; ?>"></td>
-		</tr>
-		<tr>
-			<td>設備名稱:</td>
-			<td><input type="text" name="e_name"  size="14" id="e_name" value="<?php echo $row_result["e_name"];?>"></td>
-		</tr>
-		<tr>
-			<td>設備數量:</td>
-			<td><input type="text" name="e_num"  size="14" id="e_num" value="<?php echo $row_result["e_num"]; ?>"></td>
-		</tr>
-		<tr>
-			<td>設備數量:</td>
-			<td><input type="text" name="e_money"  size="14" id="e_money" value="<?php echo $row_result["e_money"]; ?>"></td>
-		</tr>
-		<tr>
-			<td>型態:</td>
-			<td>
-			<input type="radio" name="e_pattern" value="耗材" <?php if($row_result["e_pattern"]=="耗材") echo "checked";?>> 耗材<br>
-			<input type="radio" name="e_pattern" value="資材" <?php if($row_result["e_pattern"]=="資材") echo "checked";?>> 資材<br>
-			</td>
-		</tr>
-		<tr></tr>
-		<tr >
-			<td colspan="2">
-			    <input name="e_id" type="hidden" id="e_id" value="<?php echo $row_result["e_id"];?>">
-				<input name="action" type="hidden" id="action" value="update">
-            	<input type="submit" name="Submit2" class="btn btn-info" value="送出" style="font-size: 18px;">
-            	<input type="reset" name="Submit3" class="btn btn-info" value="重設資料" style="font-size: 18px;">
-				<input type="button" name="Submit" class="btn btn-info" value="回上一頁" onClick="window.history.back();" style="font-size: 18px;">
-			</td>
-		</tr>
-		<tr></tr>
-		<tr>
-    		<td align="center" colspan="2">© 2016 腎藥蘭花管理系統 ©</td>
-  		</tr>
-		</form>
-	</table>
+  <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+  <div>
+    <!--<button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>-->
+     <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="65" height="40">修改設備</h1>
+    <div class="dbg container"><!--div放白色背景透明度60%開始-->
+        <form  name="cmform" method="post" onSubmit="return checkForm();" style="font-size: 20px;">
+        <div class="form-group">
+          <label for="e_user">帳號：</label>
+          <input type="hidden" name="e_id" class="form-control" id="e_id" value="<?php echo $row_result["e_id"];?>">
+          <input type="text" name="e_user" class="form-control" id="e_user" readonly="readonly" value="<?php echo $row_result["e_user"];?>" style="font-size: 20px;">
+        </div>
+        <div class="form-group">
+          <label for="e_name">設備名稱：</label>
+          <input type="text" class="form-control" name="e_name" value="<?php echo $row_result["e_name"];?>" style="font-size: 20px;">
+        </div>
+
+		<div class="form-group">
+          <label for="e_num">設備數量：</label>
+          <input type="text" class="form-control" name="e_num" value="<?php echo $row_result["e_num"];?>" style="font-size: 20px;">
+        </div>
+        <div class="form-group">
+          <label for="e_money">設備單價：</label>
+          <input type="text" class="form-control" name="e_money" value="<?php echo $row_result["e_money"];?>" style="font-size: 20px;">
+        </div>
+
+        <div class="form-group">
+          <label for="radio">型態：</label>
+          <div class="radio" id="p1">
+          <label><input type="radio" name="e_pattern" value="資材" <?php if($row_result["e_pattern"]=="資材") echo "checked";?>>資材</label><br>
+          <label><input type="radio" name="e_pattern" value="耗材" <?php if($row_result["e_pattern"]=="耗材") echo "checked";?>>耗材</label><br>
+          </div>
+        </div>
+        <div class="form-group">
+          <center>
+          <input name="action" type="hidden" id="action" value="update">
+          <input type="submit" class="btn btn-info btn-sm" name="Submit2" value="送出" style="font-size: 18px;">
+          <input type="reset" class="btn btn-info btn-sm" name="Submit3" value="重設資料" style="font-size: 18px;">
+          <input type="button" class="btn btn-info btn-sm" name="Submit" value="回上一頁" onClick="window.history.back();" style="font-size: 18px;"></center>
+        </div>
+      </form>
+    </div><!--div放白色背景透明度60%結束-->
+  </div>
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
 </body>
 </html>

@@ -14,8 +14,9 @@ if(isset($_POST["action"])&&($_POST["action"]=="join")){
     $f_biology = $_POST['f_biology'];
     $f_username = $_POST['f_username'];
     $f_location = $_POST['f_location'];
+    $f_act = $_POST['f_act'];
     $f_date = date("Y-m-d");
-    $sql = "INSERT INTO `flower`(`f_biology`,`f_username`,`f_location`,`f_date`) VALUES ('$f_biology','$f_username','$f_location','$f_date')";
+    $sql = "INSERT INTO `flower`(`f_biology`,`f_username`,`f_location`,`f_date`,`f_act`) VALUES ('$f_biology','$f_username','$f_location','$f_date','$f_act')";
     mysql_query($sql)or die(mysql_error());
     header("Location: CM.php?loginStats=1"); //新增完資料做網頁跳轉
   }
@@ -63,7 +64,7 @@ function checkForm(){
 <body style="text-align:center;font-size:18px;background-image: url(img/46505.png);background-size: cover; font-family: 微軟正黑體;margin:30px"><?php if(isset($_GET["loginStats"]) && ($_GET["loginStats"]=="1")){?>
 <script language="javascript">
 alert('資料新增成功。');
-window.location.href='two4.php';
+window.location.href='CM.php';
 </script>
 <?php }?>
 <!--巡覽列black-->
@@ -136,6 +137,13 @@ window.location.href='two4.php';
           <label><input type="radio" name="f_location" value="左">左</label><br>
           <label><input type="radio" name="f_location" value="中">中</label><br>
           <label><input type="radio" name="f_location" value="右">右</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="radio">狀態：</label>
+          <div class="radio" id="p1">
+          <label><input type="radio" name="f_act" value="種植中">種植中</label><br>
+          <label><input type="radio" name="f_act" value="已採收">已採收</label>
           </div>
         </div>
         <div class="form-group">

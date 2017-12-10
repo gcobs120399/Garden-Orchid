@@ -30,31 +30,46 @@ if (isset($_GET["logout"]) && ($_GET["logout"]=="true")) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>腎藥蘭花管理系統</title>
+<link rel="icon" href="./img/title.png">
 <head>
-	<meta charset="utf-8">
-	<title>腎藥蘭花管理系統</title>
-	<!-- 最新編譯和最佳化的 CSS -->
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-
-	<!-- 選擇性佈景主題 -->
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-
-	<!-- 最新編譯和最佳化的 JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-  <script type="text/javascript">
-  	function checkForm(){
-  		if (document.gmmform.gh_name.value=="") {//注意表格的名稱
-  			alert("請填寫溫室名稱！");
-  			document.gmmform.gh_name.focus();
-  			return false;
-  		}
-  		return confirm('確定送出嗎？');
-  	}
-  </script>
+  <script language="javascript">
+function checkForm(){
+  if(document.cmform.gh_name.value==""){//注意表格名稱
+    alert("請填寫溫室名稱!");
+    document.cmform.gh_name.focus();
+    return false;
+  }
+  return confirm('確定送出嗎？');
+}
+</script>
+<style>
+  body {
+    font-size:18px;
+    background-image: url(img/60.png);
+    background-size: cover;
+     font-family: 微軟正黑體;
+     background-attachment:fixed;
+}
+  .dbg{
+    background: rgba(100%,100%,100%,0.6);
+    width:60%;
+    float:left;
+    position: fixed; left: 20%;
+  }
+  #p1{padding-left: 25px;}
+</style>
 </head>
-<body style="text-align:center;font-size:18px;background-image: url(img/46505.png);background-size: cover;background-attachment: fixed; font-family: 微軟正黑體;margin:30px">
-<?php if(isset($_GET["loginStats"]) && ($_GET["loginStats"]=="1")) {?>
+<body style="text-align:center;font-size:18px;background-image: url(img/46505.png);background-size: cover; font-family: 微軟正黑體;margin:30px"><?php if(isset($_GET["loginStats"]) && ($_GET["loginStats"]=="1")){?>
 <script language="javascript">
 alert('資料修改成功。');
 window.location.href='GMM.php';
@@ -96,47 +111,55 @@ window.location.href='GMM.php';
   </div>
 </nav>
 <br><br><br>
-<div class="col-xs-12">
-	<h2><img src="img/LOGO.png" alt="LOGO" width="80" height="50">修改溫室</h2>
-</div>
-<hr>
-	<table align="center" style="font-size: 20px;">
-		<form name="gmmform" method="post" onSubmit="return checkForm();" >
-			<tr>
-			<td>帳號:</td>
-			<td><input type="text" name="gh_user"  size="14" id="gh_user" readonly="readonly" value="<?php echo $row_result["gh_user"]; ?>"></td>
-		</tr>
-		<tr>
-			<td>溫室名稱：</td>
-			<td><input type="text" name="gh_name"  size="14" id="gh_name" value="<?php echo $row_result["gh_name"];?>"></td>
-		</tr>
-		<tr>
-			<td>溫室單位：</td>
-			<td><input type="text" name="gh_num"  size="14" id="gh_num" value="<?php echo $row_result["gh_num"]; ?>"></td>
-		</tr>
-		<tr>
-			<td>溫室地址：</td>
-			<td><input type="text" name="gh_add"  size="14" id="gh_add" value="<?php echo $row_result["gh_add"]; ?>"></td>
-		</tr>
-		<tr>
-			<td>溫室建置日：</td>
-			<td><input type="date" name="gh_data" size="14" value="<?php echo $row_result["gh_data"]; ?>"></td>
-		</tr>
-		<tr></tr>
-		<tr >
-			<td colspan="2">
-			    <input name="gh_id" type="hidden" id="gh_id" value="<?php echo $row_result["gh_id"];?>">
-				<input name="action" type="hidden" id="action" value="update">
-            	<input type="submit" name="Submit2" class="btn btn-info" value="送出" style="font-size: 18px;">
-            	<input type="reset" name="Submit3" class="btn btn-info" value="重設資料" style="font-size: 18px;">
-				<input type="button" name="Submit" class="btn btn-info" value="回上一頁" onClick="window.history.back();" style="font-size: 18px;">
-			</td>
-		</tr>
-		<tr></tr>
-		<tr>
-    		<td align="center" colspan="2">© 2016 腎藥蘭花管理系統 ©</td>
-  		</tr>
-		</form>
-	</table>
+  <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+  <div>
+    <!--<button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>-->
+     <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="65" height="40">修改溫室</h1>
+    <div class="dbg container"><!--div放白色背景透明度60%開始-->
+        <form  name="cmform" method="post" onSubmit="return checkForm();" style="font-size: 20px;">
+        <div class="form-group">
+          <label for="gh_user">帳號：</label>
+          <input type="hidden" name="gh_id" class="form-control" id="gh_id" value="<?php echo $row_result["gh_id"];?>">
+          <input type="text" name="gh_user" class="form-control" id="gh_user" readonly="readonly" value="<?php echo $row_result["gh_user"];?>" style="font-size: 20px;">
+        </div>
+        <div class="form-group">
+          <label for="gh_name">溫室名稱：</label>
+          <input type="text" class="form-control" name="gh_name" value="<?php echo $row_result["gh_name"];?>" style="font-size: 20px;">
+        </div>
+
+		<div class="form-group">
+          <label for="gh_num">溫室單位：</label>
+          <input type="text" class="form-control" name="gh_num" value="<?php echo $row_result["gh_num"];?>" style="font-size: 20px;">
+        </div>
+        <div class="form-group">
+          <label for="gh_add">溫室地址：</label>
+          <input type="text" class="form-control" name="gh_add" value="<?php echo $row_result["gh_add"];?>" style="font-size: 20px;">
+        </div>
+
+        <div class="form-group">
+          <label for="gh_data">溫室建置日：</label>
+          <input type="text" class="form-control" name="gh_data" value="<?php echo $row_result["gh_data"];?>" style="font-size: 20px;">
+        </div>
+        <div class="form-group">
+          <center>
+          <input name="action" type="hidden" id="action" value="update">
+          <input type="submit" class="btn btn-info btn-sm" name="Submit2" value="送出" style="font-size: 18px;">
+          <input type="reset" class="btn btn-info btn-sm" name="Submit3" value="重設資料" style="font-size: 18px;">
+          <input type="button" class="btn btn-info btn-sm" name="Submit" value="回上一頁" onClick="window.history.back();" style="font-size: 18px;"></center>
+        </div>
+      </form>
+    </div><!--div放白色背景透明度60%結束-->
+  </div>
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
 </body>
 </html>

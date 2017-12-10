@@ -13,14 +13,14 @@ if(isset($_SESSION["loginMember"]) && ($_SESSION["loginMember"]!="")){
 if(isset($_GET["logout"]) && ($_GET["logout"]=="true")){
   unset($_SESSION["loginMember"]);
   unset($_SESSION["memberLevel"]);
-  header("Location: two3.php");
+  header("Location: index.php");
 }
 //刪除花花
 if(isset($_GET["action"])&&($_GET["action"]=="delete")){
   $query_delMember = "DELETE FROM `flower` WHERE `f_id`=".$_GET["id"];
   mysql_query($query_delMember);
   //重新導向回到主畫面
-  header("Location: two4.php");
+  header("Location: CM.php");
 }
 //選會員
 $query_RecMember = "SELECT * FROM `memberdata` WHERE `m_username`='".$_SESSION["loginMember"]."'";
@@ -43,7 +43,7 @@ if (isset($_GET['page'])) {
 //本頁開始記錄筆數 = (頁數-1)*每頁記錄筆數
 $startRow_records = ($num_pages -1) * $pageRow_records;
 //未加限制顯示筆數的SQL敘述句
-$query_RecFlower = "SELECT * FROM `flower` WHERE `f_act`<>'已採收' AND `f_username`='".$_SESSION["loginMember"]."' ";
+$query_RecFlower = "SELECT * FROM `flower` WHERE `f_act`<>'種植中' AND `f_username`='".$_SESSION["loginMember"]."' ";
 //加上限制顯示筆數的SQL敘述句，由本頁開始記錄筆數開始，每頁顯示預設筆數
 $query_limit_RecFlower = $query_RecFlower." LIMIT ".$startRow_records.", ".$pageRow_records;
 //以加上限制顯示筆數的SQL敘述句查詢資料到 $resultMember 中
@@ -176,12 +176,12 @@ $total_pages = ceil($total_records/$pageRow_records);
     <table width="100%" border="0px" cellspacing="0" cellpadding="10" style="font-size: 20px;">
       <tr valign="top">
         <td class="tdrline"><p class="title" style="text-align: center;"><?php echo $row_RecMember["m_name"];?> 您的作物列表 </p>
-          <div class="col-md-4"></div>
-          <div class="col-md-1"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-1"></div>
           <div align="center"><ul class="nav nav-tabs">
-          <li role="presentation" class="active"><a href="CM.php">種植中</a></li>
-          <li role="presentation"><a href="CM1.php">已採收</a></li>
-          </ul></div>
+        <li role="presentation"><a href="CM.php">種植中</a></li>
+         <li role="presentation" class="active"><a href="CM1.php">已採收</a></li>
+        </ul></div>
           <table width="100%"  border="1px" cellpadding="0" cellspacing="0" bgcolor="#F0F0F0" >
             <tr >
               <th width="10%" bgcolor="#CCCCCC" style="text-align:center;"><p>品種</p></th>

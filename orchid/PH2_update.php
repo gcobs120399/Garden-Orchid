@@ -24,41 +24,57 @@ if(isset($_POST["action"])&&($_POST["action"]=="update")){
         $h_bifNum1 = $_POST['h_bifNum1'];
         $h_bifNum2 = $_POST['h_bifNum2'];
 		$maturity = $_POST['maturity'];
+		$h_on = $_POST['h_on'];
         $sql = "UPDATE `history` SET `h_pedlength`='{$h_pedlength}',`h_leafNum`='{$h_leafNum}',`h_bifNum`='{$h_bifNum}',`h_bifNum1`='{$h_bifNum1}',`h_bifNum2`='{$h_bifNum2}',`maturity`='{$maturity}' WHERE `h_id`=".$_GET["id"];
         mysql_query($sql)or die(mysql_error());
-        header("Location: window.history.back();");
+        header("Location: PH2.php?id=$h_on");
       }
     }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<title>腎藥蘭花管理系統</title>
+<link rel="icon" href="./img/title.png">
 <head>
-	<meta charset="UTF-8">
-	<title>腎藥蘭花管理系統</title>
-	<script language="javascript">
+  <script language="javascript">
 function checkForm(){
-	if(document.hform.f_biology.value==""){//注意表格名稱
-		alert("請填寫品種!");
-		document.hform.f_biology.focus();
-		return false;
-	}
-	return confirm('確定送出嗎？');
+  if(document.cmform.h_biology.value==""){//注意表格名稱
+    alert("請填寫品種!");
+    document.cmform.h_biology.focus();
+    return false;
+  }
+  return confirm('確定送出嗎？');
 }
 </script>
-	<!-- 最新編譯和最佳化的 CSS -->
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-
-	<!-- 選擇性佈景主題 -->
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-
-	<!-- 最新編譯和最佳化的 JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<style>
+  body {
+    font-size:18px;
+    background-image: url(img/60.png);
+    background-size: cover;
+     font-family: 微軟正黑體;
+     background-attachment:fixed;
+}
+  .dbg{
+    background: rgba(100%,100%,100%,0.6);
+    width:60%;
+    float:center;
+  }
+  #p1{padding-left: 25px;}
+</style>
 </head>
-<body style="text-align:center;font-size:18px;background-image: url(img/46505.png);background-size: cover;background-attachment: fixed; font-family: 微軟正黑體;margin:30px">
-<?php if(isset($_GET["loginStats"]) && ($_GET["loginStats"]=="1")){?>
+<body style="text-align:center;font-size:18px;background-image: url(img/46505.png);background-size: cover; font-family: 微軟正黑體;margin:30px"><?php if(isset($_GET["loginStats"]) && ($_GET["loginStats"]=="1")){?>
 <script language="javascript">
 alert('資料修改成功。');
-window.location.href='history.php';
+window.location.href='PH2.php';
 </script>
 <?php }?>
 <!--巡覽列black-->
@@ -81,12 +97,12 @@ window.location.href='history.php';
         </button>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" style="font-size: 20px;">
         <li><a href="member_center.php">首頁</a></li>
         <li><a href="GMM.php">溫室管理</a></li>
         <li><a href="SM.php">設備管理</a></li>
-        <li><a href="CM.php">作物管理</a></li>
-        <li class="active"><a href="PH.php?select=1">生產履歷</a></li>
+        <li class="active"><a href="CM.php">作物管理</a></li>
+        <li><a href="PH.php?select=1">生產履歷</a></li>
         <li><a href="prediction.php?select=10">生長預測</a></li>
         <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
         <li><a href="Diary.php">日誌</a></li>
@@ -97,59 +113,68 @@ window.location.href='history.php';
   </div>
 </nav>
 <br><br><br>
-<div class="row col-xs-12 ">
-	<h2><img src="img/LOGO.png" alt="LOGO" width="80" height="50">修改歷史紀錄</h2>
-</div>
-<hr>
-	<table align="center" >
-	<form name="hform" method="post" onSubmit="return checkForm();" >
-		<tr>
-			<td><input type="hidden" name="h_on" maxlength="" size="14" id="h_on" readonly="readonly" value="<?php echo $row_RecFlower["h_id"]; ?> "></td>
-		</tr>
-		<tr>
-			<td>品種:</td>
-			<td><?php echo $row_RecFlower["h_biology"]; ?></td>
-		</tr>
-		<tr>
-			<td>花梗長度:</td>
-			<td><input type="text" name="h_pedlength" value="<?php echo $row_RecFlower["h_pedlength"]; ?>" size="14" id="h_pedlength"></td>
-		</tr>
-		<tr>
-			<td>葉片數量:</td>
-			<td><input type="text" name="h_leafNum" value="<?php echo $row_RecFlower["h_leafNum"]; ?>" size="14" id="h_leafNum"></td>
-		</tr>
-		<tr>
-			<td>分岔數量:</td>
-			<td><input type="text" name="h_bifNum" value="<?php echo $row_RecFlower["h_bifNum"]; ?>" size="14" id="h_bifNum" ></td>
-		</tr>
-		<tr>
-			<td>第一分岔:</td>
-			<td><input type="text" name="h_bifNum1" value="<?php echo $row_RecFlower["h_bifNum1"]; ?>" size="14" id="h_bifNum1" ></td>
-		</tr>
-		<tr>
-			<td>第二分岔:</td>
-			<td><input type="text" name="h_bifNum2" value="<?php echo $row_RecFlower["h_bifNum2"]; ?>" size="14" id="h_bifNum2" ></td>
-		</tr>
-		<tr>
-			<td>成熟度(0.00~1):</td>
-			<td><input type="text" name="maturity" value="<?php echo $row_RecFlower["maturity"]; ?>" size="14" id="maturity" ></td>
-		</tr>
-		<tr>
-			<td>日期:</td>
-			<td><?php echo $row_RecFlower["h_date"]; ?></td>
-		</tr>
-		<tr>
-			<td colspan="2">
-				<input name="h_id" type="hidden" id="h_id" value="<?php echo $row_result["h_id"];?>">
-				<input name="action" type="hidden" id="action" value="update">
-            	<input type="submit" class="btn btn-info" name="Submit2" value="送出">
-			</td>
-		</tr>
-		<tr></tr>
-		<tr>
-    		<td align="center" colspan="2">© 2016 腎藥蘭花管理系統 ©</td>
-  		</tr>
-	</form>
-</table>
+  <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+  <div>
+    <!--<button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>-->
+     <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="65" height="40">修改歷史紀錄</h1>
+    <div class="dbg container"><!--div放白色背景透明度60%開始-->
+        <form  name="cmform" method="post" onSubmit="return checkForm();" style="font-size: 20px;">
+        <div class="form-group">
+          <label for="h_biology">品種：</label>
+          <input type="hidden" name="h_on" class="form-control" id="h_on" value="<?php echo $row_RecFlower["h_on"];?>">
+          <input type="hidden" name="h_id" class="form-control" id="h_id" value="<?php echo $row_RecFlower["h_id"];?>">
+          <input type="text" name="h_biology" class="form-control" id="h_biology" readonly="readonly" value="<?php echo $row_RecFlower["h_biology"];?>" style="font-size: 20px;">
+        </div>
+        <div class="form-group">
+          <label for="h_pedlength">花梗長度：</label>
+          <input type="text" class="form-control" name="h_pedlength" value="<?php echo $row_RecFlower["h_pedlength"];?>" style="font-size: 20px;">
+        </div>
+
+		<div class="form-group">
+          <label for="h_leafNum">葉片數量：</label>
+          <input type="text" class="form-control" name="h_leafNum" value="<?php echo $row_RecFlower["h_leafNum"];?>" style="font-size: 20px;">
+        </div>
+        <div class="form-group">
+          <label for="h_bifNum">分岔數量：</label>
+          <input type="text" class="form-control" name="h_bifNum" value="<?php echo $row_RecFlower["h_bifNum"];?>" style="font-size: 20px;">
+        </div>
+
+        <div class="form-group">
+          <label for="h_bifNum1">第一分岔長度：</label>
+          <input type="text" class="form-control" name="h_bifNum1" value="<?php echo $row_RecFlower["h_bifNum1"];?>" style="font-size: 20px;">
+        </div>
+        <div class="form-group">
+          <label for="h_bifNum2">第二分岔長度：</label>
+          <input type="text" class="form-control" name="h_bifNum2" value="<?php echo $row_RecFlower["h_bifNum2"];?>" style="font-size: 20px;">
+        </div>
+        <div class="form-group">
+          <label for="maturity">成熟度：</label>
+          <input type="text" class="form-control" name="maturity" value="<?php echo $row_RecFlower["maturity"];?>" style="font-size: 20px;">
+        </div>
+        <div class="form-group">
+          <label for="h_date">日期：</label>
+          <input type="text" class="form-control" name="h_date" value="<?php echo $row_RecFlower["h_date"];?>" style="font-size: 20px;">
+        </div>
+        <div class="form-group">
+          <center>
+          <input name="action" type="hidden" id="action" value="update">
+          <input type="submit" class="btn btn-info btn-sm" name="Submit2" value="送出" style="font-size: 18px;">
+          <input type="reset" class="btn btn-info btn-sm" name="Submit3" value="重設資料" style="font-size: 18px;">
+          <input type="button" class="btn btn-info btn-sm" name="Submit" value="回上一頁" onClick="window.history.back();" style="font-size: 18px;"></center>
+        </div>
+      </form>
+    </div><!--div放白色背景透明度60%結束-->
+  </div>
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
 </body>
 </html>
