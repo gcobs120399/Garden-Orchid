@@ -40,6 +40,7 @@ if (isset($_GET["logout"]) && ($_GET["logout"]=="true")) {
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>腎藥蘭花管理系統</title>
+<link rel="icon" href="./img/title.png">
 <head>
   <script language="javascript">
 function checkForm(){
@@ -149,6 +150,7 @@ window.location.href='SM.php';
           <input type="submit" class="btn btn-info btn-sm" name="Submit2" value="送出" style="font-size: 18px;">
           <input type="reset" class="btn btn-info btn-sm" name="Submit3" value="重設資料" style="font-size: 18px;">
           <input type="button" class="btn btn-info btn-sm" name="Submit" value="回上一頁" onClick="window.history.back();" style="font-size: 18px;"></center>
+          <div>© 2016 腎藥蘭花管理系統 ©</div>
         </div>
       </form>
     </div><!--div放白色背景透明度60%結束-->

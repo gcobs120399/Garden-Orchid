@@ -174,6 +174,7 @@ window.location.href='CM.php';
           <input type="submit" class="btn btn-info btn-sm" name="Submit2" value="送出" style="font-size: 18px;">
           <input type="reset" class="btn btn-info btn-sm" name="Submit3" value="重設資料" style="font-size: 18px;">
           <input type="button" class="btn btn-info btn-sm" name="Submit" value="回上一頁" onClick="window.history.back();" style="font-size: 18px;"></center>
+          <br><div>© 2016 腎藥蘭花管理系統 ©</div>
         </div>
       </form>
     </div><!--div放白色背景透明度60%結束-->

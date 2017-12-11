@@ -15,29 +15,52 @@ if(isset($_GET["logout"]) && ($_GET["logout"]=="true")){
   unset($_SESSION["memberLevel"]);
   header("Location: index.php");}
 ?>
-<html>
-<head>
-  <meta  http-equiv="Content-Type" content="text/html;charset=utf-8">
-  <title>腎藥蘭花管理系統</title>
-  <!--呆的巡覽列-->
+<!DOCTYPE html>
+<html lang="en-us">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="./css/bootstrap.min.css" rel="stylesheet">
-<link href="./css/navbar-fixed-top.css" rel="stylesheet"> 
-<script src="./js/ie-emulation-modes-warning.js"></script> 
-<link rel="icon" href="./img/title.png">
-<!--呆-->
-  <!-- 最新編譯和最佳化的 CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-  <!-- 選擇性佈景主題 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-  <!-- 最新編譯和最佳化的 JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/menu.css"><!--菜單CSS+頂端-->
-</head>
-<body style="text-align:center;font-size:18px;background-image: url(img/46505.png);background-size: cover; background-attachment: fixed; font-family: 微軟正黑體;margin:30px">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<title>腎藥蘭花管理系統</title>
+<link rel="icon" href="./img/title.png">
+<head>
+  <script language="javascript">
+function checkForm(){
+  if(document.cmform.h_biology.value==""){//注意表格名稱
+    alert("請填寫品種!");
+    document.cmform.h_biology.focus();
+    return false;
+  }
+  return confirm('確定送出嗎？');
+}
+</script>
+<style>
+  body {
+    font-size:18px;
+    background-image: url(img/60.png);
+    background-size: cover;
+     font-family: 微軟正黑體;
+     background-attachment:fixed;
+}
+  .dbg{
+    background: rgba(100%,100%,100%,0.6);
+    width:60%;
+    float:center;
+  }
+  #p1{padding-left: 25px;}
+</style>
+</head>
+<body style="text-align:center;font-size:18px;background-image: url(img/46505.png);background-size: cover; font-family: 微軟正黑體;margin:30px"><?php if(isset($_GET["loginStats"]) && ($_GET["loginStats"]=="1")){?>
+<script language="javascript">
+alert('資料修改成功。');
+window.location.href='PH2.php';
+</script>
+<?php }?>
 <!--巡覽列black-->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
@@ -73,51 +96,59 @@ if(isset($_GET["logout"]) && ($_GET["logout"]=="true")){
     </div>
   </div>
 </nav>
-</head>
+<br><br><br>
+  <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 
-<body style="text-align:center;font-size:18px;background-image: url(img/46505.png);background-size: cover; font-family: 微軟正黑體;margin:30px">
-<div>
-  <h2><img src="img/LOGO.png" alt="LOGO" width="80" height="50">新增設備</h2>
-</div>
-<hr>
-<div class="col-xs-12"><!--div放白色背景透明度60%開始-->
-  <form action="SM_running.php" method="post" name="formAdd" id="formAdd">
-  <table align="center" style="font-size: 20px;">
-    <tr>
-      <td>使用者</td>
-      <td><input type="text" name="e_user" maxlength="" size="14" readonly="readonly" value="<?php echo $row_RecMember["m_username"];?>"></td>
-    </tr>
-    <tr>
-      <td>名稱</td>
-      <td><input type="text" name="e_name" maxlength="" size="14"></td>
-    </tr>
-    <tr>
-      <td>數量</td>
-      <td><input type="text" name="e_num" maxlength="" size="14"></td>
-    </tr>
-    <tr>
-      <td>單價</td>
-      <td><input type="text" name="e_money" maxlength="" size="14"></td>
-    </tr>
-    <tr>
-      <td>型態</td>
-      <td><input type="radio" name="e_pattern" value="耗材"> 耗材<br>
-<input type="radio" name="e_pattern" value="資材"> 資材<br></td>
-    </tr>
-    <tr >
-      <td colspan="2">
-        <input name="action" type="hidden" value="add">
-        <input type="submit" class="btn btn-info" name="button" id="button" value="新增資料" style="font-size: 18px;">
-        <input type="reset" class="btn btn-info" name="button2" id="button2" value="重新填寫" style="font-size: 18px;">
-        <input type="button" class="btn btn-info" size="12" value="回上一頁" onClick="window.history.back();" style="font-size: 18px;">
-      </td>
-    </tr>
-    <tr></tr>
-    <tr>
-        <td align="center" colspan="2">© 2016 腎藥蘭花管理系統 ©</td>
-      </tr>
-</table>
-</form>
-</div><!--放body下面才會跑-->
+  <div>
+    <!--<button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>-->
+     <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="65" height="40">新增設備</h1>
+    <div class="dbg container"><!--div放白色背景透明度60%開始-->
+        <form  name="cmform" method="post" action="SM_running.php" style="font-size: 20px;">
+        <div class="form-group">
+          <label for="e_user">帳號：</label>
+          <input type="text" name="e_user" class="form-control" id="e_user" readonly="readonly" value="<?php echo $row_RecMember["m_username"];?>" style="font-size: 20px;">
+        </div>
+        <div class="form-group">
+          <label for="e_name">設備名稱：</label>
+          <input type="text" class="form-control" name="e_name" style="font-size: 20px;">
+        </div>
+
+    <div class="form-group">
+          <label for="e_num">設備數量：</label>
+          <input type="text" class="form-control" name="e_num" style="font-size: 20px;">
+        </div>
+        <div class="form-group">
+          <label for="e_money">設備單價：</label>
+          <input type="text" class="form-control" name="e_money" style="font-size: 20px;">
+        </div>
+
+        <div class="form-group">
+          <label for="radio">型態：</label>
+          <div class="radio" id="p1">
+          <label><input type="radio" name="e_pattern" value="資材">資材</label><br>
+          <label><input type="radio" name="e_pattern" value="耗材">耗材</label><br>
+          </div>
+        </div>
+        <div class="form-group">
+          <center>
+          <input name="action" type="hidden" id="action" value="update">
+          <input type="submit" class="btn btn-info btn-sm" name="Submit2" value="送出" style="font-size: 18px;">
+          <input type="reset" class="btn btn-info btn-sm" name="Submit3" value="重設資料" style="font-size: 18px;">
+          <input type="button" class="btn btn-info btn-sm" name="Submit" value="回上一頁" onClick="window.history.back();" style="font-size: 18px;"></center>
+          <div>© 2016 腎藥蘭花管理系統 ©</div>
+        </div>
+      </form>
+    </div><!--div放白色背景透明度60%結束-->
+  </div>
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
 </body>
 </html>
