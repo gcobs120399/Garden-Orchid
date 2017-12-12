@@ -72,24 +72,6 @@ $total_pages = ceil($total_records/$pageRow_records);
       if (confirm('\n您確定要刪除此筆資料嗎?\n刪除後無法恢復!\n')) return true;
       return false;
     }
-    function SetCwinHeight(){
-      var iframeid=document.getElementById("new"); //iframe id
-      if (document.getElementById){
-        if (iframeid && !window.opera){
-          if (iframeid.contentDocument && iframeid.contentDocument.body.offsetHeight){
-            iframeid.height = iframeid.contentDocument.body.offsetHeight;
-          }else if(iframeid.Document && iframeid.Document.body.scrollHeight){
-            iframeid.height = iframeid.Document.body.scrollHeight;
-          }
-        }
-      }
-    }
-    function btnDivShow_onclick() {
-          div1.style.display='';
-          }
-    function btnDivH_onclick() {
-          div1.style.display='none';
-          }
   </script>
 <head>
 <style>
@@ -193,7 +175,7 @@ $total_pages = ceil($total_records/$pageRow_records);
       <?php while($row_RecFlower=mysql_fetch_assoc($RecFlower)){ ?>
             <tr>
               <td width="10%" align="center" bgcolor="#FFFFFF">
-                <p><a href="CPDR_join.php?id=<?php echo $row_RecFlower["f_id"];?>" target="new" onclick="return btnDivShow_onclick()"><?php echo $row_RecFlower["f_biology"];?></a></p>
+                <p><?php echo $row_RecFlower["f_biology"];?></a></p>
               </td>
               <!--td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["f_username"];?></p></td-->
               <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["f_location"];?></p></td>
