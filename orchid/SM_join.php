@@ -25,7 +25,6 @@ if(isset($_GET["logout"]) && ($_GET["logout"]=="true")){
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 <title>腎藥蘭花管理系統</title>
 <link rel="icon" href="./img/title.png">
 <head>
@@ -98,9 +97,7 @@ window.location.href='PH2.php';
 </nav>
 <br><br><br>
   <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
-
   <div>
-    <!--<button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>-->
      <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="65" height="40">新增設備</h1>
     <div class="dbg container"><!--div放白色背景透明度60%開始-->
         <form  name="cmform" method="post" action="SM_running.php" style="font-size: 20px;">
@@ -112,7 +109,6 @@ window.location.href='PH2.php';
           <label for="e_name">設備名稱：</label>
           <input type="text" class="form-control" name="e_name" style="font-size: 20px;">
         </div>
-
     <div class="form-group">
           <label for="e_num">設備數量：</label>
           <input type="text" class="form-control" name="e_num" style="font-size: 20px;">
@@ -121,7 +117,6 @@ window.location.href='PH2.php';
           <label for="e_money">設備單價：</label>
           <input type="text" class="form-control" name="e_money" style="font-size: 20px;">
         </div>
-
         <div class="form-group">
           <label for="radio">型態：</label>
           <div class="radio" id="p1">

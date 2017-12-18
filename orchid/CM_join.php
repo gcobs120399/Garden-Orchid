@@ -103,23 +103,8 @@ window.location.href='CM.php';
   </div>
 </nav>
 <br><br><br>
-<!-- Sidebar 
-  <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
-    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
-    <a href="#" class="w3-bar-item w3-button">首頁</a>
-    <a href="#" class="w3-bar-item w3-button">溫室管理</a>
-    <a href="#" class="w3-bar-item w3-button">設備管理</a>
-    <a href="#" class="w3-bar-item w3-button">作物管理</a>
-    <a href="#" class="w3-bar-item w3-button">生產履歷</a>
-    <a href="#" class="w3-bar-item w3-button">生長預測</a>
-    <a href="#" class="w3-bar-item w3-button">溫室環境監控</a>
-    <a href="#" class="w3-bar-item w3-button">日誌</a>
-  </div>-->
-  <!-- Page Content -->
   <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
-
   <div>
-    <!--<button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>-->
      <h2 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="65" height="40">新增作物</h2>
     <div class="dbg container"><!--div放白色背景透明度60%開始-->
         <form  name="cmform" method="post" onSubmit="return checkForm();" style="font-size: 20px;">
@@ -168,23 +153,3 @@ function w3_close() {
 </script>
 </body>
 </html>
-<!--
-    <form name="cmform" method="post" onSubmit="return checkForm();">
-    <p id="p1"><strong>帳號：</strong>
-      <input type="text" name="f_username" maxlength="" size="14" id="f_username" readonly="readonly" value="<?php echo $row_RecMember["m_username"];?>">
-    </p>
-    <p id="p1"><strong>品種：</strong>
-      <input type="text" name="f_biology" maxlength="" size="14" id="f_biology">
-    </p>
-    <p id="p1"><strong>位置：</strong><center>
-      <input type="radio" name="f_location" value="左"> 左<br>
-      <input type="radio" name="f_location" value="中"> 中<br>
-      <input type="radio" name="f_location" value="右"> 右<br></center>
-    </p>
-    <p id="p1">
-      <input name="action" type="hidden" id="action" value="join">
-       <input type="submit" class="btn btn-info" name="Submit2" value="送出">
-              <input type="reset" class="btn btn-info" name="Submit3" value="重設資料">
-        <input type="button" class="btn btn-info" name="Submit" value="回上一頁" onClick="window.history.back();">
-    </p>
-    </form> -->

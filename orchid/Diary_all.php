@@ -31,7 +31,6 @@ $count=0;
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
-<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
 <!--呆-->
@@ -110,12 +109,8 @@ while($rowub = mysql_fetch_array($resultub)){ //顯示資料
   <div class="col-md-4">
 
     <div class="thumbnail" style="text-align:center;font-size: 20px;">
-    <!--<?php if(($row_RecPic['p_username']==$rowub["m_username"])&&($row_RecPic['filepic']!="")){?>
-        <a href="Diary_view.php?id=<?php echo $rowub["m_id"];?>"><img alt="<?php echo $rowub["m_username"];?>的日誌" width="200" height="200" src="<?php echo $row_RecPic['filepic']; ?>"></a>
-      <?php } ?>-->
       <a href="Diary_all1.php?id=<?php echo $rowub["m_id"];?>"><?php echo $rowub["m_name"];?>的日誌</a>
     </div>
-
 </div>
 <?php }?>
 
@@ -138,7 +133,6 @@ burger.addEventListener('click', function (e) {
     burger.classList.toggle('open');
 });
 </script>
-<!--<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>造成日誌一直轉-->
 <script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/locale/zh-cn.js"></script>

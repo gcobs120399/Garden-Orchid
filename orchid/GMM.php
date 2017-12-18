@@ -63,7 +63,6 @@ $total_pages = ceil($total_records/$pageRow_records);
 <head>
 	<meta  http-equiv="Content-Type" content="text/html;charset=utf-8">
 	<title>腎藥蘭花管理系統</title>
-
 <!--呆的巡覽列-->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -73,8 +72,6 @@ $total_pages = ceil($total_records/$pageRow_records);
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
 <!--呆-->
-
-
 	<!-- 最新編譯和最佳化的 CSS -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   	<!-- 選擇性佈景主題 -->
@@ -86,7 +83,6 @@ $total_pages = ceil($total_records/$pageRow_records);
   	<link rel="stylesheet" type="text/css" href="css/menu.css"><!--菜單CSS+頂端-->
 </head>
 <body style="text-align:center;font-size:18px;background-image: url(img/46505.png);background-size: cover; background-attachment: fixed; font-family: 微軟正黑體;margin:30px">
-
 <!--巡覽列black-->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
@@ -122,35 +118,11 @@ $total_pages = ceil($total_records/$pageRow_records);
     </div>
   </div>
 </nav>
-
 <br><br><br>
 <h1><img src="img/LOGO.png" alt="LOGO" width="80" height="50">溫室管理</h1>
 <hr>
-
 <!--旁邊菜單nav_burger-->
-<div class=" col-xs-2 col-md-2">
- <!--<nav class="burger">
-      <a href="#" class="burger__button" id="burger-button">
-        <span class="burger__button__icon"></span>
-      </a>
-      <ul class="burger__menu">
-        <li><a href="member_center.php">首頁</a></li>
-        <li><a href="GMM.php">溫室管理</a></li>
-        <li><a href="DMM.php">設備管理</a></li>
-        <li><a href="CM.php">作物管理</a></li>
-        <li><a href="PH.php?select=1">生產履歷</a></li>
-        <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
-        <li><a href="Diary.php">日誌</a></li>
-      </ul>
-    </nav>-->
-</div>
-
-<!--內文-->
-<!--按鈕<form name="" method="" action="">
-<input type="button" class="btn btn-info" size="12" value="溫室設置" onclick="location.href='GM.php'">
-<input type="button" class="btn btn-info" size="12" value="溫室資料查詢" onclick="location.href='GII.php'">
-<input type="button" class="btn btn-info" size="12" value="回首頁" onclick="location.href='index.php'">
-</form>-->
+<div class=" col-xs-2 col-md-2"></div>
 <div style="background: rgba(100%,100%,100%,0.6);" class=" col-xs-8 col-md-8"><!--div放白色背景透明度60%開始-->
 <table width="95%" border="0px" align="center" cellpadding="4" cellspacing="0"  style="font-size: 22px;">
   <tr>
@@ -163,7 +135,6 @@ $total_pages = ceil($total_records/$pageRow_records);
              <tr>
               <th bgcolor="#CCCCCC" style="text-align:center;"><p>溫室名稱</p></th>
               <th bgcolor="#CCCCCC" style="text-align:center;"><p>單位</p></th>
-              <!--<th bgcolor="#CCCCCC" style="text-align:center;"><p>使用者</p></th>-->
               <th bgcolor="#CCCCCC" style="text-align:center;"><p>地址</p></th>
               <th bgcolor="#CCCCCC" style="text-align:center;"><p>溫室建置日</p></th>
               <th bgcolor="#CCCCCC" style="text-align:center;"><p>時間</p></th>
@@ -173,7 +144,6 @@ $total_pages = ceil($total_records/$pageRow_records);
             <tr>
               <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["gh_name"];?></p></td>
               <td width="5%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["gh_num"];?></p></td>
-              <!--<td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["gh_user"];?></p></td>-->
               <td width="20%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["gh_add"];?></p></td>
               <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["gh_data"];?></p></td>
               <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["gh_time"];?></p></td>
@@ -196,7 +166,6 @@ $total_pages = ceil($total_records/$pageRow_records);
               </p></td>
                 <td rowspan="2"><a href="GMM_join.php">新增</a></td>
             </tr>
-
           </table>          <p>&nbsp;</p>
           </td>
       </tr>
@@ -204,21 +173,16 @@ $total_pages = ceil($total_records/$pageRow_records);
   </tr>
   <tr>
     <td align="center">
-    <!--<p>
-    <input type="button" class="btn btn-info" size="12" value="回首頁" onclick="location.href='index.php'"></p>-->
     © 2016 腎藥蘭花管理系統 ©</td>
   </tr>
 </table>
 </div><!--div放白色背景透明度60%結束-->
-
 <!--呆的巡覽列-->
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/ie10-viewport-bug-workaround.js"></script>
 <!--呆-->
-
 </body>
-
 <script type="text/javascript">/*這為左邊菜單的JS，來源http://codepen.io/vkbansal/pen/QbapGz*/
   'use strict';
 var burger = document.getElementById('burger-button');
@@ -228,5 +192,4 @@ burger.addEventListener('click', function (e) {
     burger.classList.toggle('open');
 });
 </script>
-
 </html>

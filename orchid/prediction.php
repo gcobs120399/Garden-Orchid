@@ -13,12 +13,9 @@ if(isset($_GET["logout"]) && ($_GET["logout"]=="true")){
 $query_RecFlo = "SELECT * FROM `flower` WHERE `f_id`='".$_GET["select"]."' ";
 $RecFlo = mysql_query($query_RecFlo);
 $row_RecFlo=mysql_fetch_assoc($RecFlo);
-
 $query_RecHis = "SELECT * FROM `history` WHERE `h_on`='".$_GET["select"]."' ";
 $RecHis = mysql_query($query_RecHis);
 $row_RecHis=mysql_fetch_assoc($RecHis);
-
-//$query_RecHis1 = "SELECT * FROM `history` WHERE `h_on`=10";
 $count=0;
 include("MYSQL.php");
 $data = "SELECT * FROM `history` WHERE `h_on`='".$_GET["select"]."' ORDER BY `h_id` ASC "; //查詢FROM 資料表 where 判斷式
@@ -28,11 +25,9 @@ while ($row = mysql_fetch_array($resultub)){
     $h_pedlength[]=intval($row["h_pedlength"]);
     $count=$count+1;
 }
-
 for ($i=0; $i <$count ; $i++) { 
   $pre[$i]=$h_pedlength[$i];
 }
-//左:2.7  中:3.1  右:2.9
 if ($row_RecFlo["f_location"]=="中") {
   $pre[$count]=$pre[$count-1]+3.1;
 }elseif ($row_RecFlo["f_location"]=="左") {
@@ -40,8 +35,6 @@ if ($row_RecFlo["f_location"]=="中") {
 }elseif ($row_RecFlo["f_location"]=="右") {
   $pre[$count]=$pre[$count-1]+2.9;
 }
-
-//$pre[0]=35;$pre[1]=36;$pre[2]=37;
 $time = json_encode($time);
 $data = array(array("name"=>"預測長度","data"=>$pre),array("name"=>"花梗長度","data"=>$h_pedlength));
 $data = json_encode($data);
@@ -51,7 +44,6 @@ $data = json_encode($data);
 <head>
   <meta  http-equiv="Content-Type" content="text/html;charset=utf-8">
   <title>蘭花管理系統</title>
-
 <!--呆的巡覽列-->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -138,9 +130,7 @@ $(function () {
 });
     </script>
 </head>
-
 <body style="text-align:left;font-size:20px;background-image: url(img/46505.png);background-size: cover;background-attachment: fixed; font-family: 微軟正黑體;margin:30px">
-
 <!--巡覽列black-->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
@@ -176,13 +166,9 @@ $(function () {
     </div>
   </div>
 </nav>
-
-<br>
-<br>
-<br>
+<br><br><br>
 <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">作物預測紀錄</h1>
 <hr>
-
 <div class="col-xs-2 col-md-2">
 </div>
 <div class="col-xs-8 col-md-8"><!--內文-->
@@ -218,7 +204,6 @@ if ($row_RecFlo["f_location"]=="中") {
 }
 ?>
 </div>
-
 <div class="col-xs-12 col-md-12">
   <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div><!--折線圖-->
 </div>
@@ -227,15 +212,11 @@ if ($row_RecFlo["f_location"]=="中") {
 <footer style="text-align:center">© 2016 農業物聯生產管理系統 ©</footer>
 </div>
 <div class="col-xs-2 col-md-2"></div>
-
-
-
 <!--呆的巡覽列-->
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/ie10-viewport-bug-workaround.js"></script>
 <!--呆-->
-
 </body>
 <script type="text/javascript">/*這為左邊菜單的JS，來源http://codepen.io/vkbansal/pen/QbapGz*/
   'use strict';
@@ -246,19 +227,4 @@ burger.addEventListener('click', function (e) {
     burger.classList.toggle('open');
 });
 </script>
-<!--這段是影響圖表數度
-<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
-<script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/locale/zh-cn.js"></script>
-<script src="js/es6.js"></script>
-<script>
-  'use strict';
-  $(function () {
-    'use strict';
-    $('#date1').DatePicker({
-        startDate: moment()
-    });
-  });
-</script>-->
 </html>

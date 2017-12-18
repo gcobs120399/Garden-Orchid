@@ -117,7 +117,6 @@ $count=0;
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
 <!--呆-->
-
 	<!-- 最新編譯和最佳化的 CSS -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 	<!-- 選擇性佈景主題 -->
@@ -178,34 +177,8 @@ $count=0;
 </nav>
 <br><br><br>
 <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">日誌</h1>
-<!--<div style="text-align:center;">
-  <input type="button" class="btn btn-info" size="12" value="溫室管理" onclick="location.href='GMM.php'">
-  <input type="button" class="btn btn-info" size="12" value="設備管理" onclick="location.href='DMM.php'">
-  <input type="button" class="btn btn-info" size="12" value="作物管理" onclick="location.href='CM.php'">
-  <input type="button" class="btn btn-info" size="12" value="生產履歷" onclick="location.href='PH2.php'">
-  <input type="button" class="btn btn-info" size="12" value="溫室環境監控" onclick="location.href='GEMM.php'">
-  <input type="button" class="btn btn-info" size="12" value="日誌" onclick="location.href='Diary.php'">
-</div>-->
 <hr>
 <div class="col-xs-2 col-md-2"></div>
-<!--旁邊菜單nav_burger
-<div class="col-xs-2 col-md-2">
- <nav class="burger">
-      <a href="#" class="burger__button" id="burger-button">
-        <span class="burger__button__icon"></span>
-      </a>
-      <ul class="burger__menu">
-        <li><a href="member_center.php">首頁</a></li>
-        <li><a href="GMM.php">溫室管理</a></li>
-        <li><a href="DMM.php">設備管理</a></li>
-        <li><a href="CM.php">作物管理</a></li>
-        <li><a href="PH.php?select=1">生產履歷</a></li>
-        <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
-        <li><a href="Diary.php">日誌</a></li>
-      </ul>
-    </nav>
-</div>-->
-
   <div class=" col-xs-8 col-md-8">
     <div class="thumbnail">
     <form method="POST" Enctype="multipart/form-data" id="Dform" >
@@ -259,14 +232,11 @@ while($rowub1 = mysql_fetch_array($resultub1)){ //顯示資料
   <button style="font-size: 18px;" class="btn btn-info btn-sm" onclick="javascript:location.href='Diary_all.php'">其他日誌</button>
 </div>
 <div class="col-xs-12 col-md-12" style="text-align: center;">© 2016 腎藥蘭花管理系統 ©</div>
-
-
 <!--呆的巡覽列-->
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/ie10-viewport-bug-workaround.js"></script>
 <!--呆-->
-
 </body>
 <script type="text/javascript">/*這為左邊菜單的JS，來源http://codepen.io/vkbansal/pen/QbapGz*/
   'use strict';
@@ -277,12 +247,10 @@ burger.addEventListener('click', function (e) {
     burger.classList.toggle('open');
 });
 </script>
-<!--<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>造成日誌網頁一直轉-->
 <script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/locale/zh-cn.js"></script>
 <script src="js/es6.js"></script>
-
 <script>
 	'use strict';
 	$(function () {

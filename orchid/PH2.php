@@ -15,7 +15,6 @@ if(isset($_GET["logout"]) && ($_GET["logout"]=="true")){
   unset($_SESSION["memberLevel"]);
   header("Location: index.php");
 }
-
 $query_RecFlower = "SELECT * FROM `history` WHERE `h_on`='".$_GET["id"]."' ";
 $RecFlower = mysql_query($query_RecFlower);
 $row_RecFlower=mysql_fetch_assoc($RecFlower);
@@ -47,7 +46,6 @@ $total_pages = ceil($total_records/$pageRow_records);
 <head>
   <meta  http-equiv="Content-Type" content="text/html;charset=utf-8">
   <title>腎藥蘭花管理系統</title>
-
 <!--呆的巡覽列-->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,7 +55,6 @@ $total_pages = ceil($total_records/$pageRow_records);
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
 <!--呆-->
-
   <!-- 最新編譯和最佳化的 CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <!-- 選擇性佈景主題 -->
@@ -69,35 +66,10 @@ $total_pages = ceil($total_records/$pageRow_records);
       if (confirm('\n您確定要刪除此筆資料嗎?\n刪除後無法恢復!\n該筆歷史紀錄也會跟著刪除!\n')) return true;
       return false;
     }
-/*function SetCwinHeight()
-{
-var iframeid=document.getElementById("new"); //iframe id
-  if (document.getElementById)
-  {
-   if (iframeid && !window.opera)
-   {
-    if (iframeid.contentDocument && iframeid.contentDocument.body.offsetHeight)
-     {
-       iframeid.height = iframeid.contentDocument.body.offsetHeight;
-     }else if(iframeid.Document && iframeid.Document.body.scrollHeight)
-     {
-       iframeid.height = iframeid.Document.body.scrollHeight;
-      }
-    }
-   }
-}
-
-function btnDivShow_onclick() {
-      div1.style.display='';
-      }
-function btnDivH_onclick() {
-      div1.style.display='none';
-      }*/
 </script>
 <link rel="stylesheet" type="text/css" href="css/menu.css"><!--菜單CSS+頂端-->
 </head>
 <body style="text-align:center;font-size:18px;background-image: url(img/46505.png);background-size: cover;background-attachment: fixed; font-family: 微軟正黑體;margin:30px">
-
 <!--巡覽列black-->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
@@ -137,11 +109,9 @@ function btnDivH_onclick() {
 <div class="row col-xs-12" style="display:none" id="div1">
   <iframe name="new" style="width: 30%;" marginwidth="0" marginheight="0" onload="Javascript:SetCwinHeight()"  scrolling="No" frameborder="0" id="new"></iframe><br>
 </div>
-
 <form name="fromCM" method="" action="">
 <hr>
 <div class="col-xs-1 col-md-1"></div>
-
 <div style="background: rgba(100%,100%,100%,0.6);" class="row col-xs-10 col-md-10"><!--div放白色背景透明度60%開始-->
 <!--以下顯示作物列表-->
 <table width="90%" border="0px" align="center" cellpadding="4" cellspacing="0" style="font-size: 20px;">
@@ -152,7 +122,6 @@ function btnDivH_onclick() {
           <table width="100%"  border="1px" cellpadding="0" cellspacing="0" bgcolor="#F0F0F0" >
             <tr >
               <th width="5%" bgcolor="#CCCCCC" style="text-align:center;"><p>日期</p></th>
-              <!--th width="10%" bgcolor="#CCCCCC" style="text-align:center;"><p>帳號</p></th-->
               <th width="5%" bgcolor="#CCCCCC" style="text-align:center;"><p>花梗長度</p></th>
               <th width="5%" bgcolor="#CCCCCC" style="text-align:center;"><p>葉片數量</p></th>
               <th width="5%" bgcolor="#CCCCCC" style="text-align:center;"><p>分岔數</p></th>
@@ -187,7 +156,6 @@ function btnDivH_onclick() {
                   <?php }?>
               </p></td>
             </tr>
-
           </table>          <p>&nbsp;</p>
           </td>
       </tr>
@@ -203,13 +171,11 @@ function btnDivH_onclick() {
 </table>
 </form>
 </div><!--div放白色背景透明度60%結束-->
-
 <!--呆的巡覽列-->
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/ie10-viewport-bug-workaround.js"></script>
 <!--呆-->
-
 </body>
 <script type="text/javascript">/*這為左邊菜單的JS，來源http://codepen.io/vkbansal/pen/QbapGz*/
   'use strict';

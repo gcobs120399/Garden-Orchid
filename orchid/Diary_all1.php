@@ -30,7 +30,6 @@ $count=0;
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
-<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
 <!--呆-->
@@ -94,16 +93,6 @@ $count=0;
 <br><br><br>
 <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50"><?php echo $row_RecMember['m_name']?>的日誌</h1>
 <div style="background-image: url(img/w60.gif);background: rgba(100%,100%,100%,0.6);" class="col-xs-12 "><!--div放白色背景透明度60%開始-->
-<!--
-    <nav class="burger">
-      <a href="#" class="burger__button" id="burger-button">
-        <span class="burger__button__icon"></span>
-      </a>
-      <ul class="burger__menu">
-        <li><a href="index.php">首頁</a></li>
-        <li><a href="Diary_c.php">日誌</a></li>
-      </ul>
-    </nav>-->
 </div>
 <div class="row col-xs-12 ">
   <div class="col-md-2"></div>
@@ -162,7 +151,6 @@ burger.addEventListener('click', function (e) {
     burger.classList.toggle('open');
 });
 </script>
-<!--<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>造成日誌一直轉-->
 <script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/locale/zh-cn.js"></script>
@@ -175,19 +163,5 @@ burger.addEventListener('click', function (e) {
 		    startDate: moment()
 		});
 	});
-
-	/*$("#gotop").click(function(){
-    jQuery("html,body").animate({
-        scrollTop:0
-    },1000);
-});
-$(window).scroll(function() {
-    if ( $(this).scrollTop() > 300){
-        $('#gotop').fadeIn("fast");
-    } else {
-        $('#gotop').stop().fadeOut("fast");
-    }
-});*/
-
 </script>
 </html>

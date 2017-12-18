@@ -56,8 +56,6 @@ while ($row1 = mysql_fetch_array($resultub1)){
 $time1 = json_encode($time_1); //调用函数json_encode生成json数据。
 $data1 = array(array("name"=>"葉片數量","data"=>$h_leafNum_1),array("name"=>"花梗長度","data"=>$h_pedlength_1),array("name"=>"分岔數","data"=>$h_bifNum_1),array("name"=>"第一分岔","data"=>$h_bifNum1_1),array("name"=>"第二分岔","data"=>$h_bifNum2_1),array("name"=>"成熟度","data"=>$maturity_1));
 $data1 = json_encode($data1);
-
-
 $data2 = "SELECT * FROM `history` WHERE `h_on`='".$_GET["select"]."' ORDER BY `h_id` "; //查詢FROM 資料表 where 判斷式
 $resultub2 = mysql_query($data2);
 while ($row2 = mysql_fetch_array($resultub2)){
@@ -78,17 +76,14 @@ $data2 = json_encode($data2);
 <head>
   <meta  http-equiv="Content-Type" content="text/html;charset=utf-8">
   <title>腎藥蘭花管理系統</title>
-
 <!--呆的巡覽列-->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
-<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
 <!--呆-->
-
   <!-- 最新編譯和最佳化的 CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <!-- 選擇性佈景主題 -->
@@ -278,9 +273,7 @@ $(function () {
 });
     </script>
 </head>
-
 <body style="text-align:left;font-size:18px;background-image: url(img/46505.png);background-size: cover;background-attachment: fixed; font-family: 微軟正黑體;margin:30px">
-
 <!--巡覽列black-->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
@@ -316,28 +309,10 @@ $(function () {
     </div>
   </div>
 </nav>
-
 <br><br><br>
 <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">作物歷史紀錄</h1>
 <hr>
-
-<div class="col-xs-2 col-md-2">
-<!--旁邊菜單nav_burger
- <nav class="burger">
-      <a href="#" class="burger__button" id="burger-button">
-        <span class="burger__button__icon"></span>
-      </a>
-      <ul class="burger__menu">
-        <li><a href="member_center.php">首頁</a></li>
-        <li><a href="GMM.php">溫室管理</a></li>
-        <li><a href="DMM.php">設備管理</a></li>
-        <li><a href="CM.php">作物管理</a></li>
-        <li><a href="PH2.php">生產履歷</a></li>
-        <li><a href="http://140.127.1.99/orchid_garden/index.html" target=" _new">溫室環境監控</a></li>
-        <li><a href="Diary.php">日誌</a></li>
-      </ul>
-    </nav>-->
-</div>
+<div class="col-xs-2 col-md-2"></div>
 <div class="col-xs-8 col-md-8"><!--內文-->
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
@@ -363,7 +338,6 @@ $resultub = mysql_query($data);
   </div>
 </div>
 </div>
-
 <div class="col-xs-12 col-md-12">
   <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div><!--近10天折線圖-->
   <br>
@@ -376,15 +350,11 @@ $resultub = mysql_query($data);
 <footer style="text-align:center">© 2016 腎藥蘭花管理系統 ©</footer>
 </div>
 <div class="col-xs-2 col-md-2"></div>
-
-
-
 <!--呆的巡覽列-->
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/ie10-viewport-bug-workaround.js"></script>
 <!--呆-->
-
 </body>
 <script type="text/javascript">/*這為左邊菜單的JS，來源http://codepen.io/vkbansal/pen/QbapGz*/
   'use strict';
@@ -395,19 +365,4 @@ burger.addEventListener('click', function (e) {
     burger.classList.toggle('open');
 });
 </script>
-<!--這段是影響圖表數度
-<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
-<script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/locale/zh-cn.js"></script>
-<script src="js/es6.js"></script>
-<script>
-	'use strict';
-	$(function () {
-		'use strict';
-		$('#date1').DatePicker({
-		    startDate: moment()
-		});
-	});
-</script>-->
 </html>

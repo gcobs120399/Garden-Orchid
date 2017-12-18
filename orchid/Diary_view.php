@@ -17,7 +17,6 @@ $count=0;
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
-<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
 <!--呆-->
@@ -70,22 +69,12 @@ $count=0;
 <br>
 <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50"><?php echo $row_RecMember['m_name']?>的日誌</h1>
 <div style="background-image: url(img/w60.gif);background: rgba(100%,100%,100%,0.6);" class="col-xs-12 "><!--div放白色背景透明度60%開始-->
-<!--
-    <nav class="burger">
-      <a href="#" class="burger__button" id="burger-button">
-        <span class="burger__button__icon"></span>
-      </a>
-      <ul class="burger__menu">
-        <li><a href="index.php">首頁</a></li>
-        <li><a href="Diary_c.php">日誌</a></li>
-      </ul>
-    </nav>-->
 </div>
 <div class="row col-xs-12 ">
   <div class="col-md-2"></div>
   <div class="col-md-8">
 <?php
-include("MYSQL.php"); //資料庫連線套用WHERE `m_no`='".$_GET["id"]."'ORDER BY `p_time` DESC"
+include("MYSQL.php"); //資料庫連線套用
 $data = "SELECT * FROM `picture` WHERE `m_no`='".$_GET["id"]."'ORDER BY `p_time` DESC"; //查詢FROM 資料表 where 判斷式(府和判斷式的才搜尋
 $resultub = mysql_query($data);
 while($rowub = mysql_fetch_array($resultub)){ //顯示資料
@@ -124,7 +113,6 @@ while($rowub1 = mysql_fetch_array($resultub1)){ //顯示資料
 <div class="col-xs-12 col-md-2"></div>
 <div class="col-xs-12 col-md-8" style="text-align: center;">© 2016 腎藥蘭花管理系統 ©</div>
 <div class="col-xs-12 col-md-2"></div>
-<!--<div id="gotop">˄</div>-->
 </body>
 <script type="text/javascript">/*這為左邊菜單的JS，來源http://codepen.io/vkbansal/pen/QbapGz*/
   'use strict';
@@ -148,19 +136,5 @@ burger.addEventListener('click', function (e) {
 		    startDate: moment()
 		});
 	});
-
-	/*$("#gotop").click(function(){
-    jQuery("html,body").animate({
-        scrollTop:0
-    },1000);
-});
-$(window).scroll(function() {
-    if ( $(this).scrollTop() > 300){
-        $('#gotop').fadeIn("fast");
-    } else {
-        $('#gotop').stop().fadeOut("fast");
-    }
-});*/
-
 </script>
 </html>

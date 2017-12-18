@@ -24,7 +24,6 @@ $uptypes=array('image/jpg','image/jpeg','image/png','image/pjpeg','image/gif','i
 	'application/pdf','application/msword</a>','image/x-png');
 $max_file_size=2000000; //上傳檔案大小限制, 單位BYTE
 $destination_folder="upload/"; //上傳檔路徑
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	if (!is_uploaded_file($_FILES["upfile"]['tmp_name']))
@@ -103,11 +102,9 @@ if(isset($_POST["action"])&&($_POST["action"]=="update")){
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
-<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
 <!--呆-->
-
   <!-- 最新編譯和最佳化的 CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <!-- 選擇性佈景主題 -->
@@ -159,30 +156,8 @@ if(isset($_POST["action"])&&($_POST["action"]=="update")){
 </nav>
 <br><br><br>
 <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">日誌修改</h1>
-<!--<div style="text-align:center;">
-  <input type="button" class="btn btn-info" size="12" value="溫室管理" onclick="location.href='GMM.php'">
-  <input type="button" class="btn btn-info" size="12" value="設備管理" onclick="location.href='DMM.php'">
-  <input type="button" class="btn btn-info" size="12" value="作物管理" onclick="location.href='CM.php'">
-  <input type="button" class="btn btn-info" size="12" value="生產履歷" onclick="location.href='PH2.php'">
-  <input type="button" class="btn btn-info" size="12" value="溫室環境監控" onclick="location.href='GEMM.php'">
-  <input type="button" class="btn btn-info" size="12" value="日誌" onclick="location.href='Diary.php'">
-</div>-->
 <hr>
 <div style="background-image: url(img/w60.gif);background: rgba(100%,100%,100%,0.6);" class="col-xs-12"><!--div放白色背景透明度60%開始-->
-<!--
-    <nav class="burger">
-      <a href="#" class="burger__button" id="burger-button">
-        <span class="burger__button__icon"></span>
-      </a>
-      <ul class="burger__menu">
-        <li><a href="GMM.php">溫室管理</a></li>
-        <li><a href="DMM.php">設備管理</a></li>
-        <li><a href="CM.php">作物管理</a></li>
-        <li><a href="PH2.php">生產履歷</a></li>
-        <li><a href="GEMM.php">溫室環境監控</a></li>
-        <li><a href="Diary.php">日誌</a></li>
-      </ul>
-    </nav>-->
 </div>
 <div class="row col-xs-12 ">
   <div class="col-md-1"></div>

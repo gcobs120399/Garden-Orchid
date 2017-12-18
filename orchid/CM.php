@@ -26,7 +26,6 @@ if(isset($_GET["action"])&&($_GET["action"]=="delete")){
 $query_RecMember = "SELECT * FROM `memberdata` WHERE `m_username`='".$_SESSION["loginMember"]."'";
 $RecMember = mysql_query($query_RecMember);
 $row_RecMember=mysql_fetch_assoc($RecMember);
-
 //選取會員的花資料
 $query_RecFlower = "SELECT * FROM `flower` WHERE `f_username`='".$_SESSION["loginMember"]."'";
 $RecFlower = mysql_query($query_RecFlower);
@@ -148,23 +147,8 @@ $total_pages = ceil($total_records/$pageRow_records);
   </div>
 </nav>
 <br><br><br><br>
-  <!-- Sidebar -->
-  <!--<div class="w3-sidebar w3-bar-block w3-animate-left " style="display:none;z-index:5" id="mySidebar">
-    <button class="w3-bar-item w3-button w3-large w3-green" onclick="w3_close()">Close &times;</button>
-    <a href="two3(1).php" class="w3-bar-item w3-button">首頁</a>
-    <a href="#" class="w3-bar-item w3-button">溫室管理</a>
-    <a href="#" class="w3-bar-item w3-button">設備管理</a>
-    <a href="two4.php" class="w3-bar-item w3-button w3-pale-blue">作物管理</a>
-    <a href="#" class="w3-bar-item w3-button">生產履歷</a>
-    <a href="#" class="w3-bar-item w3-button">生長預測</a>
-    <a href="#" class="w3-bar-item w3-button">溫室環境監控</a>
-    <a href="#" class="w3-bar-item w3-button">日誌</a>
-  </div>-->
-  <!-- Page Content -->
   <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
-
   <div>
-    <!--<button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>-->
     <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="65" height="40">作物管理</h1>
     <div align="center" style="display:none" id="div1">
       <iframe name="new" style="width: 80%;" onload="Javascript:SetCwinHeight()"  frameborder="0" id="new"></iframe>
@@ -185,7 +169,6 @@ $total_pages = ceil($total_records/$pageRow_records);
           <table width="100%"  border="1px" cellpadding="0" cellspacing="0" bgcolor="#F0F0F0" >
             <tr >
               <th width="10%" bgcolor="#CCCCCC" style="text-align:center;"><p>品種</p></th>
-              <!--th width="10%" bgcolor="#CCCCCC" style="text-align:center;"><p>帳號</p></th-->
               <th width="10%" bgcolor="#CCCCCC" style="text-align:center;"><p>作物位置</p></th>
               <th width="10%" bgcolor="#CCCCCC" style="text-align:center;"><p>狀態</p></th>
               <th width="5%" bgcolor="#CCCCCC">&nbsp;</th>
@@ -195,7 +178,6 @@ $total_pages = ceil($total_records/$pageRow_records);
               <td width="10%" align="center" bgcolor="#FFFFFF">
                 <p><a href="CPDR_join.php?id=<?php echo $row_RecFlower["f_id"];?>" target="new" onclick="return btnDivShow_onclick()"><?php echo $row_RecFlower["f_biology"];?></a></p>
               </td>
-              <!--td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["f_username"];?></p></td-->
               <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["f_location"];?></p></td>
               <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["f_act"];?></p></td>
               <td width="5%" align="center" bgcolor="#FFFFFF"><p>

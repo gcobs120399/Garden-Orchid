@@ -41,7 +41,6 @@ if(isset($_POST["action"])&&($_POST["action"]=="update")){
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 <title>腎藥蘭花管理系統</title>
 <link rel="icon" href="./img/title.png">
 <head>
@@ -114,7 +113,6 @@ window.location.href='PH2.php';
 </nav>
 <br><br><br>
   <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
-
   <div>
     <!--<button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>-->
      <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="65" height="40">修改歷史紀錄</h1>
@@ -130,7 +128,6 @@ window.location.href='PH2.php';
           <label for="h_pedlength">花梗長度：</label>
           <input type="text" class="form-control" name="h_pedlength" value="<?php echo $row_RecFlower["h_pedlength"];?>" style="font-size: 20px;">
         </div>
-
 		<div class="form-group">
           <label for="h_leafNum">葉片數量：</label>
           <input type="text" class="form-control" name="h_leafNum" value="<?php echo $row_RecFlower["h_leafNum"];?>" style="font-size: 20px;">
@@ -139,7 +136,6 @@ window.location.href='PH2.php';
           <label for="h_bifNum">分岔數量：</label>
           <input type="text" class="form-control" name="h_bifNum" value="<?php echo $row_RecFlower["h_bifNum"];?>" style="font-size: 20px;">
         </div>
-
         <div class="form-group">
           <label for="h_bifNum1">第一分岔長度：</label>
           <input type="text" class="form-control" name="h_bifNum1" value="<?php echo $row_RecFlower["h_bifNum1"];?>" style="font-size: 20px;">

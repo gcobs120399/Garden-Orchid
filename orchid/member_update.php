@@ -112,12 +112,8 @@ function checkmail(myEmail) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
 <link href="./css/navbar-fixed-top.css" rel="stylesheet"> 
-<!--[if lt IE 9]><script src=~/Scripts/AssetsBS3/ie8-responsive-file-warning.js></script><![endif]-->
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
-<!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]-->
-<!--呆-->
-
   <!-- 最新編譯和最佳化的 CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <!-- 選擇性佈景主題 -->
@@ -237,7 +233,6 @@ function checkmail(myEmail) {
             <p>您總共登入了 <?php echo $row_RecMember["m_login"];?> 次。<br>
             本次登入的時間為：<br>
             <?php echo $row_RecMember["m_logintime"];?></p>
-            
 </div>
         <div class="col-xs-12"></div><div class="col-xs-12"></div></td>
       </tr>

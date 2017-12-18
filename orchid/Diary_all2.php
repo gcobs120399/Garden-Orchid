@@ -60,7 +60,6 @@ $total_records = mysql_num_rows($all_RecFlower);
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
-<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
 <!--呆-->
@@ -116,14 +115,6 @@ $total_records = mysql_num_rows($all_RecFlower);
 <br><br><br>
 <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">日誌</h1>
 <div style="background-image: url(img/w60.gif);background: rgba(100%,100%,100%,0.6);" class="col-xs-12"><!--div放白色背景透明度60%開始-->
-    <!--<nav class="burger">
-      <a href="#" class="burger__button" id="burger-button">
-        <span class="burger__button__icon"></span>
-      </a>
-      <ul class="burger__menu">
-        <li><a href="Diary_c.php">日誌</a></li>
-      </ul>
-    </nav>-->
 </div>
 <div class="row col-xs-12 ">
   <div class="col-md-2"></div>
@@ -138,16 +129,6 @@ $total_records = mysql_num_rows($all_RecFlower);
         <?php  echo nl2br($row_RecView['p_text']); ?>
         </p>
         <span style="font-size:14px;"><?php echo $row_RecView['p_time']; ?></span>
-        <!--<div id="fb-root"></div><!--分享
-    <script>
-      (function(d, s, id) {
-　     var js, fjs = d.getElementsByTagName(s)[0];
-　     if (d.getElementById(id)) return;
-　     js = d.createElement(s); js.id = id;
-　       js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1";
-　     fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>-->
     <div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
       </div>
       </p>
@@ -209,12 +190,10 @@ burger.addEventListener('click', function (e) {
     burger.classList.toggle('open');
 });
 </script>
-<!--<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>造成日誌一直轉-->
 <script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/locale/zh-cn.js"></script>
 <script src="js/es6.js"></script>
-
 <script>
   'use strict';
   $(function () {
@@ -223,18 +202,5 @@ burger.addEventListener('click', function (e) {
         startDate: moment()
     });
   });
-
-  /*$("#gotop").click(function(){//至頂按鈕
-    jQuery("html,body").animate({
-        scrollTop:0
-    },1000);
-});
-$(window).scroll(function() {//至頂按鈕
-    if ( $(this).scrollTop() > 300){
-        $('#gotop').fadeIn("fast");
-    } else {
-        $('#gotop').stop().fadeOut("fast");
-    }
-});*/
 </script>
 </html>

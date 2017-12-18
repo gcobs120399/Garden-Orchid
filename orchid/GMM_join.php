@@ -111,9 +111,7 @@ window.location.href='PH2.php';
 </nav>
 <br><br><br>
   <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
-
   <div>
-    <!--<button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>-->
      <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="65" height="40">新增溫室</h1>
     <div class="dbg container"><!--div放白色背景透明度60%開始-->
         <form name="formAdd" id="formAdd" method="post" onSubmit="return checkForm();" style="font-size: 20px;">
@@ -125,7 +123,6 @@ window.location.href='PH2.php';
           <label for="gh_name">名稱：</label>
           <input type="text" class="form-control" name="gh_name" id="gh_name" style="font-size: 20px;">
         </div>
-
     <div class="form-group">
           <label for="gh_num">單位：</label>
           <input type="text" class="form-control" name="gh_num" id="gh_num" style="font-size: 20px;">
@@ -160,7 +157,6 @@ function w3_close() {
     document.getElementById("myOverlay").style.display = "none";
 }
 </script>
-
 <script type="text/javascript">/*這為左邊菜單的JS，來源http://codepen.io/vkbansal/pen/QbapGz*/
   'use strict';
 var burger = document.getElementById('burger-button');

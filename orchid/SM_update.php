@@ -112,9 +112,7 @@ window.location.href='SM.php';
 </nav>
 <br><br><br>
   <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
-
   <div>
-    <!--<button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>-->
      <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="65" height="40">修改設備</h1>
     <div class="dbg container"><!--div放白色背景透明度60%開始-->
         <form  name="cmform" method="post" onSubmit="return checkForm();" style="font-size: 20px;">
@@ -127,7 +125,6 @@ window.location.href='SM.php';
           <label for="e_name">設備名稱：</label>
           <input type="text" class="form-control" name="e_name" value="<?php echo $row_result["e_name"];?>" style="font-size: 20px;">
         </div>
-
 		<div class="form-group">
           <label for="e_num">設備數量：</label>
           <input type="text" class="form-control" name="e_num" value="<?php echo $row_result["e_num"];?>" style="font-size: 20px;">
@@ -136,7 +133,6 @@ window.location.href='SM.php';
           <label for="e_money">設備單價：</label>
           <input type="text" class="form-control" name="e_money" value="<?php echo $row_result["e_money"];?>" style="font-size: 20px;">
         </div>
-
         <div class="form-group">
           <label for="radio">型態：</label>
           <div class="radio" id="p1">

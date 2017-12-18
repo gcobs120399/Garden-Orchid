@@ -25,13 +25,9 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="./css/bootstrap.min.css" rel="stylesheet">
-<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
-<!--[if lt IE 9]><script src=~/Scripts/AssetsBS3/ie8-responsive-file-warning.js></script><![endif]-->
   <script src="./js/ie-emulation-modes-warning.js"></script> 
   <link rel="icon" href="./img/title.png">
-<!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]-->
 <!--呆-->
-
   <!-- 最新編譯和最佳化的 CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <!-- 選擇性佈景主題 -->
@@ -43,7 +39,6 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
   <link rel="stylesheet" type="text/css" href="css/menu.css"><!--菜單CSS+頂端-->
 </head>
 <body style="text-align:left;font-size:18px;background-image: url(img/46505.png);background-size: cover;background-attachment: fixed; font-family: 微軟正黑體;margin:30px">
-
 <!--巡覽列black-->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
@@ -85,7 +80,6 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
   <h1 style="text-align:center;">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</h1>
   <hr>
   <div style="background: rgba(100%,100%,100%,0.6); margin: 0 auto;"><!--div放白色背景透明度60%開始-->
-  
     <div style="text-align: center"><h1><img src="img/LOGO.png" alt="LOGO" width="80" height="50">豐田蘭園</h1></div>
     <div style="margin-left:0px auto;margin-right:0px auto;">
       <div style="display: table-cell;vertical-align: middle;">
@@ -104,18 +98,6 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
           <tr>
           <td align="center" valign="center"><img src="img/orchid1.jpg" width="90%" height="50%"></td>
           </tr>
-                <!--<tr>
-                  <td style="font-size: 30px">種植的蘭花品種為「腎藥蘭」。<p></td>
-                </tr>
-                 <tr>
-                  <td style="font-size: 30px">腎藥蘭(Renanthera Philippinensis)介紹：<p></td>
-                </tr>
-                <tr>
-                  <td style="font-size: 30px">蘭科腎藥蘭屬的著生性多年生草本，本屬約有15種。<p>屬名Renanthera 是由拉丁文 renes 腎臟與希臘文 anthera 花藥組合成，意指花藥形似腎臟。</td>
-                </tr>
-                <tr>
-                  <td style="font-size: 30px">粗壯的氣生根自莖伸出，單莖直立，二列互生葉片排列如梯，厚革質葉長橢圓形，葉尖凹入，葉長約10~15㎝。<p>複總狀花序自葉腋伸出，花朵萼瓣發達寬大，其他花瓣較窄，脣瓣小而不明顯，中心黃色。花色橘紅，有深紅色斑紋。<p></td>
-                </tr>-->
         </table>
     </div>
     <div style="display: table-cell;vertical-align: middle;"></div>

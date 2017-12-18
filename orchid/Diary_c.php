@@ -2,7 +2,6 @@
 header("Content-Type: text/html; charset=utf-8;image/jpeg;image/gif;image/png");
 require_once("MYSQL.php");
 session_start();
-//執行登出動作
 //圖片->日誌
 $query_RecPic = "SELECT * FROM `picture`ORDER BY `p_time` DESC";
 $RecPic = mysql_query($query_RecPic);
@@ -73,16 +72,6 @@ $count=0;
 <hr>
 <div style="background-image: url(img/w60.gif);background: rgba(100%,100%,100%,0.6);" class="col-xs-12"><!--div放白色背景透明度60%開始-->
 <!--巡覽列nav-->
-
-<!--<nav class="burger">
-      <a href="#" class="burger__button" id="burger-button">
-        <span class="burger__button__icon"></span>
-      </a>
-      <ul class="burger__menu">
-        <li><a href="index.php">首頁</a></li>
-      </ul>
-    </nav>-->
-
 <div class="row col-xs-12 ">
   <div class="col-md-2"></div>
   <div class="col-md-8">
@@ -94,19 +83,12 @@ $resultub = mysql_query($data);
 while($rowub = mysql_fetch_array($resultub)){ //顯示資料
 ?>
   <div class="col-md-4">
-
     <div class="thumbnail" style="text-align:center;font-size: 20px;">
-    <!--<?php if(($row_RecPic['p_username']==$rowub["m_username"])&&($row_RecPic['filepic']!="")){?>
-        <a href="Diary_view.php?id=<?php echo $rowub["m_id"];?>"><img alt="<?php echo $rowub["m_username"];?>的日誌" width="200" height="200" src="<?php echo $row_RecPic['filepic']; ?>"></a>
-      <?php } ?>-->
       <a href="Diary_view.php?id=<?php echo $rowub["m_id"];?>"><?php echo $rowub["m_name"];?>的日誌</a>
     </div>
-
 </div>
 <?php }?>
-
   </div>
-  
   <div class="col-md-2"></div>
 </div>
 <div class="col-xs-12 col-md-2"></div>
@@ -123,7 +105,6 @@ burger.addEventListener('click', function (e) {
     burger.classList.toggle('open');
 });
 </script>
-<!--<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>-->
 <script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/locale/zh-cn.js"></script>

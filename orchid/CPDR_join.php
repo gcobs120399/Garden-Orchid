@@ -28,7 +28,6 @@ if(isset($_POST["action"])&&($_POST["action"]=="join")){
     $h_on = $_POST['h_on'];
 		$sql = "INSERT INTO `history`(`h_biology`,`h_leafNum`,`h_pedlength`,`h_bifNum`,`h_bifNum1` ,`h_bifNum2`,`maturity`,`h_username`,`h_date`,`h_on`) VALUES ('$h_biology','$h_leafNum','$h_pedlength','$h_bifNum' ,'$h_bifNum1','$h_bifNum2','$maturity','$h_username','$h_date','$h_on')";
 		mysql_query($sql)or die(mysql_error());echo "新增成功";
-		//header("Location: CPDR_join.php?id=$h_on"); //新增完資料做網頁跳轉
 	}
 }
 ?>
@@ -74,7 +73,7 @@ window.location.href='history.php';
 </script>
 <?php }?>
   <div>
-     <h2 style="text-align:center;"><!--img src="img/LOGO.png" alt="LOGO" width="80" height="50"-->新增歷史紀錄</h2>
+     <h2 style="text-align:center;">新增歷史紀錄</h2>
         <form  name="hform" method="post" onSubmit="return checkForm();" style="font-size: 20px;">
         <div class="form-group">
           <input type="hidden" name="h_username" maxlength="" size="14" id="h_username" readonly="readonly" value="<?php echo $row_RecMember["m_username"];?>" style="font-size: 20px;">

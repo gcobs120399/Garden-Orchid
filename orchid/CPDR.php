@@ -30,7 +30,6 @@ $row_RecMember=mysql_fetch_assoc($RecMember);
 $query_RecFlower = "SELECT * FROM `flower` WHERE `f_id`=".$_GET["id"];
 $RecFlower = mysql_query($query_RecFlower);
 $row_RecFlower=mysql_fetch_assoc($RecFlower);
-
 //選取會員的花歷史
 $query_RecHistory = "SELECT * FROM `history` WHERE `h_on`=".$_GET["id"];
 $RecHistory = mysql_query($query_RecHistory);
@@ -141,7 +140,6 @@ $total_pages = ceil($total_records/$pageRow_records);
     <input type="button" class="btn btn-info" name="Submit" value="回上一頁" onClick="window.history.back();"><br>
     © 2016 腎藥蘭花管理系統 ©</td>
   </tr>
-
 </table>
 </form>
 </body>

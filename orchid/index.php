@@ -62,12 +62,7 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
-<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
-<!--[if lt IE 9]><script src=~/Scripts/AssetsBS3/ie8-responsive-file-warning.js></script><![endif]-->
 <script src="./js/ie-emulation-modes-warning.js"></script> 
-<!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]-->
-<!--呆-->
-
   <!-- 最新編譯和最佳化的 CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <!-- 選擇性佈景主題 -->
@@ -77,7 +72,6 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
 <link rel="stylesheet" type="text/css" href="css/menu.css"><!--菜單CSS-->
 </head>
 <body style="text-align:left;font-size:18px;background-image: url(img/46505.png);background-size: cover;background-attachment: fixed; font-family: 微軟正黑體;margin:30px">
-
 <!--巡覽列nav-->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
@@ -114,24 +108,6 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
     <td class="tdbline">
     <table width="100%" border="5">
       <tr valign="top">
-        <!--<td class="tdrline"><p class="title">歡迎光臨農業物聯生產管理系統</p>
-          <p>感謝各位來到腎藥蘭花管理系統， 所有的會員功能都必須經由登入後才能使用，請您在右方視窗中執行登入動作。</p>
-          <p class="heading"> 本會員系統擁有以下的功能：</p>
-          <ol>
-            <li>免費加入會員 。</li>
-            <li>每個會員可修改本身資料。</li>
-            <li>若是遺忘密碼，會員可由系統發出電子信函通知。</li>
-            <li>管理者可以修改、刪除會員的資料。</li>
-          </ol>
-          <p class="heading">請各位會員遵守以下規則： </p>
-          <ol>
-            <li> 遵守政府的各項有關法律法規。</li>
-            <li> 不得在發佈任何色情非法， 以及危害國家安全的言論。</li>
-            <li>嚴禁連結有關政治， 色情， 宗教， 迷信等違法訊息。</li>
-            <li> 承擔一切因您的行為而直接或間接導致的民事或刑事法律責任。</li>
-            <li> 互相尊重， 遵守互聯網絡道德；嚴禁互相惡意攻擊， 漫罵。</li>
-            <li> 管理員擁有一切管理權力。</li>
-          </ol></td>-->
         <td width="200">
         <div class="boxtl col-xs-12"></div><div class="boxtr"></div>
   <div class="col-xs-12"><?php if(isset($_GET["errMsg"]) && ($_GET["errMsg"]=="1")){?>
@@ -151,7 +127,6 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
       <input type="submit" name="button" class="btn btn-info" id="button" value="登入系統">
     </p>
     </form>
-    <!--p align="center" style="font-size: 20px; text-align: center;"><a href="admin_passmail.php">忘記密碼，補寄密碼信。</a></p>-->
     <hr size="1">
     <p class="heading" style="font-size: 20px;">還沒有會員帳號?</p>
     <p  style="font-size: 20px;">註冊帳號免費又容易</p>
@@ -172,7 +147,6 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/ie10-viewport-bug-workaround.js"></script>
 <!--呆-->
-
 </body>
 <script type="text/javascript">/*這為左邊菜單的JS，來源http://codepen.io/vkbansal/pen/QbapGz*/
   'use strict';

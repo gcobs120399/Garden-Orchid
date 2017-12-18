@@ -112,9 +112,7 @@ window.location.href='GMM.php';
 </nav>
 <br><br><br>
   <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
-
   <div>
-    <!--<button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>-->
      <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="65" height="40">修改溫室</h1>
     <div class="dbg container"><!--div放白色背景透明度60%開始-->
         <form  name="cmform" method="post" onSubmit="return checkForm();" style="font-size: 20px;">

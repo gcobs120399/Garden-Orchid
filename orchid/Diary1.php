@@ -80,11 +80,9 @@ $total_records = mysql_num_rows($all_RecFlower);
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
-<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
 <!--呆-->
-
   <!-- 最新編譯和最佳化的 CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <!-- 選擇性佈景主題 -->
@@ -191,32 +189,7 @@ $(function() {
 </nav>
 <br><br><br>
 <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">日誌</h1>
-<!--
-<div style="text-align:center;">
-  <input type="button" class="btn btn-info" size="12" value="溫室管理" onclick="location.href='GMM.php'">
-  <input type="button" class="btn btn-info" size="12" value="設備管理" onclick="location.href='DMM.php'">
-  <input type="button" class="btn btn-info" size="12" value="作物管理" onclick="location.href='CM.php'">
-  <input type="button" class="btn btn-info" size="12" value="生產履歷" onclick="location.href='PH.php?select=1'">
-  <input type="button" class="btn btn-info" size="12" value="溫室環境監控" onclick="location.href='GEMM.php'">
-  <input type="button" class="btn btn-info" size="12" value="日誌" onclick="location.href='Diary.php'">
-</div>
--->
 <div style="background-image: url(img/w60.gif);background: rgba(100%,100%,100%,0.6);" class="col-xs-12 "><!--div放白色背景透明度60%開始-->
-<!--
-    <nav class="burger">
-      <a href="#" class="burger__button" id="burger-button">
-        <span class="burger__button__icon"></span>
-      </a>
-      <ul class="burger__menu">
-        <li><a href="member_center.php">首頁</a></li>
-        <li><a href="GMM.php">溫室管理</a></li>
-        <li><a href="SM.php">設備管理</a></li>
-        <li><a href="CM.php">作物管理</a></li>
-        <li><a href="PH.php?select=1">生產履歷</a></li>
-        <li><a href="GEMM.php">溫室環境監控</a></li>
-        <li><a href="Diary.php">日誌</a></li>
-      </ul>
-    </nav>-->
 </div>
 <div class="row col-xs-12 ">
   <div class="col-md-2"></div>
@@ -237,16 +210,6 @@ while($rowub = mysql_fetch_array($resultub)){ //顯示資料
         <?php  echo nl2br($rowub['p_text']); ?>
         </p>
         <span style="font-size:16px;"><?php echo $rowub['p_time']; ?></span>
-        <!--<div id="fb-root"></div>分享
-    <script>
-      (function(d, s, id) {
-　     var js, fjs = d.getElementsByTagName(s)[0];
-　     if (d.getElementById(id)) return;
-　     js = d.createElement(s); js.id = id;
-　       js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1";
-　     fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>-->
     <div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
       </div>
       <p style="text-align:right;"><a class="btn btn-default" role="button" href="Diary_update.php?id=<?php echo $rowub["p_id"];?>" style="font-size: 16px;">編輯</a>
@@ -282,7 +245,6 @@ while($rowub = mysql_fetch_array($resultub)){ //顯示資料
         　於　<?php echo $rowub['s_jointime']; ?>
         </span>
         <p><?php  echo nl2br($rowub['s_text']); ?></p><!--留言內容-->
-
 <?php
 include("MYSQL.php"); //資料庫連線套用
 $data1 = "SELECT * FROM `reply` ORDER BY `r_id` ASC"; //查詢FROM 資料表 where 判斷式(府和判斷式的才搜尋
@@ -333,7 +295,6 @@ burger.addEventListener('click', function (e) {
     burger.classList.toggle('open');
 });
 </script>
-<!--<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>造成日誌網頁一直轉-->
 <script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/locale/zh-cn.js"></script>
@@ -348,5 +309,4 @@ burger.addEventListener('click', function (e) {
     });
   });
 </script>
-
 </html>

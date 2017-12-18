@@ -32,7 +32,6 @@ if(isset($_POST["action"])&&($_POST["action"]=="join")){
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
-<!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
 <!--呆-->
@@ -161,7 +160,6 @@ function checkmail(myEmail) {
     </div>
   </div>
 </nav>
-
 <?php if(isset($_GET["loginStats"]) && ($_GET["loginStats"]=="1")){?>
 <script language="javascript">
 alert('會員新增成功\n請用申請的帳號密碼登入。');
