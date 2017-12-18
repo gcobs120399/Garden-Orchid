@@ -57,7 +57,7 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>腎藥蘭花管理系統</title>
 <link rel="icon" href="./img/title.png">
-<!--呆-->
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -99,7 +99,7 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
 <br><br>
 <h1 style="text-align:center;"><img src="img/LOGO.png" alt="LOGO" width="80" height="50">基於物聯網與KNN技術之腎藥蘭園監測及智慧生產管理系統</h1>
 <div class="col-xs-2"></div>
-<div style="background: rgba(100%,100%,100%,0.6);" class="col-xs-12"><!--div放白色背景透明度60%開始-->
+<div style="background: rgba(100%,100%,100%,0.6);" class="col-xs-12">
 <table width="550" border="0" align="center" cellpadding="4" cellspacing="0">
   <tr>
     <td class="tdbline"><h2>會員系統</h2></td>
@@ -141,12 +141,12 @@ if(isset($_POST["username"]) && isset($_POST["passwd"])){
     <td align="center" background="images/album_r2_c1.jpg" class="trademark" style="font-size: 18px;">© 2016 腎藥蘭花管理系統 ©</td>
   </tr>
 </table>
-</div><!--div放白色背景透明度60%結束-->
-<!--呆-->
+</div>
+
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/ie10-viewport-bug-workaround.js"></script>
-<!--呆-->
+
 </body>
 <script type="text/javascript">/*這為左邊菜單的JS，來源http://codepen.io/vkbansal/pen/QbapGz*/
   'use strict';

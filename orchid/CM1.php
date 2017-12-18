@@ -135,7 +135,7 @@ $total_pages = ceil($total_records/$pageRow_records);
     <div align="center" style="display:none" id="div1">
       <iframe name="new" style="width: 80%;" onload="Javascript:SetCwinHeight()"  frameborder="0" id="new"></iframe>
     </div>
-    <div class="dbg"><!--div放白色背景透明度60%開始-->
+    <div class="dbg">
     <table width="90%" border="0px" align="center" cellpadding="4" cellspacing="0">
     <tr>
     <td class="tdbline">
@@ -199,7 +199,7 @@ $total_pages = ceil($total_records/$pageRow_records);
   </tr>
 </table>
 </form>
-</div><!--div放白色背景透明度60%結束-->
+</div>
   </div>
 <script>
 function w3_open() {

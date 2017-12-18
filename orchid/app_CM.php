@@ -63,7 +63,7 @@ $total_pages = ceil($total_records/$pageRow_records);
   <meta  http-equiv="Content-Type" content="text/html;charset=utf-8">
   <title>腎藥蘭花管理系統</title>
 
-<!--呆的巡覽列-->
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,7 +71,7 @@ $total_pages = ceil($total_records/$pageRow_records);
 <link href="./css/navbar-fixed-top.css" rel="stylesheet"> 
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
-<!--呆-->
+
 
   <!-- 最新編譯和最佳化的 CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
@@ -112,7 +112,7 @@ function btnDivH_onclick() {
 </head>
 <body style="text-align:center;font-size:18px;background-image: url(img/46505.png);background-size: cover;background-attachment: fixed; font-family: 微軟正黑體;margin:30px">
 
-<!--巡覽列black-->
+
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header"> 
@@ -140,7 +140,7 @@ function btnDivH_onclick() {
           <table width="100%"  border="1px" cellpadding="0" cellspacing="0" bgcolor="#F0F0F0" >
             <tr >
               <th width="10%" bgcolor="#CCCCCC" style="text-align:center;"><p>品種</p></th>
-              <!--th width="10%" bgcolor="#CCCCCC" style="text-align:center;"><p>帳號</p></th-->
+              
               <th width="10%" bgcolor="#CCCCCC" style="text-align:center;"><p>作物位置</p></th>
               <th width="5%" bgcolor="#CCCCCC">&nbsp;</th>
             </tr>
@@ -149,7 +149,7 @@ function btnDivH_onclick() {
               <td width="10%" align="center" bgcolor="#FFFFFF">
                 <p><a href="CPDR_join.php?id=<?php echo $row_RecFlower["f_id"];?>" target="new" onclick="return btnDivShow_onclick()"><?php echo $row_RecFlower["f_biology"];?></a></p>
               </td>
-              <!--td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["f_username"];?></p></td-->
+              
               <td width="10%" align="center" bgcolor="#FFFFFF"><p><?php echo $row_RecFlower["f_location"];?></p></td>
               <td width="5%" align="center" bgcolor="#FFFFFF"><p>
               <a href="CM_update.php?id=<?php echo $row_RecFlower["f_id"];?>">修改</a><br>
@@ -191,13 +191,6 @@ function btnDivH_onclick() {
 
 
 </body>
-<script type="text/javascript">/*這為左邊菜單的JS，來源http://codepen.io/vkbansal/pen/QbapGz*/
-  'use strict';
-var burger = document.getElementById('burger-button');
-burger.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.body.classList.toggle('open');
-    burger.classList.toggle('open');
-});
+
 </script>
 </html>

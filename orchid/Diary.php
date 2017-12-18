@@ -108,7 +108,7 @@ $count=0;
 	<meta  http-equiv="Content-Type" content="text/html;charset=utf-8">
 	<title>腎藥蘭花管理系統</title>
 
-<!--呆的巡覽列-->
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -116,7 +116,7 @@ $count=0;
 <!--<link href="./css/navbar-fixed-top.css" rel="stylesheet">造成網頁可以上下移動-->
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
-<!--呆-->
+
 	<!-- 最新編譯和最佳化的 CSS -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 	<!-- 選擇性佈景主題 -->
@@ -232,11 +232,11 @@ while($rowub1 = mysql_fetch_array($resultub1)){ //顯示資料
   <button style="font-size: 18px;" class="btn btn-info btn-sm" onclick="javascript:location.href='Diary_all.php'">其他日誌</button>
 </div>
 <div class="col-xs-12 col-md-12" style="text-align: center;">© 2016 腎藥蘭花管理系統 ©</div>
-<!--呆的巡覽列-->
+
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/ie10-viewport-bug-workaround.js"></script>
-<!--呆-->
+
 </body>
 <script type="text/javascript">/*這為左邊菜單的JS，來源http://codepen.io/vkbansal/pen/QbapGz*/
   'use strict';

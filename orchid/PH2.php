@@ -46,7 +46,7 @@ $total_pages = ceil($total_records/$pageRow_records);
 <head>
   <meta  http-equiv="Content-Type" content="text/html;charset=utf-8">
   <title>腎藥蘭花管理系統</title>
-<!--呆的巡覽列-->
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,7 +54,7 @@ $total_pages = ceil($total_records/$pageRow_records);
 <link href="./css/navbar-fixed-top.css" rel="stylesheet"> 
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
-<!--呆-->
+
   <!-- 最新編譯和最佳化的 CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <!-- 選擇性佈景主題 -->
@@ -112,7 +112,7 @@ $total_pages = ceil($total_records/$pageRow_records);
 <form name="fromCM" method="" action="">
 <hr>
 <div class="col-xs-1 col-md-1"></div>
-<div style="background: rgba(100%,100%,100%,0.6);" class="row col-xs-10 col-md-10"><!--div放白色背景透明度60%開始-->
+<div style="background: rgba(100%,100%,100%,0.6);" class="row col-xs-10 col-md-10">
 <!--以下顯示作物列表-->
 <table width="90%" border="0px" align="center" cellpadding="4" cellspacing="0" style="font-size: 20px;">
   <tr>
@@ -170,12 +170,12 @@ $total_pages = ceil($total_records/$pageRow_records);
   </tr>
 </table>
 </form>
-</div><!--div放白色背景透明度60%結束-->
-<!--呆的巡覽列-->
+</div>
+
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/ie10-viewport-bug-workaround.js"></script>
-<!--呆-->
+
 </body>
 <script type="text/javascript">/*這為左邊菜單的JS，來源http://codepen.io/vkbansal/pen/QbapGz*/
   'use strict';

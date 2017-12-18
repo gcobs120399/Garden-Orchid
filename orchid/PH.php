@@ -76,14 +76,14 @@ $data2 = json_encode($data2);
 <head>
   <meta  http-equiv="Content-Type" content="text/html;charset=utf-8">
   <title>腎藥蘭花管理系統</title>
-<!--呆的巡覽列-->
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
 <script src="./js/ie-emulation-modes-warning.js"></script> 
 <link rel="icon" href="./img/title.png">
-<!--呆-->
+
   <!-- 最新編譯和最佳化的 CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <!-- 選擇性佈景主題 -->
@@ -350,11 +350,11 @@ $resultub = mysql_query($data);
 <footer style="text-align:center">© 2016 腎藥蘭花管理系統 ©</footer>
 </div>
 <div class="col-xs-2 col-md-2"></div>
-<!--呆的巡覽列-->
+
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/ie10-viewport-bug-workaround.js"></script>
-<!--呆-->
+
 </body>
 <script type="text/javascript">/*這為左邊菜單的JS，來源http://codepen.io/vkbansal/pen/QbapGz*/
   'use strict';
